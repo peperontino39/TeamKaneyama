@@ -1,0 +1,11 @@
+
+/.vs
+
+/[lL]ibrary
+/[tT]emp
+
+*.sln
+*.suo
+*.csproj
+*.user
+
