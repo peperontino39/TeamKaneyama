@@ -18,7 +18,7 @@ public class CreateBoard : MonoBehaviour
                 cube.transform.position = new Vector3(x, 0, z);
                 int col = Convert.ToInt32((x + z)% 2 == 0);
                 cube.GetComponent<Renderer>().material.color = Color.white * col;
-                //cube.GetComponent <Color>() = new Color(col, col, col);
+                cube.AddComponent<SellDate>();
             }
         }
     }
