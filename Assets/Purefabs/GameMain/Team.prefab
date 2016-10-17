@@ -9,46 +9,49 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000010041340452}
+  m_RootGameObject: {fileID: 1000012752054200}
   m_IsPrefabParent: 1
---- !u!1 &1000010041340452
+--- !u!1 &1000012752054200
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000010538095526}
-  - 114: {fileID: 114000012355399680}
+  - 4: {fileID: 4000011213452854}
+  - 114: {fileID: 114000012570275518}
   m_Layer: 0
-  m_Name: Board
+  m_Name: Team
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000010538095526
+--- !u!4 &4000011213452854
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010041340452}
+  m_GameObject: {fileID: 1000012752054200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.266197, y: 3.0902393, z: -4.031489}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000012355399680
+--- !u!114 &114000012570275518
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010041340452}
+  m_GameObject: {fileID: 1000012752054200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3213e8e52caa206488e66ae92a15bb67, type: 3}
+  m_Script: {fileID: 11500000, guid: e100b70809629694a85dad8b1c969983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 8, y: 8}
+  pieces:
+  - {fileID: 1000013625422604, guid: 1d60886037401a34196bbfa4ed9fc409, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
