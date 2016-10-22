@@ -17,10 +17,13 @@ public class CreateBoard : MonoBehaviour
     Team team;
 
 
+    void Awake()
+    {
+        CreateStage();
+    }
 
     void Start()
     {
-        CreateStage();
 
         
     }
@@ -104,7 +107,7 @@ public class CreateBoard : MonoBehaviour
         {
             foreach (var sell in lines)
             {
-                sell.GetComponent<SellDate>().is_attack = false;
+                sell.GetComponent<SellDate>().SetAttack(false);
             }
         }
     }
@@ -122,6 +125,13 @@ public class CreateBoard : MonoBehaviour
         
         return map[(int)_sell.y][(int)_sell.x].transform.position
             + Vector3.up;
+    }
+
+    public void OnPiceMove(Vector2 _terget,Vector2 go_selll)
+    {
+        map[(int)go_selll.y][(int)go_selll.x].on_pise = 
+        map[(int)_terget.y][(int)_terget.x].on_pise;
+        map[(int)_terget.y][(int)_terget.x].on_pise = null;
     }
 
 }

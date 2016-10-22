@@ -24,16 +24,16 @@ public class piece : MonoBehaviour
 
     public void setSell(Vector2 _sell)
     {
-        sell = _sell;
         transform.position = board.getSellPosition(_sell);
-
-        board.setOnpise(_sell, gameObject);
+        sell = _sell;
     }
 
 
     void Start()
     {
         board = GameObject.Find("Board").GetComponent<CreateBoard>();
+        board.setOnpise(sell, gameObject);
+        setSell(sell);
 
         LoadCharacterDate();
     }
@@ -47,7 +47,7 @@ public class piece : MonoBehaviour
     }
     public void OnAttackArea( Vector2 _sell)
     {
-        Debug.Log(attack_areas.Count);
+       
         foreach (var area in attack_areas)
         {
             area.SetAttackOn(_sell, board);
@@ -119,8 +119,7 @@ public class piece : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            setSell(sell);
-
+            
         }
 
     }

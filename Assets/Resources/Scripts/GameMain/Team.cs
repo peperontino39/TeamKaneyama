@@ -48,14 +48,25 @@ public class Team : MonoBehaviour
                         {
                             moveSell = obj.GetComponent<SellDate>().sell;
                             select_pieces.GetComponent<piece>().OnAttackArea(moveSell);
-                            step++;
+                            
+                        step++;
                         }
-                            board.allMovableOff();
+                        else
+                        {
+                            step = 0;
+                        }
+                        board.allMovableOff();
                         break;
                     case Step.ATACK:
 
-                       
-
+                        if (obj.GetComponent<SellDate>().is_attack)
+                        {
+                            board.OnPiceMove(select_pieces.GetComponent<piece>().sell, moveSell);
+                            select_pieces.GetComponent<piece>().setSell(moveSell);
+                            
+                        }
+                        board.allAttackOff();
+                        step = 0;
                             break;
 
                 }
@@ -63,6 +74,8 @@ public class Team : MonoBehaviour
             }
             else
             {
+                board.allMovableOff();
+                board.allAttackOff();
                 step = 0;
             }
         }
