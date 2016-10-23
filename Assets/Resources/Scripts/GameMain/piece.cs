@@ -66,6 +66,10 @@ public class piece : MonoBehaviour
     {
         life -= _damage;
         hp_ber.value = (float)life / (float)max_hp; 
+        if(life  <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void LoadCharacterDate()
@@ -97,14 +101,14 @@ public class piece : MonoBehaviour
         if (fields[0] == "point")
         {
             attack_areas.Add(new PointArea(
-                new Vector2(int.Parse(fields[1]), int.Parse(fields[2])))
-                );
+                new Vector2(int.Parse(fields[1]), int.Parse(fields[2])) * (-team_number * 2 + 1)
+                ));
         }
         if (fields[0] == "line")
         {
 
             attack_areas.Add(new LineArea(
-               new Vector2(int.Parse(fields[1]), int.Parse(fields[2])),
+               new Vector2(int.Parse(fields[1]), int.Parse(fields[2])) * (-team_number * 2 + 1),
                int.Parse(fields[3]))
                );
         }
@@ -115,13 +119,13 @@ public class piece : MonoBehaviour
         if (fields[0] == "point")
         {
             move_areas.Add(new PointArea(
-                new Vector2(int.Parse(fields[1]), int.Parse(fields[2])))
-                );
+                new Vector2(int.Parse(fields[1]), int.Parse(fields[2])) * (-team_number * 2 + 1)
+                ));
         }
         if (fields[0] == "line")
         {
             move_areas.Add(new LineArea(
-               new Vector2(int.Parse(fields[1]), int.Parse(fields[2])),
+               new Vector2(int.Parse(fields[1]), int.Parse(fields[2])) * (-team_number * 2 + 1),
                int.Parse(fields[3]))
                );
         }

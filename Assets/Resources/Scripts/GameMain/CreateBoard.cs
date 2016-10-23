@@ -25,7 +25,7 @@ public class CreateBoard : MonoBehaviour
     void Start()
     {
 
-        
+
     }
 
     void Update()
@@ -61,11 +61,11 @@ public class CreateBoard : MonoBehaviour
                 whidth++;
             }
             height++;
-           
+
             map.Add(new List<SellDate>(cube_line));
             cube_line.Clear();
         }
-       
+
     }
 
     public bool setMovable(Vector2 _sell)
@@ -86,7 +86,11 @@ public class CreateBoard : MonoBehaviour
         if ((int)_sell.y >= map.Count) return false;
         if ((int)_sell.x < 0) return false;
         if ((int)_sell.x >= map[(int)_sell.y].Count) return false;
-
+        if (map[(int)_sell.y][(int)_sell.x].GetComponent<SellDate>().on_pise != null)
+        {
+            map[(int)_sell.y][(int)_sell.x].GetComponent<SellDate>().SetAttack(true);
+            return false;
+        }
         map[(int)_sell.y][(int)_sell.x].GetComponent<SellDate>().SetAttack(true);
         return true;
     }
@@ -124,14 +128,14 @@ public class CreateBoard : MonoBehaviour
 
     public Vector3 getSellPosition(Vector2 _sell)
     {
-        
+
         return map[(int)_sell.y][(int)_sell.x].transform.position
             + Vector3.up;
     }
 
-    public void OnPiceMove(Vector2 _terget,Vector2 go_selll)
+    public void OnPiceMove(Vector2 _terget, Vector2 go_selll)
     {
-        map[(int)go_selll.y][(int)go_selll.x].on_pise = 
+        map[(int)go_selll.y][(int)go_selll.x].on_pise =
         map[(int)_terget.y][(int)_terget.x].on_pise;
         map[(int)_terget.y][(int)_terget.x].on_pise = null;
     }
