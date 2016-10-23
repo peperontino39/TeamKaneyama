@@ -74,6 +74,8 @@ public class CreateBoard : MonoBehaviour
         if ((int)_sell.y >= map.Count) return false;
         if ((int)_sell.x < 0) return false;
         if ((int)_sell.x >= map[(int)_sell.y].Count) return false;
+        if (map[(int)_sell.y][(int)_sell.x].GetComponent<SellDate>().on_pise != null)
+            return false;
 
         map[(int)_sell.y][(int)_sell.x].GetComponent<SellDate>().setMovable(true);
         return true;

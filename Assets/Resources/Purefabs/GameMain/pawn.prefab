@@ -222,7 +222,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 224000011379331844}
   m_HandleRect: {fileID: 0}
@@ -277,6 +277,9 @@ MonoBehaviour:
   board: {fileID: 0}
   sell: {x: 3, y: 3}
   CharacterDataCSV: {fileID: 4900000, guid: 21ac15ee746bf7c4ea3d7ec284aa3d57, type: 3}
+  hp_ber: {fileID: 114000011266845984}
+  attack_power: 0
+  team_number: 0
 --- !u!114 &114000012352140128
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine.UI;
 
 public class piece : MonoBehaviour
 {
@@ -12,14 +13,17 @@ public class piece : MonoBehaviour
 
     [SerializeField]
     TextAsset CharacterDataCSV;
+    [SerializeField]
+    Slider hp_ber;
 
-    private int life;
-    private int attack_power;
-    private int counter_attack_power;
+    public int max_hp;
+    public int life;
+    public int attack_power;
+    public int counter_attack_power;
     private List<areaBase> move_areas = new List<areaBase>();
     private List<areaBase> attack_areas = new List<areaBase>();
 
-    private int team_number;
+    public int team_number;
 
 
     public void setSell(Vector2 _sell)
@@ -28,10 +32,14 @@ public class piece : MonoBehaviour
         sell = _sell;
     }
 
+    void Awake()
+    {
+        board = GameObject.Find("Board").GetComponent<CreateBoard>();
+
+    }
 
     void Start()
     {
-        board = GameObject.Find("Board").GetComponent<CreateBoard>();
         board.setOnpise(sell, gameObject);
         setSell(sell);
 
@@ -54,14 +62,18 @@ public class piece : MonoBehaviour
         }
     }
 
-
+    public void damage(int _damage = 0)
+    {
+        life -= _damage;
+        hp_ber.value = (float)life / (float)max_hp; 
+    }
 
     private void LoadCharacterDate()
     {
         StringReader reader = new StringReader(CharacterDataCSV.text);
 
         string[] fields = reader.ReadLine().Split(',');
-        life = int.Parse(fields[1]);
+        max_hp = life = int.Parse(fields[1]);
         fields = reader.ReadLine().Split(',');
         attack_power = int.Parse(fields[1]);
         fields = reader.ReadLine().Split(',');
@@ -74,7 +86,7 @@ public class piece : MonoBehaviour
             
            AddMoveAreas(text.Split(','));
         }
-        while ((text = reader.ReadLine()) != "")
+        while ((text = reader.ReadLine()) != null)
         {
             AddAttackAreas(text.Split(','));
         }
