@@ -107,7 +107,7 @@ GameObject:
   - 65: {fileID: 65000012549362252}
   - 23: {fileID: 23000010221591894}
   - 114: {fileID: 114000010618088162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: queen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,10 @@ MonoBehaviour:
   sell: {x: 3, y: 3}
   CharacterDataCSV: {fileID: 4900000, guid: f5780c6553e06ee4fb83ebd147a9d067, type: 3}
   hp_ber: {fileID: 114000010477937980}
+  max_hp: 0
+  life: 0
   attack_power: 0
+  counter_attack_power: 0
   team_number: 0
 --- !u!114 &114000012331199818
 MonoBehaviour:
