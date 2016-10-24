@@ -9,30 +9,29 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000010041340452}
+  m_RootGameObject: {fileID: 1000012508249054}
   m_IsPrefabParent: 1
---- !u!1 &1000010041340452
+--- !u!1 &1000012508249054
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000010538095526}
-  - 114: {fileID: 114000012355399680}
+  - 4: {fileID: 4000013914223702}
   m_Layer: 0
-  m_Name: Board
+  m_Name: board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000010538095526
+--- !u!4 &4000013914223702
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010041340452}
+  m_GameObject: {fileID: 1000012508249054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,19 +39,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000012355399680
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010041340452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3213e8e52caa206488e66ae92a15bb67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selllist:
-  - {fileID: 1000012606628198, guid: 1800ba78bd603864791c21ca5b87c7eb, type: 2}
-  - {fileID: 1000010450499896, guid: 55101082fa0855e45941470d37f808af, type: 2}
-  csvFile: {fileID: 0}
-  team: {fileID: 0}
