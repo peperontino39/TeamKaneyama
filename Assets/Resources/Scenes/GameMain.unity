@@ -194,6 +194,35 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014204654716, guid: 1462dd3e4fe21eb468e5c18cbb2b3e35, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223000011992384632, guid: 1462dd3e4fe21eb468e5c18cbb2b3e35,
+        type: 2}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223000011992384632, guid: 1462dd3e4fe21eb468e5c18cbb2b3e35,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011701403994, guid: 1462dd3e4fe21eb468e5c18cbb2b3e35,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011473137012, guid: 1462dd3e4fe21eb468e5c18cbb2b3e35,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223000011992384632, guid: 1462dd3e4fe21eb468e5c18cbb2b3e35,
+        type: 2}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1462dd3e4fe21eb468e5c18cbb2b3e35, type: 2}
   m_IsPrefabParent: 0
