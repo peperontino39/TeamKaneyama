@@ -16,6 +16,7 @@ public class CreateBoard : MonoBehaviour
     [SerializeField]
     Team team;
 
+    public List<Castle> castles = new List<Castle>();
 
     void Awake()
     {
@@ -68,6 +69,90 @@ public class CreateBoard : MonoBehaviour
 
     }
 
+    public void AllAttack(GameObject _terget_piese)
+    {
+        List<piece> anger = new List<piece>();
+        foreach (var _line in map)
+        {
+            foreach (var _sell in _line)
+            {
+                if (_sell.is_attack)
+                {
+                    if (_sell.on_pise != null)
+                    {
+
+
+                        if (_terget_piese.GetComponent<piece>().
+                            team_number !=
+                      _sell.on_pise.GetComponent<piece>().team_number)
+                        {
+                            _sell.on_pise.GetComponent<piece>().damage(
+                                _terget_piese.GetComponent<piece>().attack_power);
+
+                            anger.Add(_sell.on_pise.GetComponent<piece>());
+                        }
+                    }
+                }
+            }
+        }
+        allAttackOff();
+        //反撃の処理
+        foreach (var ang in anger)
+        {
+            ang.OnAttackArea(ang.sell);
+            foreach (var _line in map)
+            {
+                foreach (var _sell in _line)
+                {
+                    if (_sell.is_attack)
+                    {
+                        if (_sell.on_pise != null)
+                        {
+                            if (ang.team_number !=
+                      _sell.on_pise.GetComponent<piece>().team_number)
+                            {
+
+                                _sell.on_pise.GetComponent<piece>().damage(ang.counter_attack_power);
+
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            allAttackOff();
+        }
+    }
+
+    public bool CastleAdjacent(Vector2 _sell, int _team_num)
+    {
+        foreach (var castle in castles)
+        {
+            if (_team_num == castle.team_num)
+                continue;
+            for (int y = -1; y <= 1; y++)
+            {
+                for (int x = -1; x <= 1; x++)
+                {
+                    if(_sell == castle.sell + new Vector2(x, y))
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+
+    public void AddCastle(Castle _castle)
+    {
+        castles.Add(_castle);
+
+
+
+    }
     public bool setMovable(Vector2 _sell)
     {
         if ((int)_sell.y < 0) return false;

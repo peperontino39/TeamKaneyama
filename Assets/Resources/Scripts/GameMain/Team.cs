@@ -38,10 +38,11 @@ public class Team : MonoBehaviour
 
     void Update()
     {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit = new RaycastHit();
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit = new RaycastHit();
+
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
             {
                 GameObject obj = hit.collider.gameObject;
@@ -63,8 +64,14 @@ public class Team : MonoBehaviour
                         if (obj.GetComponent<SellDate>().is_movable)
                         {
                             moveSell = obj.GetComponent<SellDate>().sell;
-                            select_pieces.GetComponent<piece>().OnAttackArea(moveSell);
+                            if (board.CastleAdjacent(moveSell, select_pieces.GetComponent<piece>().team_number))
+                            {
+                                Debug.Log("hoggeogej");
+                            }
+                            else {
+                                select_pieces.GetComponent<piece>().OnAttackArea(moveSell);
 
+                            }
                             step++;
                         }
                         else
@@ -75,24 +82,7 @@ public class Team : MonoBehaviour
                         break;
                     case Step.ATACK:
 
-                        if (obj.GetComponent<SellDate>().is_attack)
-                        {
-                            if (obj.GetComponent<SellDate>().on_pise != null)
-                            {
-                                //違うチームだったら
-                                if (obj.GetComponent<SellDate>().on_pise.GetComponent<piece>().team_number !=
-                                    select_pieces.GetComponent<piece>().team_number)
-                                    obj.GetComponent<SellDate>().on_pise.GetComponent<piece>().damage(
-                                        select_pieces.GetComponent<piece>().attack_power
-                                        );
-                            }
-                            board.OnPiceMove(select_pieces.GetComponent<piece>().sell, moveSell);
-                            select_pieces.GetComponent<piece>().setSell(moveSell);
-                            setControlTeam((control_team + 1) % 2);
-
-                        }
-                        board.allAttackOff();
-                        step = 0;
+                        Atack(obj);
                         break;
 
                 }
@@ -106,8 +96,46 @@ public class Team : MonoBehaviour
                 step = 0;
             }
         }
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
+        {
+            GameObject obj = hit.collider.gameObject;
+            //obj.GetComponent<>
+
+        }
+
     }
 
+    private void Atack(GameObject obj)
+    {
+        if (obj.GetComponent<SellDate>().is_attack)
+        {
+            //if (obj.GetComponent<SellDate>().on_pise != null)
+            //{
+            //    //違うチームだったら
+            //    if (obj.GetComponent<SellDate>().on_pise.GetComponent<piece>().team_number !=
+            //        select_pieces.GetComponent<piece>().team_number)
+            //        obj.GetComponent<SellDate>().on_pise.GetComponent<piece>().damage(
+            //            select_pieces.GetComponent<piece>().attack_power
+            //            );
+            //}
+
+            board.AllAttack(select_pieces);
+            board.OnPiceMove(select_pieces.GetComponent<piece>().sell, moveSell);
+            select_pieces.GetComponent<piece>().setSell(moveSell);
+            setControlTeam((control_team + 1) % 2);
+
+        }
+        if (obj.GetComponent<SellDate>().sell == moveSell)
+        {
+            board.OnPiceMove(select_pieces.GetComponent<piece>().sell, moveSell);
+            select_pieces.GetComponent<piece>().setSell(moveSell);
+            setControlTeam((control_team + 1) % 2);
+
+        }
+        board.allAttackOff();
+        step = 0;
+    }
 
     public void setUiStatus(piece _piece)
     {
