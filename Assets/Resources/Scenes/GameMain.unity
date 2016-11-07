@@ -424,11 +424,6 @@ Prefab:
       propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000011701403994, guid: 1462dd3e4fe21eb468e5c18cbb2b3e35,
-        type: 2}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1462dd3e4fe21eb468e5c18cbb2b3e35, type: 2}
   m_IsPrefabParent: 0
