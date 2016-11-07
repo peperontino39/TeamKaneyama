@@ -28,38 +28,28 @@ public class Castles : MonoBehaviour
         return false;
     }
 
-    public bool IsWin(piece _piece)
+    public bool IsWin (piece _piece)
     {
-        foreach (var castle in castles)
+        foreach(var castle in castles)
         {
-            if (_piece.team_number != castle.team_num)
+            if(_piece.team_number != castle.team_num)
             {
-                
-                Vector2 rev = castle.sell + (castle.sell - _piece.sell);
-                Debug.Log(rev);
-
-                if (GamaManager.Instance.Board.getSellDate(rev).on_pise != null)
-                {
-                    Debug.Log("nannkairu ");
-                    if (GamaManager.Instance.Board.getSellDate(rev).on_pise.is_siege)
-                    {
-                        Debug.Log("hoge ");
-
-                        return true;
-                    }
-                }
-
-
+                Vector2 rev = castle.sell-(_piece.sell - castle.sell);
+                //if (GamaManager.Instance.Board.getSellDate(rev).)
+                return false;
             }
         }
         return false;
     }
 
 
-    public void AddCastle(Castle _castle)
-    {
-        castles.Add(_castle);
-    }
+public void AddCastle(Castle _castle)
+{
+    castles.Add(_castle);
+}
 
-
+internal void Add(Castle cas)
+{
+    throw new NotImplementedException();
+}
 }
