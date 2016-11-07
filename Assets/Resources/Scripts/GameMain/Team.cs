@@ -51,7 +51,7 @@ public class Team : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
             {
                 Debug.Log(hit.collider.gameObject.GetComponent<SellDate>().on_pise);
-                
+
 
             }
         }
@@ -95,9 +95,9 @@ public class Team : MonoBehaviour
                             GamaManager.Instance.command_list.SetInteractable(CommandList.Command.END, true);
 
                             step++;
+                            GamaManager.Instance.Board.allMovableOff();
                         }
 
-                        //GamaManager.Instance.Board.allMovableOff();
                         break;
                     case Step.ACTIVITY:
 
@@ -117,8 +117,19 @@ public class Team : MonoBehaviour
 
     public void Atack()
     {
+        GamaManager.Instance.Board.OnPiceMove(select_pieces.sell, moveSell);
         GamaManager.Instance.Board.AllAttack(select_pieces);
-        ChangeTurn();
+        select_pieces.setSell(moveSell);
+        setControlTeam((control_team + 1) % 2);
+        GamaManager.Instance.Board.allAttackOff();
+        step = 0;
+        GamaManager.Instance.command_list.ALLSetInteractable(false);
+        int win_team_num = GamaManager.Instance.kings_info.WinTeam();
+        if (win_team_num != -1)
+        {
+            step = Step.ACTIVITY;
+            turn.text = (win_team_num + "の勝利");
+        }
     }
 
     private void ChangeTurn()
@@ -140,10 +151,12 @@ public class Team : MonoBehaviour
 
         if (GamaManager.Instance.castles.IsWin(select_pieces))
         {
-            //Debug.Log((control_team+1) + "の勝利");
-            turn.text = ((control_team + 1) %2) + "の勝利";
+            step = Step.ACTIVITY;
+            turn.text = ((control_team + 1) % 2) + "の勝利";
             return;
         }
+        
+
 
         setControlTeam((control_team + 1) % 2);
         GamaManager.Instance.Board.allAttackOff();
@@ -153,8 +166,7 @@ public class Team : MonoBehaviour
 
     public void End()
     {
-        GamaManager.Instance.Board.OnPiceMove(select_pieces.GetComponent<piece>().sell, moveSell);
-        ChangeTurn();
+         ChangeTurn();
     }
 
     public void Cancel()
@@ -163,7 +175,7 @@ public class Team : MonoBehaviour
         GamaManager.Instance.Board.allAttackOff();
         select_pieces = null;
         step = 0;
-        GamaManager.Instance.command_list.SetInteractable(CommandList.Command.CANCEL, false);
+        GamaManager.Instance.command_list.ALLSetInteractable(false);
     }
 
 

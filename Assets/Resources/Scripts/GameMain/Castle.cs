@@ -4,7 +4,7 @@ using System.Collections;
 public class Castle : MonoBehaviour {
 
 
-
+    
   
     public Vector2 sell;
 

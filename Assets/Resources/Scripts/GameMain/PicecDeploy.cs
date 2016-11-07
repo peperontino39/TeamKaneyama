@@ -43,7 +43,7 @@ public class PicecDeploy : MonoBehaviour
         CreatePiece(PieceNum.BISOP, 2, 0, 0);
         CreatePiece(PieceNum.BISOP, 6, 0, 0);
         CreatePiece(PieceNum.QUEEN, 3, 0, 0);
-        CreatePiece(PieceNum.KING, 4, 0, 0);
+        CreatePiece(PieceNum.KING, 4, 0, 0);//
         CreatePiece(PieceNum.JACK, 5, 0, 0);
 
         CreatePiece(PieceNum.PAWN, 0, 6, 1);
@@ -63,7 +63,7 @@ public class PicecDeploy : MonoBehaviour
         CreatePiece(PieceNum.BISOP, 2, 8, 1);
         CreatePiece(PieceNum.BISOP, 6, 8, 1);
         CreatePiece(PieceNum.QUEEN, 3, 8, 1);
-        CreatePiece(PieceNum.KING, 4, 8, 1);
+        CreatePiece(PieceNum.KING, 4, 8, 1);//
         CreatePiece(PieceNum.JACK, 5, 8, 1);
 
         CreateCastle(4, 1, 0);
@@ -96,6 +96,10 @@ public class PicecDeploy : MonoBehaviour
         if (_team == 1)
         {
             obj.GetComponent<Renderer>().material.color = new Color(0, 1, 0);
+        }
+        if(PieceNum.KING == _piece)
+        {
+            GamaManager.Instance.kings_info.kings.Add(pic);
         }
     }
 

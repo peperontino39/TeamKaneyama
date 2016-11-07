@@ -40,11 +40,10 @@ public class Castles : MonoBehaviour
 
                 if (GamaManager.Instance.Board.getSellDate(rev).on_pise != null)
                 {
-                    Debug.Log("nannkairu ");
+                   
                     if (GamaManager.Instance.Board.getSellDate(rev).on_pise.is_siege)
                     {
-                        Debug.Log("hoge ");
-
+                      
                         return true;
                     }
                 }

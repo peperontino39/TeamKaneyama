@@ -16,7 +16,8 @@ public class CommandList : MonoBehaviour
         ATTACK,
         END,
         SIEGE,
-        CANCEL
+        CANCEL,
+        INCASTLE
     }
     void Start()
     {

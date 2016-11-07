@@ -72,14 +72,14 @@ public class CreateBoard : MonoBehaviour
                     {
 
 
-                        if (_terget_piese.GetComponent<piece>().
+                        if (_terget_piese.
                             team_number !=
-                      _sell.on_pise.GetComponent<piece>().team_number)
+                      _sell.on_pise.team_number)
                         {
-                            _sell.on_pise.GetComponent<piece>().damage(
-                                _terget_piese.GetComponent<piece>().attack_power);
-
-                            anger.Add(_sell.on_pise.GetComponent<piece>());
+                            _sell.on_pise.damage(
+                                _terget_piese.attack_power);
+                            if (_sell.on_pise != null)
+                                anger.Add(_sell.on_pise);
                         }
                     }
                 }
@@ -101,9 +101,9 @@ public class CreateBoard : MonoBehaviour
                             if (ang.team_number !=
                       _sell.on_pise.team_number)
                             {
-
-                                _sell.on_pise.damage(ang.counter_attack_power);
-
+                                if (_sell.on_pise == _terget_piese)
+                                    if (ang.life > 0)
+                                        _sell.on_pise.damage(ang.counter_attack_power);
                             }
                         }
                     }
@@ -124,6 +124,10 @@ public class CreateBoard : MonoBehaviour
         if ((int)_sell.x >= map[(int)_sell.y].Count) return false;
         if (map[(int)_sell.y][(int)_sell.x].on_pise != null)
             return false;
+        foreach (var cas in GamaManager.Instance.castles.castles)
+        {
+            if (_sell == cas.sell) return false;
+        }
 
         map[(int)_sell.y][(int)_sell.x].setMovable(true);
         return true;
@@ -134,7 +138,10 @@ public class CreateBoard : MonoBehaviour
         if ((int)_sell.y >= map.Count) return false;
         if ((int)_sell.x < 0) return false;
         if ((int)_sell.x >= map[(int)_sell.y].Count) return false;
-
+        foreach (var cas in GamaManager.Instance.castles.castles)
+        {
+            if (_sell == cas.sell) return false;
+        }
         if (map[(int)_sell.y][(int)_sell.x].on_pise != null)
         {
             if (map[(int)_sell.y][(int)_sell.x].on_pise.team_number != team_num)

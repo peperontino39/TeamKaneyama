@@ -15,7 +15,8 @@ public class GamaManager : MonoBehaviour
     [SerializeField]
     public CommandList command_list;
 
-
+    [SerializeField]
+    public KingsInfo kings_info;
 
 
 
