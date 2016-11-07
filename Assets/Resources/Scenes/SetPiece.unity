@@ -170,10 +170,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321147264}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 9, z: -1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4, y: -1, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -187,6 +187,7 @@ GameObject:
   - 224: {fileID: 463318784}
   - 222: {fileID: 463318786}
   - 114: {fileID: 463318785}
+  - 114: {fileID: 463318787}
   m_Layer: 5
   m_Name: kingNum
   m_TagString: Untagged
@@ -209,7 +210,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87, y: -109}
+  m_AnchoredPosition: {x: 87, y: -115}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &463318785
@@ -244,13 +245,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xD71"
+  m_Text: New Text
 --- !u!222 &463318786
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 463318783}
+--- !u!114 &463318787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 463318783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43c03ebcbccc4458c4a14fa4d8b7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceNum: 1
+  PieceNumText: {fileID: 463318785}
 --- !u!1 &630449936
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +379,7 @@ GameObject:
   - 224: {fileID: 948254675}
   - 222: {fileID: 948254677}
   - 114: {fileID: 948254676}
+  - 114: {fileID: 948254678}
   m_Layer: 5
   m_Name: knightNum
   m_TagString: Untagged
@@ -422,13 +437,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xD72"
+  m_Text: New Text
 --- !u!222 &948254677
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 948254674}
+--- !u!114 &948254678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948254674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43c03ebcbccc4458c4a14fa4d8b7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceNum: 2
+  PieceNumText: {fileID: 948254676}
 --- !u!1 &1353033454
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +467,7 @@ GameObject:
   - 224: {fileID: 1353033455}
   - 222: {fileID: 1353033457}
   - 114: {fileID: 1353033456}
+  - 114: {fileID: 1353033458}
   m_Layer: 5
   m_Name: queenNum
   m_TagString: Untagged
@@ -461,7 +490,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -37, y: -109}
+  m_AnchoredPosition: {x: -37, y: -115}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1353033456
@@ -496,13 +525,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xD71"
+  m_Text: New Text
 --- !u!222 &1353033457
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1353033454}
+--- !u!114 &1353033458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353033454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43c03ebcbccc4458c4a14fa4d8b7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceNum: 1
+  PieceNumText: {fileID: 1353033456}
 --- !u!1 &1409780104
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +705,7 @@ GameObject:
   - 224: {fileID: 1944355191}
   - 222: {fileID: 1944355193}
   - 114: {fileID: 1944355192}
+  - 114: {fileID: 1944355194}
   m_Layer: 5
   m_Name: jackNum
   m_TagString: Untagged
@@ -685,7 +728,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 217, y: -109}
+  m_AnchoredPosition: {x: 217, y: -115}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1944355192
@@ -720,13 +763,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xD71"
+  m_Text: New Text
 --- !u!222 &1944355193
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1944355190}
+--- !u!114 &1944355194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1944355190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43c03ebcbccc4458c4a14fa4d8b7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceNum: 1
+  PieceNumText: {fileID: 1944355192}
 --- !u!1 &2087707074
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +892,7 @@ GameObject:
   - 224: {fileID: 2100895712}
   - 222: {fileID: 2100895714}
   - 114: {fileID: 2100895713}
+  - 114: {fileID: 2100895715}
   m_Layer: 5
   m_Name: bishopNum
   m_TagString: Untagged
@@ -893,13 +950,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xD72"
+  m_Text: New Text
 --- !u!222 &2100895714
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2100895711}
+--- !u!114 &2100895715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2100895711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43c03ebcbccc4458c4a14fa4d8b7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceNum: 2
+  PieceNumText: {fileID: 2100895713}
 --- !u!1 &2123978036
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,6 +980,7 @@ GameObject:
   - 224: {fileID: 2123978037}
   - 222: {fileID: 2123978039}
   - 114: {fileID: 2123978038}
+  - 114: {fileID: 2123978040}
   m_Layer: 5
   m_Name: pawnNum
   m_TagString: Untagged
@@ -967,13 +1038,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xD79"
+  m_Text: New Text
 --- !u!222 &2123978039
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123978036}
+--- !u!114 &2123978040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2123978036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43c03ebcbccc4458c4a14fa4d8b7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceNum: 9
+  PieceNumText: {fileID: 2123978038}
 --- !u!1 &2131029276
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +1068,7 @@ GameObject:
   - 224: {fileID: 2131029277}
   - 222: {fileID: 2131029279}
   - 114: {fileID: 2131029278}
+  - 114: {fileID: 2131029280}
   m_Layer: 5
   m_Name: rookNum
   m_TagString: Untagged
@@ -1041,10 +1126,23 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xD72"
+  m_Text: New Text
 --- !u!222 &2131029279
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2131029276}
+--- !u!114 &2131029280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2131029276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43c03ebcbccc4458c4a14fa4d8b7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceNum: 2
+  PieceNumText: {fileID: 2131029278}
