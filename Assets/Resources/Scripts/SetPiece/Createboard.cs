@@ -34,7 +34,7 @@ public class Createboard : MonoBehaviour {
             for (int j = 0; j < 9; j++)
             {
                 GameObject obj = Instantiate(boardobj);
-                Vector3 pinPos = new Vector3(j - 4.5f, 1, i);
+                Vector3 pinPos = new Vector3(j, i, 12);
                 obj.transform.position = pinPos;
 
                 boardObjList.Add(obj);

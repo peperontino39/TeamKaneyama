@@ -8,13 +8,13 @@ public class CreatePiece : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        CreatePieces(PieceNum.PAWN, -6.0f, -2.0f);
-        CreatePieces(PieceNum.ROOK, -2.5f, -2.0f);
-        CreatePieces(PieceNum.BISOP, 1.0f, -2.0f);
-        CreatePieces(PieceNum.KNIGHT, 4.5f, -2.0f);
-        CreatePieces(PieceNum.QUEEN, -4.0f, -4.0f);
-        CreatePieces(PieceNum.KING, -0.5f, -4.0f);
-        CreatePieces(PieceNum.JACK, 3.0f, -4.0f);
+        CreatePieces(PieceNum.PAWN, -2.0f, -2.0f);
+        CreatePieces(PieceNum.ROOK, 1.5f, -2.0f);
+        CreatePieces(PieceNum.BISOP, 5.0f, -2.0f);
+        CreatePieces(PieceNum.KNIGHT, 8.5f, -2.0f);
+        CreatePieces(PieceNum.QUEEN, 0.0f, -4.0f);
+        CreatePieces(PieceNum.KING, 3.5f, -4.0f);
+        CreatePieces(PieceNum.JACK, 7.0f, -4.0f);
     }
 	
 	// Update is called once per frame
@@ -22,10 +22,10 @@ public class CreatePiece : MonoBehaviour {
 	
 	}
 
-    public void CreatePieces(PieceNum _piece, float x, float z)
+    public void CreatePieces(PieceNum _piece, float x, float y)
     {
         GameObject obj = Instantiate(pieces[(int)_piece]);
-        Vector3 piecePos = new Vector3(x, 1, z);
+        Vector3 piecePos = new Vector3(x, y, 12);
         obj.transform.position = piecePos;
     }
 }
