@@ -8,6 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/Title.unity
   - enabled: 1
-    path: Assets/Resources/Scenes/MainMenuSample.unity
-  - enabled: 1
     path: Assets/Resources/Scenes/GameMain.unity

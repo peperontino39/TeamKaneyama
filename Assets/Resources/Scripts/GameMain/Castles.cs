@@ -28,12 +28,13 @@ public class Castles : MonoBehaviour
         return false;
     }
 
-    public bool IsWin(piece _piece)
+    public bool IsWin (piece _piece)
     {
-        foreach (var castle in castles)
+        foreach(var castle in castles)
         {
-            if (_piece.team_number != castle.team_num)
+            if(_piece.team_number != castle.team_num)
             {
+<<<<<<< HEAD
                 
                 Vector2 rev = castle.sell + (castle.sell - _piece.sell);
                 Debug.Log(rev);
@@ -49,16 +50,24 @@ public class Castles : MonoBehaviour
                 }
 
 
+=======
+                Vector2 rev = castle.sell-(_piece.sell - castle.sell);
+                //if (GamaManager.Instance.Board.getSellDate(rev).)
+                return false;
+>>>>>>> e1be980a2dcc57ce94dc95eb7ce2e92d9a68b7dd
             }
         }
         return false;
     }
 
 
-    public void AddCastle(Castle _castle)
-    {
-        castles.Add(_castle);
-    }
+public void AddCastle(Castle _castle)
+{
+    castles.Add(_castle);
+}
 
-
+internal void Add(Castle cas)
+{
+    throw new NotImplementedException();
+}
 }

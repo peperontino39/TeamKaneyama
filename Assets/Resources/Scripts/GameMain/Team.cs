@@ -43,6 +43,7 @@ public class Team : MonoBehaviour
 
     void Update()
     {
+<<<<<<< HEAD
         if (Input.GetMouseButtonDown(1))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -55,6 +56,8 @@ public class Team : MonoBehaviour
 
             }
         }
+=======
+>>>>>>> e1be980a2dcc57ce94dc95eb7ce2e92d9a68b7dd
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -98,6 +101,10 @@ public class Team : MonoBehaviour
                             GamaManager.Instance.Board.allMovableOff();
                         }
 
+<<<<<<< HEAD
+=======
+                        GamaManager.Instance.Board.allMovableOff();
+>>>>>>> e1be980a2dcc57ce94dc95eb7ce2e92d9a68b7dd
                         break;
                     case Step.ACTIVITY:
 
@@ -145,6 +152,7 @@ public class Team : MonoBehaviour
     public void Siege()
     {
         select_pieces.is_siege = true;
+<<<<<<< HEAD
 
         GamaManager.Instance.Board.OnPiceMove(select_pieces.sell, moveSell);
         select_pieces.setSell(moveSell);
@@ -162,6 +170,11 @@ public class Team : MonoBehaviour
         GamaManager.Instance.Board.allAttackOff();
         step = 0;
         GamaManager.Instance.command_list.ALLSetInteractable(false);
+=======
+        
+        ChangeTurn();
+        
+>>>>>>> e1be980a2dcc57ce94dc95eb7ce2e92d9a68b7dd
     }
 
     public void End()
@@ -175,7 +188,10 @@ public class Team : MonoBehaviour
         GamaManager.Instance.Board.allAttackOff();
         select_pieces = null;
         step = 0;
+<<<<<<< HEAD
         GamaManager.Instance.command_list.ALLSetInteractable(false);
+=======
+>>>>>>> e1be980a2dcc57ce94dc95eb7ce2e92d9a68b7dd
     }
 
 
