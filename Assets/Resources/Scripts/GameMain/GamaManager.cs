@@ -12,8 +12,15 @@ public class GamaManager : MonoBehaviour
     [SerializeField]
     public Castles castles;
 
+    [SerializeField]
+    public CommandList command_list;
 
-    static GamaManager instance;
+
+
+
+
+
+    private static GamaManager instance;
 
     public static GamaManager Instance
     {
@@ -32,6 +39,6 @@ public class GamaManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
-
+        instance = this;
     }
 }

@@ -21,8 +21,7 @@ public class PicecDeploy : MonoBehaviour
 
     [SerializeField]
     GameObject castle;
-    [SerializeField]
-    CreateBoard board;
+   
 
 
     void Start()
@@ -81,7 +80,6 @@ public class PicecDeploy : MonoBehaviour
     {
         GameObject obj = Instantiate(castle);
         Castle cas = obj.GetComponent<Castle>();
-        board.castles.Add(cas);
         cas.SetSell(new Vector2(x, y));
         cas.setTeam(_team);
     }
@@ -94,6 +92,7 @@ public class PicecDeploy : MonoBehaviour
         piece pic = obj.GetComponent<piece>();
         pic.setSell(new Vector2(x, y));
         pic.team_number = _team;
+        pic.piece_num = _piece;
         if (_team == 1)
         {
             obj.GetComponent<Renderer>().material.color = new Color(0, 1, 0);

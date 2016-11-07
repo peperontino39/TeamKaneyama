@@ -6,29 +6,34 @@ public class Team : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject select_pieces;
+    piece select_pieces = null;
     [SerializeField]
-    CreateBoard board;
+    Text select_status = null;
     [SerializeField]
-    Text select_status;
-    [SerializeField]
-    Text turn;
+    Text turn = null;
 
+    Step step = 0;
 
     private int control_team;
+    private Vector2 moveSell;
+    // public SellDate select_sell;
+
+
     public void setControlTeam(int _num)
     {
         control_team = _num;
         turn.text = "現在はチーム" + (control_team + 1) + "です";
     }
-    private Vector2 moveSell;
+
+
+
     enum Step
     {
         SERECT,
         MOVE,
-        ATACK
+        ACTIVITY
     }
-    Step step = 0;
+
 
     void Start()
     {
@@ -38,104 +43,104 @@ public class Team : MonoBehaviour
 
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit = new RaycastHit();
         if (Input.GetMouseButtonDown(0))
         {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit = new RaycastHit();
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
             {
-                GameObject obj = hit.collider.gameObject;
+                SellDate _sell = hit.collider.gameObject.GetComponent<SellDate>();
                 switch (step)
                 {
                     case Step.SERECT:
-                        select_pieces = obj.GetComponent<SellDate>().on_pise;
+                        select_pieces = _sell.on_pise;
                         if (select_pieces != null)
                         {
-                            if (select_pieces.GetComponent<piece>().team_number == control_team)
+                            if (select_pieces.team_number == control_team)
                             {
-                                setUiStatus(select_pieces.GetComponent<piece>());
-                                select_pieces.GetComponent<piece>().OnMoveArea();
-                                step++;
+                                if (!select_pieces.is_siege)
+                                {
+                                    setUiStatus(select_pieces);
+                                    select_pieces.OnMoveArea();
+                                    step++;
+                                    GamaManager.Instance.command_list.SetInteractable(CommandList.Command.CANCEL, true);
+                                }
                             }
                         }
                         break;
                     case Step.MOVE:
-                        if (obj.GetComponent<SellDate>().is_movable)
+                        if (_sell.is_movable)
                         {
-                            moveSell = obj.GetComponent<SellDate>().sell;
-                            if (board.CastleAdjacent(moveSell, select_pieces.GetComponent<piece>().team_number))
+                            moveSell = _sell.sell;
+                            if (GamaManager.Instance.castles.CastleAdjacent(moveSell, select_pieces.team_number))
                             {
-                                Debug.Log("hoggeogej");
+                                GamaManager.Instance.command_list.SetInteractable(CommandList.Command.SIEGE, true);
                             }
-                            else {
-                                select_pieces.GetComponent<piece>().OnAttackArea(moveSell);
 
-                            }
+                            select_pieces.OnAttackArea(moveSell);
+                            GamaManager.Instance.command_list.SetInteractable(CommandList.Command.ATTACK, true);
+                            GamaManager.Instance.command_list.SetInteractable(CommandList.Command.END, true);
+
                             step++;
                         }
-                        else
-                        {
-                            step = 0;
-                        }
-                        board.allMovableOff();
-                        break;
-                    case Step.ATACK:
 
-                        Atack(obj);
+                        GamaManager.Instance.Board.allMovableOff();
+                        break;
+                    case Step.ACTIVITY:
+
                         break;
 
                 }
 
             }
-            else
-            {
-                board.allMovableOff();
-                board.allAttackOff();
-                select_pieces = null;
-                step = 0;
-            }
-        }
-
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
-        {
-            GameObject obj = hit.collider.gameObject;
-            //obj.GetComponent<>
 
         }
+
+
 
     }
 
-    private void Atack(GameObject obj)
+
+
+    public void Atack()
     {
-        if (obj.GetComponent<SellDate>().is_attack)
-        {
-            //if (obj.GetComponent<SellDate>().on_pise != null)
-            //{
-            //    //違うチームだったら
-            //    if (obj.GetComponent<SellDate>().on_pise.GetComponent<piece>().team_number !=
-            //        select_pieces.GetComponent<piece>().team_number)
-            //        obj.GetComponent<SellDate>().on_pise.GetComponent<piece>().damage(
-            //            select_pieces.GetComponent<piece>().attack_power
-            //            );
-            //}
+        GamaManager.Instance.Board.AllAttack(select_pieces);
+        ChangeTurn();
+    }
 
-            board.AllAttack(select_pieces);
-            board.OnPiceMove(select_pieces.GetComponent<piece>().sell, moveSell);
-            select_pieces.GetComponent<piece>().setSell(moveSell);
-            setControlTeam((control_team + 1) % 2);
+    private void ChangeTurn()
+    {
+        GamaManager.Instance.Board.OnPiceMove(select_pieces.sell, moveSell);
+        select_pieces.setSell(moveSell);
+        setControlTeam((control_team + 1) % 2);
+        GamaManager.Instance.Board.allAttackOff();
+        step = 0;
+        GamaManager.Instance.command_list.ALLSetInteractable(false);
+    }
 
-        }
-        if (obj.GetComponent<SellDate>().sell == moveSell)
-        {
-            board.OnPiceMove(select_pieces.GetComponent<piece>().sell, moveSell);
-            select_pieces.GetComponent<piece>().setSell(moveSell);
-            setControlTeam((control_team + 1) % 2);
+    public void Siege()
+    {
+        select_pieces.is_siege = true;
+        
+        ChangeTurn();
+        
+    }
 
-        }
-        board.allAttackOff();
+    public void End()
+    {
+        GamaManager.Instance.Board.OnPiceMove(select_pieces.GetComponent<piece>().sell, moveSell);
+        ChangeTurn();
+    }
+
+    public void Cancel()
+    {
+        GamaManager.Instance.Board.allMovableOff();
+        GamaManager.Instance.Board.allAttackOff();
+        select_pieces = null;
         step = 0;
     }
+
 
     public void setUiStatus(piece _piece)
     {

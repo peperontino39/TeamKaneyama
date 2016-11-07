@@ -5,15 +5,14 @@ public class Castle : MonoBehaviour {
 
 
 
-    [SerializeField]
-    CreateBoard board;
+  
     public Vector2 sell;
 
     public int team_num;
 
     public void SetSell(Vector2 _sell)
     {
-        transform.position = board.getSellPosition(_sell);
+        transform.position = GamaManager.Instance.Board.getSellPosition(_sell);
         
         sell = _sell;
     }
@@ -28,15 +27,12 @@ public class Castle : MonoBehaviour {
 
     }
 
-    void Awake(){
-        board = GameObject.Find("Board").GetComponent<CreateBoard>();
-
-    }
+   
 
     void Start () {
         SetSell(sell);
 
-        board.AddCastle(this);
+        GamaManager.Instance.castles.AddCastle(this);
     }
 	
 	void Update () {

@@ -6,15 +6,14 @@ using UnityEngine.UI;
 
 public class piece : MonoBehaviour
 {
-    [SerializeField]
-    private CreateBoard board;
-    //現在のsell
+    public PieceNum piece_num;
+   //現在のsell
     public Vector2 sell = Vector2.zero;
 
     [SerializeField]
-    TextAsset CharacterDataCSV;
+    TextAsset CharacterDataCSV = null;
     [SerializeField]
-    Slider hp_ber;
+    Slider hp_ber = null;
 
     public int max_hp;
     public int life;
@@ -24,23 +23,18 @@ public class piece : MonoBehaviour
     private List<areaBase> attack_areas = new List<areaBase>();
 
     public int team_number;
-
+    public bool is_siege = false;
 
     public void setSell(Vector2 _sell)
     {
-        transform.position = board.getSellPosition(_sell);
+        transform.position = GamaManager.Instance.Board.getSellPosition(_sell);
         sell = _sell;
     }
-
-    void Awake()
-    {
-        board = GameObject.Find("Board").GetComponent<CreateBoard>();
-
-    }
+    
 
     void Start()
     {
-        board.setOnpise(sell, gameObject);
+        GamaManager.Instance.Board.setOnpise(sell, this);
         setSell(sell);
 
         LoadCharacterDate();
@@ -50,15 +44,15 @@ public class piece : MonoBehaviour
     {
         foreach(var area in move_areas)
         {
-            area.setMoveOn(this, board);
+            area.setMoveOn(this);
         }
     }
-    public void OnAttackArea( Vector2 _sell)
+    public void OnAttackArea(Vector2 _sell)
     {
        
         foreach (var area in attack_areas)
         {
-            area.SetAttackOn(_sell, board);
+            area.SetAttackOn(this,_sell);
         }
     }
 
@@ -106,7 +100,6 @@ public class piece : MonoBehaviour
         }
         if (fields[0] == "line")
         {
-
             attack_areas.Add(new LineArea(
                new Vector2(int.Parse(fields[1]), int.Parse(fields[2])) * (-team_number * 2 + 1),
                int.Parse(fields[3]))
@@ -131,12 +124,5 @@ public class piece : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            
-        }
 
-    }
 }

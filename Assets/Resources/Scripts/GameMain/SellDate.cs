@@ -15,7 +15,7 @@ public class SellDate : MonoBehaviour
 
     public Vector2 sell;
     private Status status;
-    public GameObject on_pise;
+    public piece on_pise;
 
     
     public GameObject move_quad;
@@ -34,10 +34,6 @@ public class SellDate : MonoBehaviour
         attack_quad = gameObject.transform.FindChild("attack_quad").gameObject;
     }
 
-    void Update()
-    {
-        
-    }
     public void setMovable(bool _movable)
     {
         is_movable = _movable;

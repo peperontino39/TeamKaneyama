@@ -11,29 +11,17 @@ public class CreateBoard : MonoBehaviour
     public GameObject[] selllist;
     private List<List<SellDate>> map = new List<List<SellDate>>();
     [SerializeField]
-    TextAsset csvFile;
+    TextAsset csvFile = null;
 
     [SerializeField]
-    Team team;
+    Team team = null;
 
-    public List<Castle> castles = new List<Castle>();
 
     void Awake()
     {
         CreateStage();
     }
 
-    void Start()
-    {
-
-
-    }
-
-    void Update()
-    {
-
-
-    }
 
     private void CreateStage()
     {
@@ -69,7 +57,9 @@ public class CreateBoard : MonoBehaviour
 
     }
 
-    public void AllAttack(GameObject _terget_piese)
+    //実際に全体攻撃する関数
+    //攻撃可能マスに攻撃を与える関数
+    public void AllAttack(piece _terget_piese)
     {
         List<piece> anger = new List<piece>();
         foreach (var _line in map)
@@ -109,10 +99,10 @@ public class CreateBoard : MonoBehaviour
                         if (_sell.on_pise != null)
                         {
                             if (ang.team_number !=
-                      _sell.on_pise.GetComponent<piece>().team_number)
+                      _sell.on_pise.team_number)
                             {
 
-                                _sell.on_pise.GetComponent<piece>().damage(ang.counter_attack_power);
+                                _sell.on_pise.damage(ang.counter_attack_power);
 
                             }
                         }
@@ -125,58 +115,36 @@ public class CreateBoard : MonoBehaviour
         }
     }
 
-    public bool CastleAdjacent(Vector2 _sell, int _team_num)
-    {
-        foreach (var castle in castles)
-        {
-            if (_team_num == castle.team_num)
-                continue;
-            for (int y = -1; y <= 1; y++)
-            {
-                for (int x = -1; x <= 1; x++)
-                {
-                    if(_sell == castle.sell + new Vector2(x, y))
-                    {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
-    }
 
-
-    public void AddCastle(Castle _castle)
-    {
-        castles.Add(_castle);
-
-
-
-    }
-    public bool setMovable(Vector2 _sell)
+    public bool setMovable(Vector2 _sell, int team_num)
     {
         if ((int)_sell.y < 0) return false;
         if ((int)_sell.y >= map.Count) return false;
         if ((int)_sell.x < 0) return false;
         if ((int)_sell.x >= map[(int)_sell.y].Count) return false;
-        if (map[(int)_sell.y][(int)_sell.x].GetComponent<SellDate>().on_pise != null)
+        if (map[(int)_sell.y][(int)_sell.x].on_pise != null)
             return false;
 
-        map[(int)_sell.y][(int)_sell.x].GetComponent<SellDate>().setMovable(true);
+        map[(int)_sell.y][(int)_sell.x].setMovable(true);
         return true;
     }
-    public bool setIsAttack(Vector2 _sell)
+    public bool setIsAttack(Vector2 _sell, int team_num)
     {
         if ((int)_sell.y < 0) return false;
         if ((int)_sell.y >= map.Count) return false;
         if ((int)_sell.x < 0) return false;
         if ((int)_sell.x >= map[(int)_sell.y].Count) return false;
-        if (map[(int)_sell.y][(int)_sell.x].GetComponent<SellDate>().on_pise != null)
+
+        if (map[(int)_sell.y][(int)_sell.x].on_pise != null)
         {
-            map[(int)_sell.y][(int)_sell.x].GetComponent<SellDate>().SetAttack(true);
+            if (map[(int)_sell.y][(int)_sell.x].on_pise.team_number != team_num)
+            {
+                map[(int)_sell.y][(int)_sell.x].SetAttack(true);
+            }
             return false;
         }
-        map[(int)_sell.y][(int)_sell.x].GetComponent<SellDate>().SetAttack(true);
+
+        map[(int)_sell.y][(int)_sell.x].SetAttack(true);
         return true;
     }
 
@@ -203,9 +171,9 @@ public class CreateBoard : MonoBehaviour
         }
     }
 
-    public void setOnpise(Vector2 _sell, GameObject piece)
+    public void setOnpise(Vector2 _sell, piece _piece)
     {
-        GameObject picec = map[(int)_sell.y][(int)_sell.x].on_pise = piece;
+        map[(int)_sell.y][(int)_sell.x].on_pise = _piece;
 
     }
 
@@ -224,5 +192,16 @@ public class CreateBoard : MonoBehaviour
         map[(int)_terget.y][(int)_terget.x].on_pise;
         map[(int)_terget.y][(int)_terget.x].on_pise = null;
     }
+
+    public SellDate getSellDate(int x, int y)
+    {
+        return map[x][y];
+    }
+    public SellDate getSellDate(Vector2 _sell)
+    {
+        return map[(int)_sell.x][(int)_sell.y];
+    }
+
+
 
 }
