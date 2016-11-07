@@ -195,11 +195,11 @@ public class CreateBoard : MonoBehaviour
 
     public SellDate getSellDate(int x, int y)
     {
-        return map[x][y];
+        return map[y][x];
     }
     public SellDate getSellDate(Vector2 _sell)
     {
-        return map[(int)_sell.x][(int)_sell.y];
+        return map[(int)_sell.y][(int)_sell.x];
     }
 
 

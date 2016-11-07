@@ -43,6 +43,18 @@ public class Team : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit = new RaycastHit();
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
+            {
+                Debug.Log(hit.collider.gameObject.GetComponent<SellDate>().on_pise);
+                
+
+            }
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -85,7 +97,7 @@ public class Team : MonoBehaviour
                             step++;
                         }
 
-                        GamaManager.Instance.Board.allMovableOff();
+                        //GamaManager.Instance.Board.allMovableOff();
                         break;
                     case Step.ACTIVITY:
 
@@ -122,9 +134,21 @@ public class Team : MonoBehaviour
     public void Siege()
     {
         select_pieces.is_siege = true;
-        
-        ChangeTurn();
-        
+
+        GamaManager.Instance.Board.OnPiceMove(select_pieces.sell, moveSell);
+        select_pieces.setSell(moveSell);
+
+        if (GamaManager.Instance.castles.IsWin(select_pieces))
+        {
+            //Debug.Log((control_team+1) + "の勝利");
+            turn.text = ((control_team + 1) %2) + "の勝利";
+            return;
+        }
+
+        setControlTeam((control_team + 1) % 2);
+        GamaManager.Instance.Board.allAttackOff();
+        step = 0;
+        GamaManager.Instance.command_list.ALLSetInteractable(false);
     }
 
     public void End()
@@ -139,6 +163,7 @@ public class Team : MonoBehaviour
         GamaManager.Instance.Board.allAttackOff();
         select_pieces = null;
         step = 0;
+        GamaManager.Instance.command_list.SetInteractable(CommandList.Command.CANCEL, false);
     }
 
 
