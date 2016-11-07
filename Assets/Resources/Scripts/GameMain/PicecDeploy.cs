@@ -43,13 +43,13 @@ public class PicecDeploy : MonoBehaviour
         CreatePiece(PieceNum.BISOP, 2, 0, 0);
         CreatePiece(PieceNum.BISOP, 6, 0, 0);
         CreatePiece(PieceNum.QUEEN, 3, 0, 0);
-<<<<<<< HEAD
+
         CreatePiece(PieceNum.KING, 4, 0, 0);//
         CreatePiece(PieceNum.JACK, 5, 0, 0);
-=======
+
         CreatePiece(PieceNum.KING, 4, 0, 0);
         CreatePiece(PieceNum.JACK, 5, 4, 0);
->>>>>>> e1be980a2dcc57ce94dc95eb7ce2e92d9a68b7dd
+
 
         CreatePiece(PieceNum.PAWN, 0, 6, 1);
         CreatePiece(PieceNum.PAWN, 1, 6, 1);
