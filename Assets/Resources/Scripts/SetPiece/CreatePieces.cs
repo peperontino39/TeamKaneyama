@@ -1,23 +1,30 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-public class CreatePiece : MonoBehaviour
+public class CreatePieces : MonoBehaviour
 {
 
     [SerializeField]
     GameObject[] pieces;
 
+    [SerializeField]
+    int[] PieceNum;
+
+    [SerializeField]
+    Text[] text;
+
     GameObject select_piece = null;
     // Use this for initialization
     void Start()
     {
-        CreatePieces(PieceNum.PAWN, -0.5f, -2.0f);
+        /*CreatePieces(PieceNum.PAWN, -0.5f, -2.0f);
         CreatePieces(PieceNum.ROOK, 3.0f, -2.0f);
         CreatePieces(PieceNum.BISOP, 6.5f, -2.0f);
         CreatePieces(PieceNum.KNIGHT, 10.0f, -2.0f);
         CreatePieces(PieceNum.QUEEN, 1.0f, -4.0f);
         CreatePieces(PieceNum.KING, 4.5f, -4.0f);
-        CreatePieces(PieceNum.JACK, 8.0f, -4.0f);
+        CreatePieces(PieceNum.JACK, 8.0f, -4.0f);*/
     }
 
     // Update is called once per frame
@@ -69,10 +76,10 @@ public class CreatePiece : MonoBehaviour
 
     }
 
-    public void CreatePieces(PieceNum _piece, float x, float y)
+    /*public void CreatePieces(PieceNum _piece, float x, float y)
     {
         GameObject obj = Instantiate(pieces[(int)_piece]);
         Vector3 piecePos = new Vector3(x, y, 4.9f);
         obj.transform.position = piecePos;
-    }
+    }*/
 }
