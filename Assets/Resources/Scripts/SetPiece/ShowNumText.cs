@@ -4,11 +4,11 @@ using System.Collections;
 
 public class ShowNumText : MonoBehaviour {
 
-    static ShowNumText instance;
+    /*static ShowNumText instance;
     public static ShowNumText Instance
     {
         get { return instance; }
-    }
+    }*/
 
     [SerializeField]
     int PieceNum;
@@ -16,10 +16,10 @@ public class ShowNumText : MonoBehaviour {
     [SerializeField]
     Text PieceNumText;
 
-    void Awake()
-    {
-        instance = this;
-    }
+    //void Awake()
+    //{
+    //    instance = this;
+    //}
 
     // Use this for initialization
     void Start () {
@@ -28,6 +28,6 @@ public class ShowNumText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        
+    }
 }

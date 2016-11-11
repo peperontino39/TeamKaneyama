@@ -22,7 +22,8 @@ GameObject:
   - 33: {fileID: 33000011813723736}
   - 65: {fileID: 65000011890556424}
   - 23: {fileID: 23000012005626820}
-  m_Layer: 0
+  - 114: {fileID: 114000011534267152}
+  m_Layer: 9
   m_Name: Setknight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1000010414347138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 0.1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,3 +91,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114000011534267152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010414347138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953da4c97a2e0624ea6231db8515f7b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
