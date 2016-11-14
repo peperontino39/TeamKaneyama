@@ -2,23 +2,28 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class CreateRook : MonoBehaviour {
+public class CreateQueen : MonoBehaviour {
 
     [SerializeField]
-    GameObject rookPieces;
+    GameObject queenPieces;
 
     [SerializeField]
-    int rookPieceNum;
+    int queenPieceNum;
 
     [SerializeField]
-    Text rooktext;
+    Text queentext;
 
     GameObject select_piece = null;
+
+    //BordManager bordManager;
+
     // Use this for initialization
     void Start()
     {
-        CreatePieces(3.5f, -2.0f);
-        rooktext.text = "×" + rookPieceNum.ToString();
+        CreatePieces(1.9f, -3.5f);
+        queentext.text = "×" + queenPieceNum.ToString();
+
+        //bordManager = 
     }
 
     // Update is called once per frame
@@ -27,13 +32,13 @@ public class CreateRook : MonoBehaviour {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit = new RaycastHit();
 
-        if (rookPieceNum != 0)
+        if (queenPieceNum != 0)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 9))
                 {
-                    if(hit.collider.gameObject.name == "Setrook(Clone)")
+                    if (hit.collider.gameObject.name == "Setqueen(Clone)")
                         select_piece = Instantiate(hit.collider.gameObject);
                 }
             }
@@ -56,8 +61,8 @@ public class CreateRook : MonoBehaviour {
                             select_piece.transform.position = hit.collider.gameObject.transform.position + new Vector3(0, 0, -0.1f);
                             select_piece.layer = LayerMask.NameToLayer("Default");
                             //hit.collider.gameObject.GetComponent<SellDate>().on_pise = select_piece;
-                            rookPieceNum -= 1;
-                            rooktext.text = "×" + rookPieceNum.ToString();
+                            queenPieceNum -= 1;
+                            queentext.text = "×" + queenPieceNum.ToString();
                         }
                         else
                         {
@@ -72,13 +77,13 @@ public class CreateRook : MonoBehaviour {
                 }
             }
         }
-       
+
 
     }
 
     public void CreatePieces(float x, float y)
     {
-        GameObject obj = Instantiate(rookPieces);
+        GameObject obj = Instantiate(queenPieces);
         Vector3 piecePos = new Vector3(x, y, 4.9f);
         obj.transform.position = piecePos;
     }
