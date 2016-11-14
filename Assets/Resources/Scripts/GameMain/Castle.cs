@@ -10,6 +10,11 @@ public class Castle : MonoBehaviour {
 
     public int team_num;
 
+    public bool is_open = false;
+    public bool is_in_piece = false;
+
+
+
     public void SetSell(Vector2 _sell)
     {
         transform.position = GamaManager.Instance.Board.getSellPosition(_sell);

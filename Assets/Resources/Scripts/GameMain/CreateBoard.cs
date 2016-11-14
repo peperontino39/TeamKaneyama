@@ -13,8 +13,7 @@ public class CreateBoard : MonoBehaviour
     [SerializeField]
     TextAsset csvFile = null;
 
-    [SerializeField]
-    Team team = null;
+
 
 
     void Awake()
@@ -56,6 +55,33 @@ public class CreateBoard : MonoBehaviour
         }
 
     }
+
+    //攻撃可能範囲に敵がいたらtrueを返します
+    public bool IsAttackAreanEnemy(piece _piece)
+    {
+        _piece.OnAttackArea(_piece.sell);
+        foreach (var line in map)
+        {
+            foreach (var _sell in line)
+            {
+                if (_sell.is_attack)
+                {
+                    if (_sell.on_pise != null)
+                    {
+                        if (_sell.on_pise.team_number != _piece.team_number)
+                        {
+                            allAttackOff();
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        allAttackOff();
+        return false;
+    }
+
+
 
     //実際に全体攻撃する関数
     //攻撃可能マスに攻撃を与える関数
@@ -115,7 +141,33 @@ public class CreateBoard : MonoBehaviour
         }
     }
 
+    //指定した範囲にほかのチームの駒が何体いるのか？
+    public int getTeamNum(Vector2 start_sell, Vector2 size, int team_num)
+    {
+        int num = 0;
+        for (int y = (int)start_sell.y; y < size.y; y++)
+        {
 
+            for (int x = (int)start_sell.x; x <size.x ; x++)
+            {
+               // Debug.Log(x.ToString() + "  " + y.ToString());
+                if (map[y][x].on_pise != null)
+                {
+                    if (map[y][x].on_pise.team_number != team_num)
+                    {
+                        num++;
+                    }
+                }
+            }
+        }
+
+        return num;
+    }
+
+    public void setMovable(Vector2 _sell)
+    {
+        map[(int)_sell.y][(int)_sell.x].setMovable(true);
+    }
     public bool setMovable(Vector2 _sell, int team_num)
     {
         if ((int)_sell.y < 0) return false;
@@ -126,8 +178,23 @@ public class CreateBoard : MonoBehaviour
             return false;
         foreach (var cas in GamaManager.Instance.castles.castles)
         {
-            if (_sell == cas.sell) return false;
+            if (_sell == cas.sell)
+            {
+                if (GamaManager.Instance.team.select_pieces.piece_num == PieceNum.KING)
+                {
+                    if (cas.team_num == team_num)
+                    {
+                        if (cas.is_open)
+                        {
+                            map[(int)_sell.y][(int)_sell.x].setMovable(true);
+                            return false;
+                        }
+                    }
+                }
+                return false;
+            }
         }
+
 
         map[(int)_sell.y][(int)_sell.x].setMovable(true);
         return true;
@@ -147,6 +214,11 @@ public class CreateBoard : MonoBehaviour
             if (map[(int)_sell.y][(int)_sell.x].on_pise.team_number != team_num)
             {
                 map[(int)_sell.y][(int)_sell.x].SetAttack(true);
+            }
+            if (_sell == GamaManager.Instance.team.select_pieces.sell)
+            {
+                map[(int)_sell.y][(int)_sell.x].SetAttack(true);
+                return true;
             }
             return false;
         }
@@ -197,6 +269,7 @@ public class CreateBoard : MonoBehaviour
     {
         map[(int)go_selll.y][(int)go_selll.x].on_pise =
         map[(int)_terget.y][(int)_terget.x].on_pise;
+        if (_terget == go_selll) return;
         map[(int)_terget.y][(int)_terget.x].on_pise = null;
     }
 

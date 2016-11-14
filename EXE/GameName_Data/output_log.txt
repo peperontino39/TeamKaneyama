@@ -1,0 +1,118 @@
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R7 M270 (ID=0x6604)
+    Vendor:   ATI
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.058 seconds
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\System.dll (this message is harmless)
+desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.604559 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1f64 -> priority: 1 
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 19.163620 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 246.
+Total: 0.743263 ms (FindLiveObjects: 0.046186 ms CreateObjectMapping: 0.056022 ms MarkObjects: 0.608124 ms  DeleteObjects: 0.031646 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.295792 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 311.
+Total: 1.411687 ms (FindLiveObjects: 0.205274 ms CreateObjectMapping: 0.101354 ms MarkObjects: 1.043048 ms  DeleteObjects: 0.060299 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.755521 ms
+
+Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 1827.
+Total: 1.092656 ms (FindLiveObjects: 0.141125 ms CreateObjectMapping: 0.163791 ms MarkObjects: 0.754382 ms  DeleteObjects: 0.032501 ms)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+

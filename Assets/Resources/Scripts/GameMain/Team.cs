@@ -1,12 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
+
+public struct Area
+{
+    public Vector2 pos;
+    public Vector2 size;
+
+}
 
 public class Team : MonoBehaviour
 {
+    public List<Area> teamArea = new List<Area>
+    {
+        new Area() {
+            pos = new Vector2(0,0),
+            size = new Vector2(9,3)},
+    new Area() {
+        pos = new Vector2(0,6),
+        size = new Vector2(9,9)}
+
+    };
+
+
 
     [SerializeField]
-    piece select_pieces = null;
+    public piece select_pieces = null;
     [SerializeField]
     Text select_status = null;
     [SerializeField]
@@ -16,13 +36,26 @@ public class Team : MonoBehaviour
 
     private int control_team;
     private Vector2 moveSell;
-    // public SellDate select_sell;
 
 
     public void setControlTeam(int _num)
     {
         control_team = _num;
         turn.text = "現在はチーム" + (control_team + 1) + "です";
+
+        Debug.Log(GamaManager.Instance.Board.getTeamNum(
+                teamArea[control_team].pos,
+            teamArea[control_team].size,
+            control_team));
+        
+        if (
+            GamaManager.Instance.Board.getTeamNum(
+                teamArea[control_team].pos,
+            teamArea[control_team].size,
+            control_team) >= 2)
+        {
+            GamaManager.Instance.castles.SetOpen(control_team, true);
+        }
     }
 
 
@@ -53,7 +86,6 @@ public class Team : MonoBehaviour
             {
                 Debug.Log(hit.collider.gameObject.GetComponent<SellDate>().on_pise);
 
-
             }
         }
 
@@ -69,10 +101,28 @@ public class Team : MonoBehaviour
                 {
                     case Step.SERECT:
                         select_pieces = _sell.on_pise;
+
                         if (select_pieces != null)
                         {
                             if (select_pieces.team_number == control_team)
                             {
+                                //攻撃範囲にてきがいた場合足踏みができる処理
+                                if (GamaManager.Instance.Board.IsAttackAreanEnemy(select_pieces))
+                                {
+                                    GamaManager.Instance.Board.setMovable(select_pieces.sell);
+                                }
+                                //選択されたマスが城だったら
+                                if (GamaManager.Instance.castles.isCatles(select_pieces.sell))
+                                {
+                                    GamaManager.Instance.command_list.SetInteractable(CommandList.Command.EXITCASTLE, true);
+                                    GamaManager.Instance.command_list.SetInteractable(CommandList.Command.CANCEL, true);
+
+                                    setUiStatus(select_pieces);
+                                    step++;
+
+                                    break;
+
+                                }
                                 if (!select_pieces.is_siege)
                                 {
                                     setUiStatus(select_pieces);
@@ -80,13 +130,25 @@ public class Team : MonoBehaviour
                                     step++;
                                     GamaManager.Instance.command_list.SetInteractable(CommandList.Command.CANCEL, true);
                                 }
+
                             }
                         }
                         break;
                     case Step.MOVE:
                         if (_sell.is_movable)
                         {
+
+                            if (GamaManager.Instance.castles.isCatles(_sell.sell))
+                            {
+                                GamaManager.Instance.command_list.SetInteractable(CommandList.Command.INCASTLE, true);
+                                step++;
+                                moveSell = _sell.sell;
+                                break;
+                            }
+
+
                             moveSell = _sell.sell;
+                            //包囲可能だったら
                             if (GamaManager.Instance.castles.CastleAdjacent(moveSell, select_pieces.team_number))
                             {
                                 GamaManager.Instance.command_list.SetInteractable(CommandList.Command.SIEGE, true);
@@ -99,9 +161,6 @@ public class Team : MonoBehaviour
                             step++;
                             GamaManager.Instance.Board.allMovableOff();
                         }
-
-
-                        GamaManager.Instance.Board.allMovableOff();
 
                         break;
                     case Step.ACTIVITY:
@@ -143,10 +202,12 @@ public class Team : MonoBehaviour
         select_pieces.setSell(moveSell);
         setControlTeam((control_team + 1) % 2);
         GamaManager.Instance.Board.allAttackOff();
+        GamaManager.Instance.Board.allMovableOff();
+
         step = 0;
         GamaManager.Instance.command_list.ALLSetInteractable(false);
     }
-
+    //包囲
     public void Siege()
     {
         select_pieces.is_siege = true;
@@ -161,22 +222,21 @@ public class Team : MonoBehaviour
             turn.text = ((control_team + 1) % 2) + "の勝利";
             return;
         }
-        
 
 
-        setControlTeam((control_team + 1) % 2);
+
         GamaManager.Instance.Board.allAttackOff();
         step = 0;
         GamaManager.Instance.command_list.ALLSetInteractable(false);
 
         ChangeTurn();
-        
+
 
     }
 
     public void End()
     {
-         ChangeTurn();
+        ChangeTurn();
     }
 
     public void Cancel()
@@ -189,6 +249,17 @@ public class Team : MonoBehaviour
         GamaManager.Instance.command_list.ALLSetInteractable(false);
 
     }
+    public void InCastle()
+    {
+        ChangeTurn();
+
+    }
+
+    public void ExitCastle()
+    {
+        select_pieces.OnMoveArea();
+    }
+
 
 
     public void setUiStatus(piece _piece)

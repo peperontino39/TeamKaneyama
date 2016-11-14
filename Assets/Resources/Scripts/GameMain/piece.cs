@@ -3,15 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine.UI;
-
+using System.Text;
+using System;
 public class piece : MonoBehaviour
 {
     public PieceNum piece_num;
-   //現在のsell
+    //現在のsell
     public Vector2 sell = Vector2.zero;
 
     [SerializeField]
     TextAsset CharacterDataCSV = null;
+    public string file_name;
     [SerializeField]
     Slider hp_ber = null;
 
@@ -30,7 +32,7 @@ public class piece : MonoBehaviour
         transform.position = GamaManager.Instance.Board.getSellPosition(_sell);
         sell = _sell;
     }
-    
+
 
     void Start()
     {
@@ -42,53 +44,57 @@ public class piece : MonoBehaviour
 
     public void OnMoveArea()
     {
-        foreach(var area in move_areas)
+        foreach (var area in move_areas)
         {
             area.setMoveOn(this);
         }
     }
     public void OnAttackArea(Vector2 _sell)
     {
-       
+
         foreach (var area in attack_areas)
         {
-            area.SetAttackOn(this,_sell);
+            area.SetAttackOn(this, _sell);
         }
     }
 
     public void damage(int _damage = 0)
     {
         life -= _damage;
-        hp_ber.value = (float)life / (float)max_hp; 
-        if(life  <= 0)
+        hp_ber.value = (float)life / (float)max_hp;
+        if (life <= 0)
         {
             Destroy(gameObject);
         }
     }
-
+    
     private void LoadCharacterDate()
     {
-        StringReader reader = new StringReader(CharacterDataCSV.text);
+        //StringReader reader = new StringReader(CharacterDataCSV.text);
+        
+        var sr = new StreamReader(Application.streamingAssetsPath + "/" + file_name + ".csv");
+       
 
-        string[] fields = reader.ReadLine().Split(',');
+        string[] fields = sr.ReadLine().Split(',');
         max_hp = life = int.Parse(fields[1]);
-        fields = reader.ReadLine().Split(',');
+        fields = sr.ReadLine().Split(',');
         attack_power = int.Parse(fields[1]);
-        fields = reader.ReadLine().Split(',');
+        fields = sr.ReadLine().Split(',');
         counter_attack_power = int.Parse(fields[1]);
-        reader.ReadLine();
+        sr.ReadLine();
 
         string text = "";
-        while ((text = reader.ReadLine()) != "U")
+        while ((text = sr.ReadLine()) != "�U���͈�")
         {
-            
-           AddMoveAreas(text.Split(','));
+            AddMoveAreas(text.Split(','));
         }
-        while ((text = reader.ReadLine()) != null)
+
+        while ((text = sr.ReadLine()) != null)
         {
             AddAttackAreas(text.Split(','));
         }
     }
+
 
     private void AddAttackAreas(string[] fields)
     {

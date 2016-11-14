@@ -47,7 +47,6 @@ public class PicecDeploy : MonoBehaviour
         CreatePiece(PieceNum.KING, 4, 0, 0);//
         CreatePiece(PieceNum.JACK, 5, 0, 0);
 
-        CreatePiece(PieceNum.KING, 4, 0, 0);
         //CreatePiece(PieceNum.JACK, 5, 4, 0);
 
 

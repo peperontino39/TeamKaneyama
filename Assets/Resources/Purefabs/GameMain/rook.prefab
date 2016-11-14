@@ -247,15 +247,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9d2ba07b91da84aa8e1b458282d9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  board: {fileID: 0}
+  piece_num: 0
   sell: {x: 3, y: 3}
   CharacterDataCSV: {fileID: 4900000, guid: 51af90798a4d4894db987b8927b2e0d4, type: 3}
+  file_name: rook
   hp_ber: {fileID: 114000012869854572}
   max_hp: 0
   life: 0
   attack_power: 0
   counter_attack_power: 0
   team_number: 0
+  is_siege: 0
 --- !u!114 &114000012869854572
 MonoBehaviour:
   m_ObjectHideFlags: 1

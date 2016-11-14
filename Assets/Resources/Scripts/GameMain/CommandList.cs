@@ -17,7 +17,8 @@ public class CommandList : MonoBehaviour
         END,
         SIEGE,
         CANCEL,
-        INCASTLE
+        INCASTLE,
+        EXITCASTLE
     }
     void Start()
     {
@@ -32,7 +33,7 @@ public class CommandList : MonoBehaviour
         }
     }
 
-    public void SetInteractable(Command com,bool _is)
+    public void SetInteractable(Command com, bool _is)
     {
         command_list[(int)com].GetComponent<Button>().interactable = _is;
     }
