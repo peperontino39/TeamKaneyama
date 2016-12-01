@@ -43,10 +43,10 @@ public class Team : MonoBehaviour
         control_team = _num;
         turn.text = "現在はチーム" + (control_team + 1) + "です";
 
-        Debug.Log(GamaManager.Instance.Board.getTeamNum(
-                teamArea[control_team].pos,
-            teamArea[control_team].size,
-            control_team));
+        //Debug.Log(GamaManager.Instance.Board.getTeamNum(
+        //        teamArea[control_team].pos,
+        //    teamArea[control_team].size,
+        //    control_team));
         
         if (
             GamaManager.Instance.Board.getTeamNum(

@@ -6,111 +6,43 @@ Direct3D:
     Vendor:   ATI
     VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.058 seconds
-Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.084 seconds
+Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\System.dll (this message is harmless)
 desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.604559 ms
+UnloadTime: 1.085814 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1f64 -> priority: 1 
+  Thread -> id: 556c -> priority: 1 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 19.163620 ms
+UnloadTime: 5.847317 ms
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 246.
-Total: 0.743263 ms (FindLiveObjects: 0.046186 ms CreateObjectMapping: 0.056022 ms MarkObjects: 0.608124 ms  DeleteObjects: 0.031646 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.295792 ms
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 311.
-Total: 1.411687 ms (FindLiveObjects: 0.205274 ms CreateObjectMapping: 0.101354 ms MarkObjects: 1.043048 ms  DeleteObjects: 0.060299 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 247.
+Total: 0.304917 ms (FindLiveObjects: 0.021810 ms CreateObjectMapping: 0.024803 ms MarkObjects: 0.245045 ms  DeleteObjects: 0.012829 ms)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.755521 ms
+UnloadTime: 0.566642 ms
 
-Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 1827.
-Total: 1.092656 ms (FindLiveObjects: 0.141125 ms CreateObjectMapping: 0.163791 ms MarkObjects: 0.754382 ms  DeleteObjects: 0.032501 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 312.
+Total: 0.286956 ms (FindLiveObjects: 0.026942 ms CreateObjectMapping: 0.027369 ms MarkObjects: 0.217676 ms  DeleteObjects: 0.014540 ms)
 
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.663719 ms
 
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 1836.
+Total: 0.706484 ms (FindLiveObjects: 0.094511 ms CreateObjectMapping: 0.078688 ms MarkObjects: 0.513185 ms  DeleteObjects: 0.019672 ms)
 
 0
  
