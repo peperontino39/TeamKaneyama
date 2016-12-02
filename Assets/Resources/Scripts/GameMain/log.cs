@@ -16,14 +16,7 @@ public class log : MonoBehaviour
     void Start()
     {
         text.text = "";
-
-        addText("hbjhuyg");
-        addText("hbjhuyg");
-        addText("hbjhuyg");
-        addText("hbjhuyg");
-        addText("hbjhuyg");
-        addText("hbjhuyg");
-
+        
     }
 
 
@@ -32,7 +25,7 @@ public class log : MonoBehaviour
         logTexts.Add(_text);
         if(logTexts.Count > maxlog)
         {
-            logTexts.RemoveAt(maxlog);
+            logTexts.RemoveAt(0);
         }
         string rizarut = "";
         foreach (var ch in logTexts)
@@ -40,7 +33,6 @@ public class log : MonoBehaviour
             rizarut += ch;
             rizarut += "\n";
         }
-        Debug.Log(rizarut);
         text.text = rizarut;
 
     }
