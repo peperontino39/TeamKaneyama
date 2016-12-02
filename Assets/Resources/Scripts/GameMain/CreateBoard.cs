@@ -112,6 +112,11 @@ public class CreateBoard : MonoBehaviour
             }
         }
         allAttackOff();
+        GamaManager.Instance.movieDate.damagePiece = new List<piece>(anger);
+        GamaManager.Instance.movieDate.movePiece = new List<piece>() { _terget_piese };
+        GamaManager.Instance.movieDate.attackPiece = new List<piece>() { _terget_piese };
+
+        List<piece> _counterPiece = new List<piece>();
         //反撃の処理
         foreach (var ang in anger)
         {
@@ -124,12 +129,16 @@ public class CreateBoard : MonoBehaviour
                     {
                         if (_sell.on_pise != null)
                         {
-                            if (ang.team_number !=
-                      _sell.on_pise.team_number)
+                            if (ang.team_number !=_sell.on_pise.team_number)
                             {
                                 if (_sell.on_pise == _terget_piese)
+                                {
                                     if (ang.life > 0)
+                                    {
                                         _sell.on_pise.damage(ang.counter_attack_power);
+                                        _counterPiece.Add(ang);
+                                    }
+                                }
                             }
                         }
                     }
@@ -139,6 +148,8 @@ public class CreateBoard : MonoBehaviour
             }
             allAttackOff();
         }
+        GamaManager.Instance.movieDate.counterPiece = new List<piece>(_counterPiece);
+
     }
 
     //指定した範囲にほかのチームの駒が何体いるのか？
@@ -148,9 +159,9 @@ public class CreateBoard : MonoBehaviour
         for (int y = (int)start_sell.y; y < size.y; y++)
         {
 
-            for (int x = (int)start_sell.x; x <size.x ; x++)
+            for (int x = (int)start_sell.x; x < size.x; x++)
             {
-               // Debug.Log(x.ToString() + "  " + y.ToString());
+                // Debug.Log(x.ToString() + "  " + y.ToString());
                 if (map[y][x].on_pise != null)
                 {
                     if (map[y][x].on_pise.team_number != team_num)

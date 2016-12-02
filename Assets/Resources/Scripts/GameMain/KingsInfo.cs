@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
+//王様の情報を管理するクラス
 public class KingsInfo : MonoBehaviour {
-
+    
     public List<piece> kings;
+
 	public int WinTeam()
     {
        foreach(var king in kings)

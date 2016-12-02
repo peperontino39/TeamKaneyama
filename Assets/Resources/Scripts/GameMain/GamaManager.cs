@@ -18,6 +18,9 @@ public class GamaManager : MonoBehaviour
     [SerializeField]
     public KingsInfo kings_info;
 
+    //ムービーに使う情報
+    public MoveDate movieDate = new MoveDate();
+
 
 
 
