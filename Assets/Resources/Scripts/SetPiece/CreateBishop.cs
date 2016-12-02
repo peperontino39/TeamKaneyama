@@ -2,23 +2,23 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class CreateRook : MonoBehaviour {
+public class CreateBishop : MonoBehaviour {
 
     [SerializeField]
-    GameObject rookPieces;
+    GameObject bishopPieces;
 
     [SerializeField]
-    int rookPieceNum;
+    int bishopPieceNum;
 
     [SerializeField]
-    Text rooktext;
+    Text bishoptext;
 
     GameObject select_piece = null;
     // Use this for initialization
     void Start()
     {
-        CreatePieces(3.5f, -2.0f);
-        rooktext.text = "×" + rookPieceNum.ToString();
+        CreatePieces(6.25f, -2.0f);
+        bishoptext.text = "×" + bishopPieceNum.ToString();
     }
 
     // Update is called once per frame
@@ -27,13 +27,13 @@ public class CreateRook : MonoBehaviour {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit = new RaycastHit();
 
-        if (rookPieceNum != 0)
+        if (bishopPieceNum != 0)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 9))
                 {
-                    if(hit.collider.gameObject.name == "Setrook(Clone)")
+                    if (hit.collider.gameObject.name == "Setbishop(Clone)")
                         select_piece = Instantiate(hit.collider.gameObject);
                 }
             }
@@ -56,8 +56,8 @@ public class CreateRook : MonoBehaviour {
                             select_piece.transform.position = hit.collider.gameObject.transform.position + new Vector3(0, 0, -0.1f);
                             select_piece.layer = LayerMask.NameToLayer("Default");
                             //hit.collider.gameObject.GetComponent<SellDate>().on_pise = select_piece;
-                            rookPieceNum -= 1;
-                            rooktext.text = "×" + rookPieceNum.ToString();
+                            bishopPieceNum -= 1;
+                            bishoptext.text = "×" + bishopPieceNum.ToString();
                         }
                         else
                         {
@@ -72,13 +72,13 @@ public class CreateRook : MonoBehaviour {
                 }
             }
         }
-       
+
 
     }
 
     public void CreatePieces(float x, float y)
     {
-        GameObject obj = Instantiate(rookPieces);
+        GameObject obj = Instantiate(bishopPieces);
         Vector3 piecePos = new Vector3(x, y, 4.9f);
         obj.transform.position = piecePos;
     }

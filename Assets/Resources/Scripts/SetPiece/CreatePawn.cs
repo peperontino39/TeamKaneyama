@@ -6,20 +6,20 @@ public class CreatePawn : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject pieces;
+    GameObject pownPieces;
 
     [SerializeField]
-    int PieceNum;
+    int pownPieceNum;
 
     [SerializeField]
-    Text text;
+    Text powntext;
 
     GameObject select_piece = null;
     // Use this for initialization
     void Start()
     {
-        CreatePieces(-0.5f, -2.0f);
-        text.text = "×" + PieceNum.ToString();
+        CreatePieces(0.5f, -2.0f);
+        powntext.text = "×" + pownPieceNum.ToString();
     }
 
     // Update is called once per frame
@@ -28,13 +28,14 @@ public class CreatePawn : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit = new RaycastHit();
 
-        if (PieceNum != 0)
+        if (pownPieceNum != 0)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 9))
                 {
-                    select_piece = Instantiate(hit.collider.gameObject);
+                    if(hit.collider.gameObject.name == "Setpawn(Clone)")
+                        select_piece = Instantiate(hit.collider.gameObject);
                 }
             }
             if (select_piece)
@@ -57,8 +58,8 @@ public class CreatePawn : MonoBehaviour
                             select_piece.transform.position = hit.collider.gameObject.transform.position + new Vector3(0, 0, -0.1f);
                             select_piece.layer = LayerMask.NameToLayer("Default");
                             //hit.collider.gameObject.GetComponent<SellDate>().on_pise = select_piece;
-                            PieceNum -= 1;
-                            text.text = "×" + PieceNum.ToString();
+                            pownPieceNum -= 1;
+                            powntext.text = "×" + pownPieceNum.ToString();
                         }
                         else
                         {
@@ -77,7 +78,7 @@ public class CreatePawn : MonoBehaviour
 
     public void CreatePieces(float x, float y)
     {
-        GameObject obj = Instantiate(pieces);
+        GameObject obj = Instantiate(pownPieces);
         Vector3 piecePos = new Vector3(x, y, 4.9f);
         obj.transform.position = piecePos;
     }
