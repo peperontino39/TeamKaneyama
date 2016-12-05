@@ -5,9 +5,8 @@ public class CamraControl : MonoBehaviour {
 
     public Vector2 angle;
 	void Start () {
-    
 
-
+        angle = new Vector2(44.0f,-90.0f);
 
     }
 

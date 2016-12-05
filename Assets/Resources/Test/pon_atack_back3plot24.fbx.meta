@@ -1,0 +1,373 @@
+fileFormatVersion: 2
+guid: c3d5f18c9ce5aef428815b78827eb73c
+timeCreated: 1480911676
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Character4_Head
+    100002: Character4_Hips
+    100004: Character4_LeftArm
+    100006: Character4_LeftFoot
+    100008: Character4_LeftForeArm
+    100010: Character4_LeftHand
+    100012: Character4_LeftHandIndex1
+    100014: Character4_LeftHandIndex2
+    100016: Character4_LeftHandIndex3
+    100018: Character4_LeftHandIndex4
+    100020: Character4_LeftHandMiddle1
+    100022: Character4_LeftHandMiddle2
+    100024: Character4_LeftHandMiddle3
+    100026: Character4_LeftHandMiddle4
+    100028: Character4_LeftHandPinky1
+    100030: Character4_LeftHandPinky2
+    100032: Character4_LeftHandPinky3
+    100034: Character4_LeftHandPinky4
+    100036: Character4_LeftHandRing1
+    100038: Character4_LeftHandRing2
+    100040: Character4_LeftHandRing3
+    100042: Character4_LeftHandRing4
+    100044: Character4_LeftHandThumb1
+    100046: Character4_LeftHandThumb2
+    100048: Character4_LeftHandThumb3
+    100050: Character4_LeftHandThumb4
+    100052: Character4_LeftLeg
+    100054: Character4_LeftShoulder
+    100056: Character4_LeftToeBase
+    100058: Character4_LeftUpLeg
+    100060: Character4_Neck
+    100062: Character4_Reference
+    100064: Character4_RightArm
+    100066: Character4_RightFoot
+    100068: Character4_RightForeArm
+    100070: Character4_RightHand
+    100072: Character4_RightHandIndex1
+    100074: Character4_RightHandIndex2
+    100076: Character4_RightHandIndex3
+    100078: Character4_RightHandIndex4
+    100080: Character4_RightHandMiddle1
+    100082: Character4_RightHandMiddle2
+    100084: Character4_RightHandMiddle3
+    100086: Character4_RightHandMiddle4
+    100088: Character4_RightHandPinky1
+    100090: Character4_RightHandPinky2
+    100092: Character4_RightHandPinky3
+    100094: Character4_RightHandPinky4
+    100096: Character4_RightHandRing1
+    100098: Character4_RightHandRing2
+    100100: Character4_RightHandRing3
+    100102: Character4_RightHandRing4
+    100104: Character4_RightHandThumb1
+    100106: Character4_RightHandThumb2
+    100108: Character4_RightHandThumb3
+    100110: Character4_RightHandThumb4
+    100112: Character4_RightLeg
+    100114: Character4_RightShoulder
+    100116: Character4_RightToeBase
+    100118: Character4_RightUpLeg
+    100120: Character4_Spine
+    100122: Character4_Spine1
+    100124: Cylinder
+    100126: Cylinder 1
+    100128: HumanBody
+    100130: //RootNode
+    400000: Character4_Head
+    400002: Character4_Hips
+    400004: Character4_LeftArm
+    400006: Character4_LeftFoot
+    400008: Character4_LeftForeArm
+    400010: Character4_LeftHand
+    400012: Character4_LeftHandIndex1
+    400014: Character4_LeftHandIndex2
+    400016: Character4_LeftHandIndex3
+    400018: Character4_LeftHandIndex4
+    400020: Character4_LeftHandMiddle1
+    400022: Character4_LeftHandMiddle2
+    400024: Character4_LeftHandMiddle3
+    400026: Character4_LeftHandMiddle4
+    400028: Character4_LeftHandPinky1
+    400030: Character4_LeftHandPinky2
+    400032: Character4_LeftHandPinky3
+    400034: Character4_LeftHandPinky4
+    400036: Character4_LeftHandRing1
+    400038: Character4_LeftHandRing2
+    400040: Character4_LeftHandRing3
+    400042: Character4_LeftHandRing4
+    400044: Character4_LeftHandThumb1
+    400046: Character4_LeftHandThumb2
+    400048: Character4_LeftHandThumb3
+    400050: Character4_LeftHandThumb4
+    400052: Character4_LeftLeg
+    400054: Character4_LeftShoulder
+    400056: Character4_LeftToeBase
+    400058: Character4_LeftUpLeg
+    400060: Character4_Neck
+    400062: Character4_Reference
+    400064: Character4_RightArm
+    400066: Character4_RightFoot
+    400068: Character4_RightForeArm
+    400070: Character4_RightHand
+    400072: Character4_RightHandIndex1
+    400074: Character4_RightHandIndex2
+    400076: Character4_RightHandIndex3
+    400078: Character4_RightHandIndex4
+    400080: Character4_RightHandMiddle1
+    400082: Character4_RightHandMiddle2
+    400084: Character4_RightHandMiddle3
+    400086: Character4_RightHandMiddle4
+    400088: Character4_RightHandPinky1
+    400090: Character4_RightHandPinky2
+    400092: Character4_RightHandPinky3
+    400094: Character4_RightHandPinky4
+    400096: Character4_RightHandRing1
+    400098: Character4_RightHandRing2
+    400100: Character4_RightHandRing3
+    400102: Character4_RightHandRing4
+    400104: Character4_RightHandThumb1
+    400106: Character4_RightHandThumb2
+    400108: Character4_RightHandThumb3
+    400110: Character4_RightHandThumb4
+    400112: Character4_RightLeg
+    400114: Character4_RightShoulder
+    400116: Character4_RightToeBase
+    400118: Character4_RightUpLeg
+    400120: Character4_Spine
+    400122: Character4_Spine1
+    400124: Cylinder
+    400126: Cylinder 1
+    400128: HumanBody
+    400130: //RootNode
+    2300000: Cylinder
+    2300002: Cylinder 1
+    3300000: Cylinder
+    3300002: Cylinder 1
+    4300000: HumanBody
+    4300002: Cylinder
+    4300004: Cylinder 1
+    7400000: Take 003
+    9500000: //RootNode
+    13700000: HumanBody
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 003
+      takeName: Take 003
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Character4_Reference
+        weight: 1
+      - path: Character4_Reference/Character4_Hips
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_LeftUpLeg
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_LeftUpLeg/Character4_LeftLeg
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_LeftUpLeg/Character4_LeftLeg/Character4_LeftFoot
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_LeftUpLeg/Character4_LeftLeg/Character4_LeftFoot/Character4_LeftToeBase
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_RightUpLeg
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_RightUpLeg/Character4_RightLeg
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_RightUpLeg/Character4_RightLeg/Character4_RightFoot
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_RightUpLeg/Character4_RightLeg/Character4_RightFoot/Character4_RightToeBase
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandIndex1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandIndex1/Character4_LeftHandIndex2
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandIndex1/Character4_LeftHandIndex2/Character4_LeftHandIndex3
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandIndex1/Character4_LeftHandIndex2/Character4_LeftHandIndex3/Character4_LeftHandIndex4
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandMiddle1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandMiddle1/Character4_LeftHandMiddle2
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandMiddle1/Character4_LeftHandMiddle2/Character4_LeftHandMiddle3
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandMiddle1/Character4_LeftHandMiddle2/Character4_LeftHandMiddle3/Character4_LeftHandMiddle4
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandPinky1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandPinky1/Character4_LeftHandPinky2
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandPinky1/Character4_LeftHandPinky2/Character4_LeftHandPinky3
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandPinky1/Character4_LeftHandPinky2/Character4_LeftHandPinky3/Character4_LeftHandPinky4
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandRing1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandRing1/Character4_LeftHandRing2
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandRing1/Character4_LeftHandRing2/Character4_LeftHandRing3
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandRing1/Character4_LeftHandRing2/Character4_LeftHandRing3/Character4_LeftHandRing4
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandThumb1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandThumb1/Character4_LeftHandThumb2
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandThumb1/Character4_LeftHandThumb2/Character4_LeftHandThumb3
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_LeftShoulder/Character4_LeftArm/Character4_LeftForeArm/Character4_LeftHand/Character4_LeftHandThumb1/Character4_LeftHandThumb2/Character4_LeftHandThumb3/Character4_LeftHandThumb4
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_Neck
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_Neck/Character4_Head
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandIndex1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandIndex1/Character4_RightHandIndex2
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandIndex1/Character4_RightHandIndex2/Character4_RightHandIndex3
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandIndex1/Character4_RightHandIndex2/Character4_RightHandIndex3/Character4_RightHandIndex4
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandMiddle1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandMiddle1/Character4_RightHandMiddle2
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandMiddle1/Character4_RightHandMiddle2/Character4_RightHandMiddle3
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandMiddle1/Character4_RightHandMiddle2/Character4_RightHandMiddle3/Character4_RightHandMiddle4
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandPinky1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandPinky1/Character4_RightHandPinky2
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandPinky1/Character4_RightHandPinky2/Character4_RightHandPinky3
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandPinky1/Character4_RightHandPinky2/Character4_RightHandPinky3/Character4_RightHandPinky4
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandRing1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandRing1/Character4_RightHandRing2
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandRing1/Character4_RightHandRing2/Character4_RightHandRing3
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandRing1/Character4_RightHandRing2/Character4_RightHandRing3/Character4_RightHandRing4
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandThumb1
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandThumb1/Character4_RightHandThumb2
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandThumb1/Character4_RightHandThumb2/Character4_RightHandThumb3
+        weight: 1
+      - path: Character4_Reference/Character4_Hips/Character4_Spine/Character4_Spine1/Character4_RightShoulder/Character4_RightArm/Character4_RightForeArm/Character4_RightHand/Character4_RightHandThumb1/Character4_RightHandThumb2/Character4_RightHandThumb3/Character4_RightHandThumb4
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder 1
+        weight: 1
+      - path: HumanBody
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
