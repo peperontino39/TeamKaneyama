@@ -3,8 +3,10 @@ using System.Collections;
 
 public class BattleSceneManager : MonoBehaviour {
 
-    [SerializeField]
-    GameObject battleCamera;
+    CamraControl camraControl;
+
+    
+    
     [SerializeField]
     GameObject mainCamera;
     [SerializeField]
@@ -12,21 +14,37 @@ public class BattleSceneManager : MonoBehaviour {
     [SerializeField]
     GameObject battleCanvas;
     [SerializeField]
-    GameObject workCamera;
-    [SerializeField]
     GameObject workCanvas;
+    [SerializeField]
+    GameObject field;
 
     int cameraNum;
+
+    Vector3 cameraPos;
+    Vector3 fieldPos;
+
+    float zoomSensitivity;
    
 	// Use this for initialization
 	void Start () {
 
         cameraNum = 0;
+
+        fieldPos = new Vector3(-250.0f, 0.0f, -250.0f);
+        cameraPos = new Vector3(4.0f, 0.0f, 4.0f);
+
+        
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        field.transform.localPosition = fieldPos;
+
+        mainCamera.transform.localPosition = cameraPos;
+
+        mainCamera.gameObject.GetComponentInChildren<Camera>().fieldOfView = zoomSensitivity;
 
         if (Input.GetKeyUp(KeyCode.A))
         {
@@ -42,33 +60,37 @@ public class BattleSceneManager : MonoBehaviour {
 
             case 0:
 
-                battleCamera.SetActive(false);
+               
                 battleCanvas.SetActive(false);
-                mainCamera.SetActive(true);
                 mainCanvas.SetActive(true);
-                workCamera.SetActive(false);
                 workCanvas.SetActive(false);
+                fieldPos = new Vector3(-250.0f, 0.0f, -250.0f);
+                cameraPos = new Vector3(4.0f, 0.0f, 4.0f);
+                zoomSensitivity = 60.0f;
+
                 break;
 
             case 1:
 
-                battleCamera.SetActive(true);
+         
                 battleCanvas.SetActive(true);
-                mainCamera.SetActive(false);
                 mainCanvas.SetActive(false);
-                workCamera.SetActive(false);
                 workCanvas.SetActive(false);
+                fieldPos = new Vector3(-240.0f, 100.0f, -300.0f);
+                cameraPos = new Vector3(0.0f, 102.0f, -5.0f);
+                zoomSensitivity = 30.0f;
 
                 break;
 
             case 2:
 
-                battleCamera.SetActive(false);
+               
                 battleCanvas.SetActive(false);
-                mainCamera.SetActive(false);
                 mainCanvas.SetActive(false);
-                workCamera.SetActive(true);
                 workCanvas.SetActive(true);
+                fieldPos = new Vector3(-250.0f, 200.0f, -320.0f);
+                cameraPos = new Vector3(4.0f, 202.0f, -8.0f);
+                zoomSensitivity = 60.0f;
 
                 break;
 
