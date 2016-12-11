@@ -92,7 +92,7 @@ public class PicecDeploy : MonoBehaviour
     public void CreatePiece(PieceNum _piece, int x, int y, int _team)
     {
 
-        GameObject obj = Instantiate(pieces[(int)_piece]);
+        GameObject obj = Instantiate(pieces[(int)_piece]);//これキャスト
         piece pic = obj.GetComponent<piece>();
         pic.setSell(new Vector2(x, y));
         pic.team_number = _team;
