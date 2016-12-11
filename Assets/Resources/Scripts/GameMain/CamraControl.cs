@@ -30,10 +30,12 @@ public class CamraControl : MonoBehaviour {
         {
             angle.x--;
         }
+
         transform.LookAt(
-            Quaternion.AngleAxis(angle.y,Vector3.up)*
-            Quaternion.AngleAxis(angle.x, Vector3.right) *
-            Vector3.forward + transform.position);
+           Quaternion.AngleAxis(angle.y, Vector3.up) *
+           Quaternion.AngleAxis(angle.x, Vector3.right) *
+           Vector3.forward + transform.position);
+
 
     }
 }

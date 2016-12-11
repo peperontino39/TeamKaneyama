@@ -1,101 +1,306 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-public class BattleSceneManager : MonoBehaviour {
 
-    CamraControl camraControl;
 
-    
-    
+public class BattleSceneManager : MonoBehaviour
+{
+
+
     [SerializeField]
-    GameObject mainCamera;
+    GameObject attacker;
     [SerializeField]
-    GameObject mainCanvas;
+    GameObject[] damager;
     [SerializeField]
-    GameObject battleCanvas;
-    [SerializeField]
-    GameObject workCanvas;
-    [SerializeField]
-    GameObject field;
+    GameObject[] counter;
 
-    int cameraNum;
+    public Text attackerNameText;
+    public Text damagerNameText;
+    public Text counterNameText;
 
-    Vector3 cameraPos;
-    Vector3 fieldPos;
+    public Slider attackerHP;
+    public Slider damagerHP;
+    public Slider counterHP;
 
-    float zoomSensitivity;
-   
-	// Use this for initialization
-	void Start () {
+    string attackerName;
+    string damagerName;
+    string counterName;
 
-        cameraNum = 0;
+    Vector3 attackerPos;
+    Vector3 damegerPos;
+    Quaternion damegerRotate;
+    Quaternion attackerRotate;
 
-        fieldPos = new Vector3(-250.0f, 0.0f, -250.0f);
-        cameraPos = new Vector3(4.0f, 0.0f, 4.0f);
 
-        
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+        attackerPos = new Vector3(0, 100, -9);
+        attackerRotate = new Quaternion(0, 90, 0, 0);
+        damegerPos = new Vector3(0, 100, -1);
+        damegerRotate = new Quaternion(0, -90, 0, 0);
+    }
 
-        field.transform.localPosition = fieldPos;
-
-        mainCamera.transform.localPosition = cameraPos;
-
-        mainCamera.gameObject.GetComponentInChildren<Camera>().fieldOfView = zoomSensitivity;
-
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            cameraNum +=1;
-        }
-
-        if (cameraNum > 2)
-        {
-            cameraNum = 0;
-        }
-
-        switch (cameraNum) {
-
-            case 0:
-
-               
-                battleCanvas.SetActive(false);
-                mainCanvas.SetActive(true);
-                workCanvas.SetActive(false);
-                fieldPos = new Vector3(-250.0f, 0.0f, -250.0f);
-                cameraPos = new Vector3(4.0f, 0.0f, 4.0f);
-                zoomSensitivity = 60.0f;
-
-                break;
-
-            case 1:
-
-         
-                battleCanvas.SetActive(true);
-                mainCanvas.SetActive(false);
-                workCanvas.SetActive(false);
-                fieldPos = new Vector3(-240.0f, 100.0f, -300.0f);
-                cameraPos = new Vector3(0.0f, 102.0f, -5.0f);
-                zoomSensitivity = 30.0f;
-
-                break;
-
-            case 2:
-
-               
-                battleCanvas.SetActive(false);
-                mainCanvas.SetActive(false);
-                workCanvas.SetActive(true);
-                fieldPos = new Vector3(-250.0f, 200.0f, -320.0f);
-                cameraPos = new Vector3(4.0f, 202.0f, -8.0f);
-                zoomSensitivity = 60.0f;
-
-                break;
-
-        }
-
+    // Update is called once per frame
+    void Update()
+    {
 
     }
+
+    public void BattleSceneCreate()
+    {
+
+        counterNameText.text = counterName;
+
+        CreateAttacker(PieceNum.PAWN, attackerPos, attackerRotate);
+
+        switch (GamaManager.Instance.movieDate.counterPiece[0].piece_num)
+        {
+
+            case PieceNum.PAWN:
+
+                counterName = "PAWN";
+
+                break;
+
+            case PieceNum.ROOK:
+
+                counterName = "ROOK";
+
+                break;
+
+            case PieceNum.BISOP:
+
+                counterName = "BISHOP";
+
+                break;
+
+            case PieceNum.KNIGHT:
+
+                counterName = "KNIGHT";
+
+                break;
+
+            case PieceNum.QUEEN:
+
+                counterName = "QUEEN";
+
+                break;
+
+            case PieceNum.KING:
+
+                counterName = "KING";
+
+                break;
+
+            case PieceNum.JACK:
+
+                counterName = "JACK";
+
+                break;
+
+        }
+
+    }
+
+
+
+
+    //////////////////////////////////攻撃側生成////////////////////////////////////////////
+
+    public void CreateAttacker(PieceNum _attacker, Vector3 pos, Quaternion rotate)
+    {
+        GameObject obj = Instantiate(counter[(int)_attacker]);//これキャスト
+
+        piece pic = obj.GetComponent<piece>();
+
+        obj.transform.localPosition = pos;
+
+        obj.transform.localRotation = rotate;
+
+        pic.piece_num = _attacker;
+
+        attackerNameText.text = attackerName;
+
+        switch (GamaManager.Instance.movieDate.attackPiece[0].piece_num)
+        {
+            case PieceNum.PAWN:
+
+                attackerName = "PAWN";
+
+                break;
+
+            case PieceNum.ROOK:
+
+                attackerName = "ROOK";
+
+                break;
+
+            case PieceNum.BISOP:
+
+                attackerName = "BISHOP";
+
+                break;
+
+            case PieceNum.KNIGHT:
+
+                attackerName = "KNIGHT";
+
+                break;
+
+            case PieceNum.QUEEN:
+
+                attackerName = "QUEEN";
+
+                break;
+
+            case PieceNum.KING:
+
+                attackerName = "KING";
+
+                break;
+
+            case PieceNum.JACK:
+
+                attackerName = "JACK";
+
+                break;
+
+        }
+
+    }
+    /// ///////////////////////////////////////////////////////////////////////////////////////
+    /// 
+
+
+    public void CreateDamagePiece(PieceNum _damagePiece, Vector3 pos, Quaternion rotate)
+    {
+
+        GameObject obj = Instantiate(counter[(int)_damagePiece]);//これキャスト
+
+        piece pic = obj.GetComponent<piece>();
+
+        obj.transform.localPosition = pos;
+
+        obj.transform.localRotation = rotate;
+
+        pic.piece_num = _damagePiece;
+
+        damagerNameText.text = damagerName;
+
+        switch (GamaManager.Instance.movieDate.damagePiece[0].piece_num)
+        {
+            case PieceNum.PAWN:
+
+                damagerName = "PAWN";
+
+                break;
+
+            case PieceNum.ROOK:
+
+                damagerName = "ROOK";
+
+                break;
+
+            case PieceNum.BISOP:
+
+                damagerName = "BISHOP";
+
+                break;
+
+            case PieceNum.KNIGHT:
+
+                damagerName = "KNIGHT";
+
+                break;
+
+            case PieceNum.QUEEN:
+
+                damagerName = "QUEEN";
+
+                break;
+
+            case PieceNum.KING:
+
+                damagerName = "KING";
+
+                break;
+
+            case PieceNum.JACK:
+
+                damagerName = "JACK";
+
+                break;
+
+        }
+
+    }
+
+
+    public void CreateCounter(PieceNum _counter, Vector3 pos, Quaternion rotate)
+    {
+
+        GameObject obj = Instantiate(counter[(int)_counter]);//これキャスト
+
+        piece pic = obj.GetComponent<piece>();
+
+        obj.transform.localPosition = pos;
+
+        obj.transform.localRotation = rotate;
+
+        pic.piece_num = _counter;
+
+        counterNameText.text = counterName;
+
+
+        switch (GamaManager.Instance.movieDate.counterPiece[0].piece_num)
+        {
+            case PieceNum.PAWN:
+
+                counterName = "PAWN";
+
+                break;
+
+            case PieceNum.ROOK:
+
+                counterName = "ROOK";
+
+                break;
+
+            case PieceNum.BISOP:
+
+                counterName = "BISHOP";
+
+                break;
+
+            case PieceNum.KNIGHT:
+
+                counterName = "KNIGHT";
+
+                break;
+
+            case PieceNum.QUEEN:
+
+                counterName = "QUEEN";
+
+                break;
+
+            case PieceNum.KING:
+
+                counterName = "KING";
+
+                break;
+
+            case PieceNum.JACK:
+
+                counterName = "JACK";
+
+                break;
+
+        }
+
+    }
+
+
 }

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+
 public class GamaManager : MonoBehaviour
 {
     [SerializeField]
@@ -22,7 +24,15 @@ public class GamaManager : MonoBehaviour
     public MoveDate movieDate = new MoveDate();
 
 
+    public enum SceneNum
+    {
+        MainGame,
+        WorkScene,
+        AttackScene,
+        CounterScene
+    }
 
+    public SceneNum sceneNum;
 
     private static GamaManager instance;
 
