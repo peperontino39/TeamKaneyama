@@ -4,22 +4,23 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.Events;
 
+public enum Command
+{
+    ATTACK,
+    END,
+    SIEGE,
+    CANCEL,
+    INCASTLE,
+    EXITCASTLE
+}
 public class CommandList : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject[] command_list;
+    public Button[] command_list;
 
 
-    public enum Command
-    {
-        ATTACK,
-        END,
-        SIEGE,
-        CANCEL,
-        INCASTLE,
-        EXITCASTLE
-    }
+  
     void Start()
     {
         ALLSetInteractable(false);
@@ -29,18 +30,18 @@ public class CommandList : MonoBehaviour
     {
         foreach (var command in command_list)
         {
-            command.GetComponent<Button>().interactable = _is;
+            command.interactable = _is;
         }
     }
 
     public void SetInteractable(Command com, bool _is)
     {
-        command_list[(int)com].GetComponent<Button>().interactable = _is;
+        command_list[(int)com].interactable = _is;
     }
 
     public void setOnClick(Command com, UnityAction call)
     {
-        command_list[(int)com].GetComponent<Button>().onClick.AddListener(call);
+        command_list[(int)com].onClick.AddListener(call);
     }
 
 }

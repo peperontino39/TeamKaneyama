@@ -69,7 +69,7 @@ public class Team : MonoBehaviour
         setControlTeam(0);
 
         ChoiceCell = new Vector2(4, 4);
-        
+
     }
 
 
@@ -85,12 +85,14 @@ public class Team : MonoBehaviour
     public Vector2 ChoiceCell
     {
         get { return choiceCell; }
-        set {
-            Debug.Log("hjkfdg");
+        set
+        {
+            choiceCell = value;
+            
             GamaManager.Instance.SelectObject.transform.position
-                = GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].transform.position + 
-                new Vector3(0,1,0);
-           choiceCell = value; }
+                = GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].transform.position +
+                new Vector3(0, 1, 0);
+        }
     }
     void Update()
     {
@@ -154,8 +156,8 @@ public class Team : MonoBehaviour
                         //選択されたマスが城だったら城から王を出す処理
                         if (GamaManager.Instance.castles.isCatles(select_pieces.sell))
                         {
-                            GamaManager.Instance.command_list.SetInteractable(CommandList.Command.EXITCASTLE, true);
-                            GamaManager.Instance.command_list.SetInteractable(CommandList.Command.CANCEL, true);
+                            GamaManager.Instance.command_list.SetInteractable(Command.EXITCASTLE, true);
+                            GamaManager.Instance.command_list.SetInteractable(Command.CANCEL, true);
 
                             setUiStatus(select_pieces);
                             step++;
@@ -169,7 +171,7 @@ public class Team : MonoBehaviour
                             setUiStatus(select_pieces);
                             select_pieces.OnMoveArea();
                             step++;
-                            GamaManager.Instance.command_list.SetInteractable(CommandList.Command.CANCEL, true);
+                            GamaManager.Instance.command_list.SetInteractable(Command.CANCEL, true);
                         }
 
                         break;
@@ -181,7 +183,7 @@ public class Team : MonoBehaviour
                             step++;
                             if (GamaManager.Instance.castles.isCatles(_sell.sell))
                             {
-                                GamaManager.Instance.command_list.SetInteractable(CommandList.Command.INCASTLE, true);
+                                GamaManager.Instance.command_list.SetInteractable(Command.INCASTLE, true);
                                 break;
                             }
 
@@ -189,11 +191,11 @@ public class Team : MonoBehaviour
                             //包囲可能だったら
                             if (GamaManager.Instance.castles.CastleAdjacent(moveSell, select_pieces.team_number))
                             {
-                                GamaManager.Instance.command_list.SetInteractable(CommandList.Command.SIEGE, true);
+                                GamaManager.Instance.command_list.SetInteractable(Command.SIEGE, true);
                             }
 
-                            GamaManager.Instance.command_list.SetInteractable(CommandList.Command.ATTACK, true);
-                            GamaManager.Instance.command_list.SetInteractable(CommandList.Command.END, true);
+                            GamaManager.Instance.command_list.SetInteractable(Command.ATTACK, true);
+                            GamaManager.Instance.command_list.SetInteractable(Command.END, true);
 
                             select_pieces.OnAttackArea(moveSell);
                             GamaManager.Instance.Board.allMovableOff();
@@ -220,6 +222,26 @@ public class Team : MonoBehaviour
         gamepad2_left_axisy = (int)Input.GetAxisRaw("GamePad2_Left_Axis_y");
 
 
+        //if ()
+        //{
+
+        //}
+        //if ()
+        //{
+
+        //}
+        //if ()
+        //{
+
+        //}
+        //if ()
+        //{
+
+        //}
+        //if ()
+        //{
+
+        //}
 
     }
 
@@ -240,6 +262,8 @@ public class Team : MonoBehaviour
 
     public void Atack()
     {
+        if (!GamaManager.Instance.command_list.command_list[(int)Command.ATTACK].IsInteractable())
+            return;
         GamaManager.Instance.Board.OnPiceMove(select_pieces.sell, moveSell);
         GamaManager.Instance.Board.AllAttack(select_pieces);
         select_pieces.setSell(moveSell);
@@ -257,6 +281,7 @@ public class Team : MonoBehaviour
     //Turnを切り替えるよ
     private void ChangeTurn()
     {
+       
         GamaManager.Instance.Board.OnPiceMove(select_pieces.sell, moveSell);
         select_pieces.setSell(moveSell);
         ChangeControlTeam();
@@ -269,6 +294,9 @@ public class Team : MonoBehaviour
     //包囲
     public void Siege()
     {
+        if (!GamaManager.Instance.command_list.command_list[(int)Command.SIEGE].IsInteractable())
+            return;
+
         select_pieces.is_siege = true;
 
 
@@ -295,6 +323,9 @@ public class Team : MonoBehaviour
     //攻撃せずに移動する
     public void End()
     {
+        if (!GamaManager.Instance.command_list.command_list[(int)Command.END].IsInteractable())
+            return;
+
         ChangeTurn();
     }
 
@@ -314,12 +345,18 @@ public class Team : MonoBehaviour
 
     public void InCastle()
     {
+        if (!GamaManager.Instance.command_list.command_list[(int)Command.INCASTLE].IsInteractable())
+            return;
+
         ChangeTurn();
 
     }
     //城からでる
     public void ExitCastle()
     {
+        if (!GamaManager.Instance.command_list.command_list[(int)Command.EXITCASTLE].IsInteractable())
+            return;
+
         select_pieces.OnMoveArea();
     }
 
