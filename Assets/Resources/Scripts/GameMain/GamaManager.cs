@@ -23,6 +23,9 @@ public class GamaManager : MonoBehaviour
     //ムービーに使う情報
     public MoveDate movieDate = new MoveDate();
 
+    [SerializeField]
+    public GameObject SelectObject;
+
 
     public enum SceneNum
     {

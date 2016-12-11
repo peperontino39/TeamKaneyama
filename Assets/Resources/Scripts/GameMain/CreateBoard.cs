@@ -9,7 +9,7 @@ public class CreateBoard : MonoBehaviour
 {
     [SerializeField]
     public GameObject[] selllist;
-    private List<List<SellDate>> map = new List<List<SellDate>>();
+    public List<List<SellDate>> map = new List<List<SellDate>>();
     [SerializeField]
     TextAsset csvFile = null;
 

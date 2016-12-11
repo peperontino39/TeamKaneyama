@@ -68,6 +68,8 @@ public class Team : MonoBehaviour
     {
         setControlTeam(0);
 
+        ChoiceCell = new Vector2(4, 4);
+        
     }
 
 
@@ -77,6 +79,19 @@ public class Team : MonoBehaviour
     int gamepad2_left_axisy;
 
 
+    private Vector2 choiceCell;
+
+
+    public Vector2 ChoiceCell
+    {
+        get { return choiceCell; }
+        set {
+            Debug.Log("hjkfdg");
+            GamaManager.Instance.SelectObject.transform.position
+                = GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].transform.position + 
+                new Vector3(0,1,0);
+           choiceCell = value; }
+    }
     void Update()
     {
 
@@ -87,24 +102,16 @@ public class Team : MonoBehaviour
         {
             gamepad1_left_axisx = 0;
         }
-        // Debug.Log(gamepad1_left_axisx);
+        if (gamepad1_left_axisy == (int)Input.GetAxisRaw("GamePad1_Left_Axis_y"))
+        {
+            gamepad1_left_axisy = 0;
+        }
 
 
-        gamepad1_left_axisx = (int)Input.GetAxisRaw("GamePad1_Left_Axis_x");
-        //Debug.Log("hoge");
+        if (gamepad1_left_axisy != 0)
+        {
 
-        //if (Input.GetKeyDown(KeyCode.Joystick1Button0))
-        //{
-        //    Debug.Log("Button A Push1");
-        //}
-        //if (Input.GetKeyDown(KeyCode.JoystickButton0))
-        //{
-        //    Debug.Log("Button A Push2");
-        //}
-        //if (Input.GetKeyDown(KeyCode.Joystick2Button0))
-        //{
-        //    Debug.Log("Button A Push3");
-        //}
+        }
 
 
 

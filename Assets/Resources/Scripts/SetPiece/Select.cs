@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Select : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class Select : MonoBehaviour
 
     bool is_ok = false;
 
-    
+
 
     void Start()
     {
@@ -161,6 +162,20 @@ public class Select : MonoBehaviour
             TextWrite();
 
         }
+
+        if (Input.GetKeyDown(KeyCode.Joystick1Button7))
+        {
+            int totle = 0;
+            foreach (var num in remainingAmount)
+            {
+                totle += num;
+            }
+            //if (totle == 0)
+            //{
+                SceneManager.LoadScene("GameMain");
+            //}
+        }
+
         icon.transform.SetAsLastSibling();
 
 
@@ -173,7 +188,7 @@ public class Select : MonoBehaviour
         gamepad1_left_axisy = (int)Input.GetAxisRaw("GamePad1_Left_Axis_y");
     }
 
-
+    
 
 
     private void AddNum(int x, int y)
