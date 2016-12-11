@@ -16,7 +16,7 @@ public class SceneSelect : MonoBehaviour {
 
     public void OnClick()
     {
-        SceneManager.LoadScene("SetPiece");
+        SceneManager.LoadScene("SetPieceMulti");
     }
 
 }

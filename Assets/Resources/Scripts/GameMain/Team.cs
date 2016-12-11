@@ -70,8 +70,45 @@ public class Team : MonoBehaviour
 
     }
 
+
+    int gamepad1_left_axisx;
+    int gamepad1_left_axisy;
+    int gamepad2_left_axisx;
+    int gamepad2_left_axisy;
+
+
     void Update()
     {
+
+        //isPress
+        //(int)Input.GetAxisRaw("GamePad1_Left_Axis_x") != 0
+
+        if (gamepad1_left_axisx == (int)Input.GetAxisRaw("GamePad1_Left_Axis_x"))
+        {
+            gamepad1_left_axisx = 0;
+        }
+        // Debug.Log(gamepad1_left_axisx);
+
+
+        gamepad1_left_axisx = (int)Input.GetAxisRaw("GamePad1_Left_Axis_x");
+        //Debug.Log("hoge");
+
+        //if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+        //{
+        //    Debug.Log("Button A Push1");
+        //}
+        //if (Input.GetKeyDown(KeyCode.JoystickButton0))
+        //{
+        //    Debug.Log("Button A Push2");
+        //}
+        //if (Input.GetKeyDown(KeyCode.Joystick2Button0))
+        //{
+        //    Debug.Log("Button A Push3");
+        //}
+
+
+
+
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -127,7 +164,7 @@ public class Team : MonoBehaviour
                             step++;
                             GamaManager.Instance.command_list.SetInteractable(CommandList.Command.CANCEL, true);
                         }
-                        
+
                         break;
                     case Step.MOVE:
                         if (_sell.is_movable)
@@ -168,7 +205,23 @@ public class Team : MonoBehaviour
 
 
 
+        gamepad1_left_axisx = (int)Input.GetAxisRaw("GamePad1_Left_Axis_x");
+
+
+        gamepad1_left_axisy = (int)Input.GetAxisRaw("GamePad1_Left_Axis_y");
+        gamepad2_left_axisx = (int)Input.GetAxisRaw("GamePad2_Left_Axis_x");
+        gamepad2_left_axisy = (int)Input.GetAxisRaw("GamePad2_Left_Axis_y");
+
+
+
     }
+
+    private bool Gamepadpush()
+    {
+        return gamepad1_left_axisx == 0 &&
+                     (int)Input.GetAxisRaw("GamePad1_Left_Axis_x") == -1;
+    }
+
     //
     public void ChangeControlTeam()
     {

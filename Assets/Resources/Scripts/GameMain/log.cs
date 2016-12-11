@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 
 
-public class log : MonoBehaviour
+public class Log : MonoBehaviour
 {
     [SerializeField]
     Text text;

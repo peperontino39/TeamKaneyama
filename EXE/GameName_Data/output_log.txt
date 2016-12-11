@@ -6,45 +6,49 @@ Direct3D:
     Vendor:   ATI
     VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 - Completed reload, in  0.084 seconds
-Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\bantan\Desktop\project\EXE\GameName_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\bantan\Desktop\TeamKaneyama\EXE\GameName_Data\Managed\System.dll (this message is harmless)
 desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.085814 ms
+UnloadTime: 2.462430 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 556c -> priority: 1 
+  Thread -> id: 2dec -> priority: 1 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.847317 ms
+UnloadTime: 10.510019 ms
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 247.
-Total: 0.304917 ms (FindLiveObjects: 0.021810 ms CreateObjectMapping: 0.024803 ms MarkObjects: 0.245045 ms  DeleteObjects: 0.012829 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 306.
+Total: 0.273698 ms (FindLiveObjects: 0.028225 ms CreateObjectMapping: 0.035922 ms MarkObjects: 0.195437 ms  DeleteObjects: 0.012401 ms)
 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.566642 ms
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 312.
-Total: 0.286956 ms (FindLiveObjects: 0.026942 ms CreateObjectMapping: 0.027369 ms MarkObjects: 0.217676 ms  DeleteObjects: 0.014540 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.663719 ms
-
-Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 1836.
-Total: 0.706484 ms (FindLiveObjects: 0.094511 ms CreateObjectMapping: 0.078688 ms MarkObjects: 0.513185 ms  DeleteObjects: 0.019672 ms)
-
-0
+Scene 'SetPieceMulti' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+(Filename:  Line: 532)
+
+Scene 'SetPieceMulti' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 532)
+
+Scene 'SetPieceMulti' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 532)
+
+Scene 'SetPieceMulti' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 532)
 

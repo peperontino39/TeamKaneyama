@@ -9,7 +9,9 @@ public enum PieceNum
     KNIGHT,
     QUEEN,
     KING,
-    JACK
+    JACK,
+    NON
+
 }
 
 

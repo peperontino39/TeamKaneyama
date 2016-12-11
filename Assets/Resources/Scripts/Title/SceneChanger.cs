@@ -12,7 +12,9 @@ public class SceneChanger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (Input.GetKeyDown(KeyCode.JoystickButton7)){
+            SceneManager.LoadScene("MainMenuSample");
+        }
 	}
 
     public void OnClick()
