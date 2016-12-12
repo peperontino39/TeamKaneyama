@@ -33,5 +33,12 @@ public class Working : MonoBehaviour {
         {
             workPos.z += 0.03f;
         }
-	}
+
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            workSwitch = true;
+
+            workPos = new Vector3(0, 200, -5);
+        }
+    }
 }
