@@ -6,8 +6,8 @@ public class GameMainData : MonoBehaviour {
 
 
 
-    public List<OnPieceDate> player1;
-    public List<OnPieceDate> player2;
+    public List<List<OnPieceDate>> player1;
+    public List<List<OnPieceDate>> player2;
 
     private static GameMainData instance;
 

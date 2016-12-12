@@ -87,8 +87,11 @@ public class Team : MonoBehaviour
         get { return choiceCell; }
         set
         {
+
             choiceCell = value;
-            
+            choiceCell.x = Mathf.Min(Mathf.Max(choiceCell.x, 0), 8);
+            choiceCell.y = Mathf.Min(Mathf.Max(choiceCell.y, 0), 8);
+
             GamaManager.Instance.SelectObject.transform.position
                 = GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].transform.position +
                 new Vector3(0, 1, 0);
@@ -108,14 +111,46 @@ public class Team : MonoBehaviour
         {
             gamepad1_left_axisy = 0;
         }
-
-
-        if (gamepad1_left_axisy != 0)
+        if (gamepad2_left_axisx == (int)Input.GetAxisRaw("GamePad2_Left_Axis_x"))
         {
-
+            gamepad2_left_axisx = 0;
+        }
+        if (gamepad2_left_axisy == (int)Input.GetAxisRaw("GamePad2_Left_Axis_y"))
+        {
+            gamepad2_left_axisy = 0;
         }
 
 
+        if (control_team == 0)
+        {
+            if (gamepad1_left_axisy != 0 || gamepad1_left_axisx != 0)
+            {
+                ChoiceCell += new Vector2(gamepad1_left_axisy, gamepad1_left_axisx);
+            }
+        }
+        else
+        {
+            if (gamepad2_left_axisy != 0 || gamepad2_left_axisx != 0)
+            {
+                ChoiceCell += new Vector2(gamepad2_left_axisy, gamepad2_left_axisx);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            ChoiceCell += new Vector2(-1, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            ChoiceCell += new Vector2(0, -1);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            ChoiceCell += new Vector2(1, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            ChoiceCell += new Vector2(0, 1);
+        }
 
 
 
@@ -130,119 +165,171 @@ public class Team : MonoBehaviour
 
             }
         }
+        //Debug.Log(Input.GetKeyDown(KeyCode.Joystick1Button0));
 
-        if (Input.GetMouseButtonDown(0))
+        //if (control_team == 0)
+        //{
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit = new RaycastHit();
-
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
-            {
-                SellDate _sell = hit.collider.gameObject.GetComponent<SellDate>();
-                switch (step)
-                {
-                    case Step.SERECT:
-                        select_pieces = _sell.on_pise;
-
-                        if (select_pieces == null) break;
-
-                        if (select_pieces.team_number != control_team) break;
-
-                        //攻撃範囲にてきがいた場合足踏みができる処理
-                        if (GamaManager.Instance.Board.IsAttackAreanEnemy(select_pieces))
-                        {
-                            GamaManager.Instance.Board.setMovable(select_pieces.sell);
-                        }
-                        //選択されたマスが城だったら城から王を出す処理
-                        if (GamaManager.Instance.castles.isCatles(select_pieces.sell))
-                        {
-                            GamaManager.Instance.command_list.SetInteractable(Command.EXITCASTLE, true);
-                            GamaManager.Instance.command_list.SetInteractable(Command.CANCEL, true);
-
-                            setUiStatus(select_pieces);
-                            step++;
-
-                            break;
-
-                        }
-                        //包囲している駒でなかったら
-                        if (!select_pieces.is_siege)
-                        {
-                            setUiStatus(select_pieces);
-                            select_pieces.OnMoveArea();
-                            step++;
-                            GamaManager.Instance.command_list.SetInteractable(Command.CANCEL, true);
-                        }
-
-                        break;
-                    case Step.MOVE:
-                        if (_sell.is_movable)
-                        {
-
-                            moveSell = _sell.sell;
-                            step++;
-                            if (GamaManager.Instance.castles.isCatles(_sell.sell))
-                            {
-                                GamaManager.Instance.command_list.SetInteractable(Command.INCASTLE, true);
-                                break;
-                            }
-
-
-                            //包囲可能だったら
-                            if (GamaManager.Instance.castles.CastleAdjacent(moveSell, select_pieces.team_number))
-                            {
-                                GamaManager.Instance.command_list.SetInteractable(Command.SIEGE, true);
-                            }
-
-                            GamaManager.Instance.command_list.SetInteractable(Command.ATTACK, true);
-                            GamaManager.Instance.command_list.SetInteractable(Command.END, true);
-
-                            select_pieces.OnAttackArea(moveSell);
-                            GamaManager.Instance.Board.allMovableOff();
-                        }
-
-                        break;
-                    case Step.ACTIVITY:
-
-                        break;
-
-                }
-
-            }
+            Atack();
 
         }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            Cancel();
+        }
 
+        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+        {
+            InCastle();
+
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+        {
+            End();
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button4))
+        {
+            ExitCastle();
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button5))
+        {
+            Siege();
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+        {
+            stepup();
+        }
+        //}
+        //else
+        //{
+        if (Input.GetKeyDown(KeyCode.Joystick2Button0))
+        {
+            Atack();
+
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick2Button1))
+        {
+            Cancel();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Joystick2Button2))
+        {
+            InCastle();
+
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick2Button3))
+        {
+            End();
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick2Button4))
+        {
+            ExitCastle();
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick2Button5))
+        {
+            Siege();
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick2Button0))
+        {
+            stepup();
+        }
+
+        //}
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hit = new RaycastHit();
+
+        //    if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
+        //    {
+
+        //    }
+
+        //}
 
 
         gamepad1_left_axisx = (int)Input.GetAxisRaw("GamePad1_Left_Axis_x");
-
-
         gamepad1_left_axisy = (int)Input.GetAxisRaw("GamePad1_Left_Axis_y");
         gamepad2_left_axisx = (int)Input.GetAxisRaw("GamePad2_Left_Axis_x");
         gamepad2_left_axisy = (int)Input.GetAxisRaw("GamePad2_Left_Axis_y");
 
 
-        //if ()
-        //{
 
-        //}
-        //if ()
-        //{
 
-        //}
-        //if ()
-        //{
+    }
 
-        //}
-        //if ()
-        //{
+    private void stepup()
+    {
+        SellDate _sell = GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x];
+        switch (step)
+        {
+            case Step.SERECT:
+                select_pieces = _sell.on_pise;
 
-        //}
-        //if ()
-        //{
+                if (select_pieces == null) break;
 
-        //}
+                if (select_pieces.team_number != control_team) break;
 
+                //攻撃範囲にてきがいた場合足踏みができる処理
+                if (GamaManager.Instance.Board.IsAttackAreanEnemy(select_pieces))
+                {
+                    GamaManager.Instance.Board.setMovable(select_pieces.sell);
+                }
+                //選択されたマスが城だったら城から王を出す処理
+                if (GamaManager.Instance.castles.isCatles(select_pieces.sell))
+                {
+                    GamaManager.Instance.command_list.SetInteractable(Command.EXITCASTLE, true);
+                    GamaManager.Instance.command_list.SetInteractable(Command.CANCEL, true);
+
+                    setUiStatus(select_pieces);
+                    step++;
+
+                    break;
+
+                }
+                //包囲している駒でなかったら
+                if (!select_pieces.is_siege)
+                {
+                    setUiStatus(select_pieces);
+                    select_pieces.OnMoveArea();
+                    step++;
+                    GamaManager.Instance.command_list.SetInteractable(Command.CANCEL, true);
+                }
+
+                break;
+            case Step.MOVE:
+                if (_sell.is_movable)
+                {
+
+                    moveSell = _sell.sell;
+                    step++;
+                    if (GamaManager.Instance.castles.isCatles(_sell.sell))
+                    {
+                        GamaManager.Instance.command_list.SetInteractable(Command.INCASTLE, true);
+                        break;
+                    }
+
+
+                    //包囲可能だったら
+                    if (GamaManager.Instance.castles.CastleAdjacent(moveSell, select_pieces.team_number))
+                    {
+                        GamaManager.Instance.command_list.SetInteractable(Command.SIEGE, true);
+                    }
+
+                    GamaManager.Instance.command_list.SetInteractable(Command.ATTACK, true);
+                    GamaManager.Instance.command_list.SetInteractable(Command.END, true);
+
+                    select_pieces.OnAttackArea(moveSell);
+                    GamaManager.Instance.Board.allMovableOff();
+                }
+
+                break;
+            case Step.ACTIVITY:
+
+                break;
+
+        }
     }
 
     private bool Gamepadpush()
@@ -281,7 +368,7 @@ public class Team : MonoBehaviour
     //Turnを切り替えるよ
     private void ChangeTurn()
     {
-       
+
         GamaManager.Instance.Board.OnPiceMove(select_pieces.sell, moveSell);
         select_pieces.setSell(moveSell);
         ChangeControlTeam();

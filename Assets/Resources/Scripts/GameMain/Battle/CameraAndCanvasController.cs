@@ -80,7 +80,7 @@ public class CameraAndCanvasController : MonoBehaviour {
 ///////////////////////////////////////////////////////////////////////////////////////////
 
         //デバッグ用シーン切り替え
-        if (Input.GetKeyUp(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             cameraNum +=1;
         }
