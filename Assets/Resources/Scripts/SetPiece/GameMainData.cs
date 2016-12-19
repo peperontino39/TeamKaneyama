@@ -29,4 +29,8 @@ public class GameMainData : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
         instance = this;
     }
+    void Update()
+    {
+        
+    }
 }

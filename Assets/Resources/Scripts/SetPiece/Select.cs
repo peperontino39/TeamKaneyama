@@ -64,6 +64,14 @@ public class Select : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+
+        }
+        //Debug.Log(Input.GetAxis("GamePad1_Left_Axis_y"));
+      
+
         if (gamepad1_left_axisx == (int)Input.GetAxisRaw(gamepadname_x))
         {
             gamepad1_left_axisx = 0;

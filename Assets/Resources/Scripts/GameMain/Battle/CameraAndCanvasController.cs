@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraAndCanvasController : MonoBehaviour {
+public class CameraAndCanvasController : MonoBehaviour
+{
 
     CamraControl camraControl;
 
@@ -22,9 +23,29 @@ public class CameraAndCanvasController : MonoBehaviour {
     public Vector2 angle;
     Vector3 cameraPos;
     Vector3 fieldPos;
+
+    //目的としているposition
+    public Vector3 tergetPosition = new Vector3(4.0f, 0.0f, 4.0f);
+    //目的としている角度
+    public float tergetAngle = -90;
+
+    //カメラの見ている位置；
+
+    public Vector3 pivotPosition
+    {
+        private get { return new Vector3(); }
+        set
+        {
+            tergetPosition = value;
+            transform.position = value;
+
+        }
+    }
+
     
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
         cameraNum = 0;
 
@@ -37,15 +58,23 @@ public class CameraAndCanvasController : MonoBehaviour {
         angle = new Vector2(44.0f, -90.0f);
 
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-        field.transform.localPosition = fieldPos;
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 result = new Vector3(
+            Mathf.Lerp(transform.position.x, tergetPosition.x, 0.1f),
+Mathf.Lerp(transform.position.y, tergetPosition.y, 0.1f),
+Mathf.Lerp(transform.position.z, tergetPosition.z, 0.1f)
+            );
+        transform.position = result;
+        angle.y = Mathf.Lerp(angle.y, tergetAngle, 0.1f);
 
-        mainCamera.transform.localPosition = cameraPos;
+        //field.transform.localPosition = fieldPos;
 
-        mainCamera.gameObject.GetComponentInChildren<Camera>().fieldOfView = zoomSensitivity;
+        //mainCamera.transform.localPosition = cameraPos;
+
+        //mainCamera.gameObject.GetComponentInChildren<Camera>().fieldOfView = zoomSensitivity;
 
         transform.LookAt(
           Quaternion.AngleAxis(angle.y, Vector3.up) *
@@ -54,10 +83,11 @@ public class CameraAndCanvasController : MonoBehaviour {
 
           Vector3.forward + transform.position);
 
-///////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////
 
         //カメラ操作
-        if (isControll == true) {
+        if (isControll == true)
+        {
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 angle.y++;
@@ -77,12 +107,12 @@ public class CameraAndCanvasController : MonoBehaviour {
             }
         }
 
-///////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////
 
         //デバッグ用シーン切り替え
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            cameraNum +=1;
+            cameraNum += 1;
         }
 
         if (cameraNum > 2)
@@ -90,10 +120,11 @@ public class CameraAndCanvasController : MonoBehaviour {
             cameraNum = 0;
         }
 
-///////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////
 
         //シーンごとのキャンバス切り替えとカメラとフィールドのposチェンジ
-        switch (cameraNum) {
+        switch (cameraNum)
+        {
 
             case 0:
 
@@ -134,6 +165,6 @@ public class CameraAndCanvasController : MonoBehaviour {
                 break;
 
         }
-//////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }

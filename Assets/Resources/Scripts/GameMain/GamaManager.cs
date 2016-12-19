@@ -27,6 +27,12 @@ public class GamaManager : MonoBehaviour
     public GameObject SelectObject;
 
 
+    [SerializeField]
+    public CameraAndCanvasController cameraAndCanvasController;
+
+
+
+
     public enum SceneNum
     {
         MainGame,

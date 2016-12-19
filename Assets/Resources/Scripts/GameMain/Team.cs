@@ -42,7 +42,16 @@ public class Team : MonoBehaviour
     {
         control_team = _num;
         turn.text = "現在はチーム" + (control_team + 1) + "です";
+        if (control_team == 1)
+        {
+            GamaManager.Instance.cameraAndCanvasController.tergetAngle = 180;
 
+        }
+        else
+        {
+            GamaManager.Instance.cameraAndCanvasController.tergetAngle = 0;
+
+        }
 
         //チームのAreaに敵が2体以上入っていたら城を開ける
         if (GamaManager.Instance.Board.getTeamNum(
@@ -95,11 +104,16 @@ public class Team : MonoBehaviour
             GamaManager.Instance.SelectObject.transform.position
                 = GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].transform.position +
                 new Vector3(0, 1, 0);
+            GamaManager.Instance.cameraAndCanvasController.tergetPosition =
+            GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].transform.position;
         }
     }
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ChangeControlTeam();
+        }
         //isPress
         //(int)Input.GetAxisRaw("GamePad1_Left_Axis_x") != 0
 
@@ -151,6 +165,7 @@ public class Team : MonoBehaviour
         {
             ChoiceCell += new Vector2(0, 1);
         }
+
 
 
 
@@ -234,7 +249,6 @@ public class Team : MonoBehaviour
         {
             stepup();
         }
-
         //}
         //if (Input.GetMouseButtonDown(0))
         //{
