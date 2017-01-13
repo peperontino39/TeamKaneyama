@@ -28,9 +28,7 @@ public class CameraAndCanvasController : MonoBehaviour
     public Vector3 tergetPosition = new Vector3(4.0f, 0.0f, 4.0f);
     //目的としている角度
     public float tergetAngle = -90;
-
     //カメラの見ている位置；
-
     public Vector3 pivotPosition
     {
         private get { return new Vector3(); }
@@ -42,8 +40,7 @@ public class CameraAndCanvasController : MonoBehaviour
         }
     }
 
-    
-    // Use this for initialization
+
     void Start()
     {
 
@@ -59,7 +56,6 @@ public class CameraAndCanvasController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 result = new Vector3(

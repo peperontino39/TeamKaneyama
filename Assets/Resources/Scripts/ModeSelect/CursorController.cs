@@ -1,58 +1,99 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
-public class CursorController : MonoBehaviour {
+public class CursorController : MonoBehaviour
+{
+    [SerializeField]
+    GameObject cursor;
 
+    public Vector2 selectSell = new Vector2(0,0);
+
+
+    [System.SerializableAttribute]
+    public class ValueList
+    {
+        public List<GameObject> List;
+    }
 
     [SerializeField]
-    Texture2D cursorTexture;
+    public List<ValueList> selectObject;
 
-    CursorMode cursorMode = CursorMode.Auto;
 
-    Vector2 position = Vector2.zero;
-    
-    
     void OnMouseEnter()
     {
-
-        //Cursor.SetCursor(cursorTexture, position,cursorMode);
 
     }
 
     void OnMouseExit()
     {
 
-        Cursor.SetCursor(null, Vector2.zero, cursorMode);
-        
-    }
-   
 
-    // Use this for initialization
+    }
+
+
     void Start()
     {
 
-        Cursor.SetCursor(cursorTexture, position, cursorMode);
-        Cursor.visible = true;
+        AddSelectSell(new Vector2(0, 0));
+    }
+    
+    void AddSelectSell(Vector2 addSell)
+    {
+        selectSell += addSell;
+
+        selectSell.y = Mathf.Min(Mathf.Max(selectSell.y, 0), selectObject.Count-1);
+        selectSell.x = Mathf.Min(Mathf.Max(selectSell.x, 0), selectObject[(int)selectSell.y].List.Count-1);
+
+        cursor.transform.position = 
+            selectObject[(int)selectSell.y].List[(int)selectSell.x].
+            transform.position + new Vector3(0,-100,0);
+
 
     }
+    
 
-    // Update is called once per frame
     void Update()
     {
 
-        Cursor.visible = true;
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            AddSelectSell(new Vector2(-1, 0));
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            AddSelectSell(new Vector2(1, 0));
+        }
 
-       
-
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit = new RaycastHit();
-
-            if (Physics.Raycast(ray, out hit))
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(selectSell.x == 0)
             {
-                GameObject obj = hit.collider.gameObject;
-                Debug.Log(obj.name);
+
             }
-        
+            if(selectSell.x == 1)
+            {
+                SceneManager.LoadScene("SetPieceMulti");
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+
+        }
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //RaycastHit hit = new RaycastHit();
+
+        //if (Physics.Raycast(ray, out hit))
+        //{
+        //    GameObject obj = hit.collider.gameObject;
+        //    Debug.Log(obj.name);
+        //}
+
 
     }
 }

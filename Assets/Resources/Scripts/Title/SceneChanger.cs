@@ -15,6 +15,10 @@ public class SceneChanger : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.JoystickButton7)){
             SceneManager.LoadScene("MainMenuSample");
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("MainMenuSample");
+        }
 	}
 
     public void OnClick()

@@ -263,6 +263,7 @@ MonoBehaviour:
   - {fileID: 1556193987}
   gamepadname_x: GamePad1_Left_Axis_x
   gamepadname_y: GamePad1_Left_Axis_y
+  gamepadname_a: GamePad1_A
 --- !u!4 &188126760
 Transform:
   m_ObjectHideFlags: 0
@@ -2341,6 +2342,7 @@ MonoBehaviour:
   - {fileID: 1106098547}
   gamepadname_x: GamePad2_Left_Axis_x
   gamepadname_y: GamePad2_Left_Axis_y
+  gamepadname_a: GamePad2_A
 --- !u!1 &1253598229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2910,7 +2912,7 @@ RectTransform:
   m_GameObject: {fileID: 1626629783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.5, y: 4.5, z: 1}
+  m_LocalScale: {x: 8.5, y: 4.6, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1460580467}

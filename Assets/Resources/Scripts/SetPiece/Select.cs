@@ -60,17 +60,17 @@ public class Select : MonoBehaviour
     public string gamepadname_x;
     [SerializeField]
     public string gamepadname_y;
+    [SerializeField]
+    public string gamepadname_a;
+
 
 
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
 
-        }
         //Debug.Log(Input.GetAxis("GamePad1_Left_Axis_y"));
-      
+        Debug.Log(Input.GetAxis(gamepadname_a));
 
         if (gamepad1_left_axisx == (int)Input.GetAxisRaw(gamepadname_x))
         {
@@ -90,26 +90,27 @@ public class Select : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            AddNum(-1, 0);
 
-        }
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    AddNum(-1, 0);
 
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            AddNum(1, 0);
-        }
+        //}
 
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            AddNum(0, 1);
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            AddNum(0, -1);
+        //if (Input.GetKeyDown(KeyCode.D))
+        //{
+        //    AddNum(1, 0);
+        //}
 
-        }
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    AddNum(0, 1);
+        //}
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    AddNum(0, -1);
+
+        //}
         if (gamepadname_x == "GamePad2_Left_Axis_x")
         {
             if (Input.GetKeyDown(KeyCode.Joystick2Button0))

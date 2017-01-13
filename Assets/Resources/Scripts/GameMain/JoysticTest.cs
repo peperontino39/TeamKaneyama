@@ -11,7 +11,7 @@ public class JoysticTest : MonoBehaviour
 
     void Update()
     {
-       // Debug.Log(Input.GetAxis("GamePad2_Left_Axis_x"));
+      // Debug.Log(Input.GetAxis("GamePad1_A"));
 
 
 
