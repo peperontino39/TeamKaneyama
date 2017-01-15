@@ -22,7 +22,7 @@ public class Castles : MonoBehaviour
 
     public GameObject getCatle(int team_num)
     {
-        Debug.Log(castles.Count);
+       // Debug.Log(castles.Count);
         foreach (var castle in castles)
         {
             if (castle.team_num == team_num)

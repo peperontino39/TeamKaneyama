@@ -98,7 +98,7 @@ public class CreateBoard : MonoBehaviour
         //
         List<piece> anger = new List<piece>();
         //_terget_piese.OnAttackArea(_terget_piese.sell);
-        Debug.Log(_terget_piese);
+       // Debug.Log(_terget_piese);
         foreach (var _line in map)
         {
             foreach (var _sell in _line)

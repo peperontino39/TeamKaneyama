@@ -34,7 +34,7 @@ public class piece : MonoBehaviour
 
             "position", GamaManager.Instance.Board.getSellPosition(_sell),
 
-            "time", 3f,
+            "time", 2f,
 
             "easeType", "easeInOutBack"
 
