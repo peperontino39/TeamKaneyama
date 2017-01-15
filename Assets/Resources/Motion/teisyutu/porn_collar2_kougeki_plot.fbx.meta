@@ -349,7 +349,349 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Character4_Ctrl_Reference
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_ChestEndEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_ChestOriginEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_HeadEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_LeftUpLeg
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_LeftUpLeg/porn:porn:porn:Human_modering:Character4_Ctrl_LeftLeg
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_LeftUpLeg/porn:porn:porn:Human_modering:Character4_Ctrl_LeftLeg/porn:porn:porn:Human_modering:Character4_Ctrl_LeftFoot
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_LeftUpLeg/porn:porn:porn:Human_modering:Character4_Ctrl_LeftLeg/porn:porn:porn:Human_modering:Character4_Ctrl_LeftFoot/porn:porn:porn:Human_modering:Character4_Ctrl_LeftToeBase
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_RightUpLeg
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_RightUpLeg/porn:porn:porn:Human_modering:Character4_Ctrl_RightLeg
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_RightUpLeg/porn:porn:porn:Human_modering:Character4_Ctrl_RightLeg/porn:porn:porn:Human_modering:Character4_Ctrl_RightFoot
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_RightUpLeg/porn:porn:porn:Human_modering:Character4_Ctrl_RightLeg/porn:porn:porn:Human_modering:Character4_Ctrl_RightFoot/porn:porn:porn:Human_modering:Character4_Ctrl_RightToeBase
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndex1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndex1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndex2
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndex1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndex2/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndex3
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndex1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndex2/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndex3/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndex4
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddle1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddle1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddle2
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddle1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddle2/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddle3
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddle1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddle2/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddle3/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddle4
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinky1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinky1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinky2
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinky1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinky2/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinky3
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinky1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinky2/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinky3/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinky4
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRing1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRing1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRing2
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRing1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRing2/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRing3
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRing1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRing2/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRing3/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRing4
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumb1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumb1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumb2
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumb1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumb2/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumb3
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_LeftArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHand/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumb1/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumb2/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumb3/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumb4
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_Neck
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_Neck/porn:porn:porn:Human_modering:Character4_Ctrl_Head
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndex1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndex1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndex2
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndex1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndex2/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndex3
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndex1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndex2/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndex3/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndex4
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddle1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddle1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddle2
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddle1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddle2/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddle3
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddle1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddle2/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddle3/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddle4
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinky1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinky1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinky2
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinky1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinky2/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinky3
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinky1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinky2/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinky3/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinky4
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRing1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRing1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRing2
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRing1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRing2/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRing3
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRing1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRing2/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRing3/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRing4
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumb1
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumb1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumb2
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumb1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumb2/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumb3
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_Hips/porn:porn:porn:Human_modering:Character4_Ctrl_Spine/porn:porn:porn:Human_modering:Character4_Ctrl_Spine1/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulder/porn:porn:porn:Human_modering:Character4_Ctrl_RightArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightForeArm/porn:porn:porn:Human_modering:Character4_Ctrl_RightHand/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumb1/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumb2/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumb3/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumb4
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_HipsEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftAnkleEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftElbowEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftFootEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandIndexEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandMiddleEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandPinkyEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandRingEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHandThumbEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftHipEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftKneeEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftShoulderEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_LeftWristEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightAnkleEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightElbowEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightFootEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandIndexEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandMiddleEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandPinkyEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandRingEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightHandThumbEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightHipEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightKneeEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightShoulderEffector
+        weight: 1
+      - path: Character4_Ctrl_Reference/porn:porn:porn:Human_modering:Character4_Ctrl_RightWristEffector
+        weight: 1
+      - path: Character4_Reference
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_LeftUpLeg
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_LeftUpLeg/porn:porn:porn:Human_modering:Character4_LeftLeg
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_LeftUpLeg/porn:porn:porn:Human_modering:Character4_LeftLeg/porn:porn:porn:Human_modering:Character4_LeftFoot
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_LeftUpLeg/porn:porn:porn:Human_modering:Character4_LeftLeg/porn:porn:porn:Human_modering:Character4_LeftFoot/porn:porn:porn:Human_modering:Character4_LeftToeBase
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_RightUpLeg
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_RightUpLeg/porn:porn:porn:Human_modering:Character4_RightLeg
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_RightUpLeg/porn:porn:porn:Human_modering:Character4_RightLeg/porn:porn:porn:Human_modering:Character4_RightFoot
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_RightUpLeg/porn:porn:porn:Human_modering:Character4_RightLeg/porn:porn:porn:Human_modering:Character4_RightFoot/porn:porn:porn:Human_modering:Character4_RightToeBase
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandIndex1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandIndex1/porn:porn:porn:Human_modering:Character4_LeftHandIndex2
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandIndex1/porn:porn:porn:Human_modering:Character4_LeftHandIndex2/porn:porn:porn:Human_modering:Character4_LeftHandIndex3
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandIndex1/porn:porn:porn:Human_modering:Character4_LeftHandIndex2/porn:porn:porn:Human_modering:Character4_LeftHandIndex3/porn:porn:porn:Human_modering:Character4_LeftHandIndex4
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandMiddle1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandMiddle1/porn:porn:porn:Human_modering:Character4_LeftHandMiddle2
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandMiddle1/porn:porn:porn:Human_modering:Character4_LeftHandMiddle2/porn:porn:porn:Human_modering:Character4_LeftHandMiddle3
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandMiddle1/porn:porn:porn:Human_modering:Character4_LeftHandMiddle2/porn:porn:porn:Human_modering:Character4_LeftHandMiddle3/porn:porn:porn:Human_modering:Character4_LeftHandMiddle4
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandPinky1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandPinky1/porn:porn:porn:Human_modering:Character4_LeftHandPinky2
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandPinky1/porn:porn:porn:Human_modering:Character4_LeftHandPinky2/porn:porn:porn:Human_modering:Character4_LeftHandPinky3
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandPinky1/porn:porn:porn:Human_modering:Character4_LeftHandPinky2/porn:porn:porn:Human_modering:Character4_LeftHandPinky3/porn:porn:porn:Human_modering:Character4_LeftHandPinky4
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandRing1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandRing1/porn:porn:porn:Human_modering:Character4_LeftHandRing2
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandRing1/porn:porn:porn:Human_modering:Character4_LeftHandRing2/porn:porn:porn:Human_modering:Character4_LeftHandRing3
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandRing1/porn:porn:porn:Human_modering:Character4_LeftHandRing2/porn:porn:porn:Human_modering:Character4_LeftHandRing3/porn:porn:porn:Human_modering:Character4_LeftHandRing4
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandThumb1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandThumb1/porn:porn:porn:Human_modering:Character4_LeftHandThumb2
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandThumb1/porn:porn:porn:Human_modering:Character4_LeftHandThumb2/porn:porn:porn:Human_modering:Character4_LeftHandThumb3
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_LeftShoulder/porn:porn:porn:Human_modering:Character4_LeftArm/porn:porn:porn:Human_modering:Character4_LeftForeArm/porn:porn:porn:Human_modering:Character4_LeftHand/porn:porn:porn:Human_modering:Character4_LeftHandThumb1/porn:porn:porn:Human_modering:Character4_LeftHandThumb2/porn:porn:porn:Human_modering:Character4_LeftHandThumb3/porn:porn:porn:Human_modering:Character4_LeftHandThumb4
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_Neck
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_Neck/porn:porn:porn:Human_modering:Character4_Head
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandIndex1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandIndex1/porn:porn:porn:Human_modering:Character4_RightHandIndex2
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandIndex1/porn:porn:porn:Human_modering:Character4_RightHandIndex2/porn:porn:porn:Human_modering:Character4_RightHandIndex3
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandIndex1/porn:porn:porn:Human_modering:Character4_RightHandIndex2/porn:porn:porn:Human_modering:Character4_RightHandIndex3/porn:porn:porn:Human_modering:Character4_RightHandIndex4
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandMiddle1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandMiddle1/porn:porn:porn:Human_modering:Character4_RightHandMiddle2
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandMiddle1/porn:porn:porn:Human_modering:Character4_RightHandMiddle2/porn:porn:porn:Human_modering:Character4_RightHandMiddle3
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandMiddle1/porn:porn:porn:Human_modering:Character4_RightHandMiddle2/porn:porn:porn:Human_modering:Character4_RightHandMiddle3/porn:porn:porn:Human_modering:Character4_RightHandMiddle4
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandPinky1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandPinky1/porn:porn:porn:Human_modering:Character4_RightHandPinky2
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandPinky1/porn:porn:porn:Human_modering:Character4_RightHandPinky2/porn:porn:porn:Human_modering:Character4_RightHandPinky3
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandPinky1/porn:porn:porn:Human_modering:Character4_RightHandPinky2/porn:porn:porn:Human_modering:Character4_RightHandPinky3/porn:porn:porn:Human_modering:Character4_RightHandPinky4
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandRing1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandRing1/porn:porn:porn:Human_modering:Character4_RightHandRing2
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandRing1/porn:porn:porn:Human_modering:Character4_RightHandRing2/porn:porn:porn:Human_modering:Character4_RightHandRing3
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandRing1/porn:porn:porn:Human_modering:Character4_RightHandRing2/porn:porn:porn:Human_modering:Character4_RightHandRing3/porn:porn:porn:Human_modering:Character4_RightHandRing4
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandThumb1
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandThumb1/porn:porn:porn:Human_modering:Character4_RightHandThumb2
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandThumb1/porn:porn:porn:Human_modering:Character4_RightHandThumb2/porn:porn:porn:Human_modering:Character4_RightHandThumb3
+        weight: 1
+      - path: Character4_Reference/porn:porn:porn:Human_modering:Character4_Hips/porn:porn:porn:Human_modering:Character4_Spine/porn:porn:porn:Human_modering:Character4_Spine1/porn:porn:porn:Human_modering:Character4_RightShoulder/porn:porn:porn:Human_modering:Character4_RightArm/porn:porn:porn:Human_modering:Character4_RightForeArm/porn:porn:porn:Human_modering:Character4_RightHand/porn:porn:porn:Human_modering:Character4_RightHandThumb1/porn:porn:porn:Human_modering:Character4_RightHandThumb2/porn:porn:porn:Human_modering:Character4_RightHandThumb3/porn:porn:porn:Human_modering:Character4_RightHandThumb4
+        weight: 1
+      - path: polySurface10
+        weight: 1
+      - path: Porn
+        weight: 1
+      - path: shield
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

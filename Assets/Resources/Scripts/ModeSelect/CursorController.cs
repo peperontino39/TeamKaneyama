@@ -32,7 +32,6 @@ public class CursorController : MonoBehaviour
 
     }
 
-
     void Start()
     {
 
@@ -48,8 +47,7 @@ public class CursorController : MonoBehaviour
 
         cursor.transform.position = 
             selectObject[(int)selectSell.y].List[(int)selectSell.x].
-            transform.position + new Vector3(0,-100,0);
-
+            transform.position + new Vector3(0,-80,0);
 
     }
     
