@@ -4,6 +4,11 @@ using System.Collections;
 public class JoysticTest : MonoBehaviour
 {
 
+    //[SerializeField]
+    //UnityActine a;
+
+
+
     void Start()
     {
 
@@ -12,9 +17,6 @@ public class JoysticTest : MonoBehaviour
     void Update()
     {
       // Debug.Log(Input.GetAxis("GamePad1_A"));
-
-
-
-
+      
     }
 }

@@ -60,7 +60,7 @@ public class Select : MonoBehaviour
 
 
     bool axis;
-    bool aButtonFlag = false;
+    bool aButtonFlag = true;
     bool gamepadnameStartFlag = false;
 
     public bool is_set_ok = false;
@@ -75,8 +75,10 @@ public class Select : MonoBehaviour
 
     void Update()
     {
+        if (is_set_ok) return;
+        // Debug.Log("1    " + Input.GetKey("joystick 1 button 0"));
+        // Debug.Log("2    " + Input.GetKey("joystick 2 button 0"));
 
-        // Debug.Log(Input.GetAxis(gamepadname_x));
         if (!axis)
         {
             if ((int)Input.GetAxis(gamepadname_x) != 0 || (int)Input.GetAxis(gamepadname_y) != 0)
@@ -87,14 +89,14 @@ public class Select : MonoBehaviour
 
         if (!aButtonFlag)
         {
-            if (Input.GetAxis(gamepadname_a) != 0)
+            if (!Input.GetKey(gamepadname_a))
             {
                 Determination();
             }
         }
 
-       // Debug.Log(Input.GetAxis("GamePad1_start"));
-        if (Input.GetAxis(gamepadname_start) == 1)
+        // Debug.Log(Input.GetAxis("GamePad1_start"));
+        if (Input.GetKey(gamepadname_start))
         {
             int totle = 0;
             foreach (var num in remainingAmount)
@@ -107,13 +109,13 @@ public class Select : MonoBehaviour
 
         }
 
-        icon.transform.SetAsLastSibling();  //アイコンを一番前に出す
+        //icon.transform.SetAsLastSibling();  //アイコンを一番前に出す
         if (selectImage != null)
         {
             selectImage.transform.position = icon.position + Vector3.up * 0;
         }
         axis = (int)Input.GetAxis(gamepadname_x) != 0 || (int)Input.GetAxis(gamepadname_y) != 0;
-        aButtonFlag = Input.GetAxis(gamepadname_a) != 0;
+        aButtonFlag = !Input.GetKey(gamepadname_a);
 
     }
     //決定ボタンを押したときの処理です
@@ -152,20 +154,22 @@ public class Select : MonoBehaviour
             //セルを指している時
             if (num == -1)
             {
-
-                if (onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage != null)
+                if (!((int)selectSell.y == 1 && (int)selectSell.x == 5))
                 {
-                    remainingAmount[(int)onPiece[(int)selectSell.y][(int)selectSell.x].onPiece]++;
-                    Destroy(onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage);
-                }
-                onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage = selectImage;
-                //Debug.Log(selectImage);
-                selectImage.transform.position = onPiece[(int)selectSell.y][(int)selectSell.x].transform.position;
-                catchPiese = PieceNum.NON;
-                onPiece[(int)selectSell.y][(int)selectSell.x].onPiece =
-                    selectImage.GetComponent<OnPieceDate>().onPiece;
+                    if (onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage != null)
+                    {
+                        remainingAmount[(int)onPiece[(int)selectSell.y][(int)selectSell.x].onPiece]++;
+                        Destroy(onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage);
+                    }
+                    onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage = selectImage;
+                    //Debug.Log(selectImage);
+                    selectImage.transform.position = onPiece[(int)selectSell.y][(int)selectSell.x].transform.position;
+                    catchPiese = PieceNum.NON;
+                    onPiece[(int)selectSell.y][(int)selectSell.x].onPiece =
+                        selectImage.GetComponent<OnPieceDate>().onPiece;
 
-                selectImage = null;
+                    selectImage = null;
+                }
             }
             //セルを指してないとき
             else
@@ -197,7 +201,7 @@ public class Select : MonoBehaviour
 
                 selectSell.x += x;
                 selectSell.y += y;
-                selectSell.x = Mathf.Min(Mathf.Max(selectSell.x, 0), 8);
+                selectSell.x = Mathf.Min(Mathf.Max(selectSell.x, 0), 10);
 
                 selectSell.y = Mathf.Max(selectSell.y, 0);
                 icon.position = onPiece[(int)selectSell.y][(int)selectSell.x].gameObject.transform.position + Vector3.up * 30;

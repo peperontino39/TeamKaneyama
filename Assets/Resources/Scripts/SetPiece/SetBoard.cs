@@ -20,7 +20,7 @@ public class SetBoard : MonoBehaviour
         for (int y = 0; y < 3; y++)
         {
             List<OnPieceDate> line = new List<OnPieceDate>();
-            for (int x = 0; x < 9; x++)
+            for (int x = 0; x < 11; x++)
             {
                 GameObject obj = Instantiate(sell);
                 obj.transform.position = new Vector3(x * 60 - 300, 150 - y * 60, 0);

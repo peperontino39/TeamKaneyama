@@ -2,6 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.Events;
+
+using System;
 
 public class CursorController : MonoBehaviour
 {
@@ -20,17 +24,19 @@ public class CursorController : MonoBehaviour
     [SerializeField]
     public List<ValueList> selectObject;
 
+    [SerializeField]
+    UnityEvent open;
 
-    void OnMouseEnter()
-    {
+    [SerializeField]
+    UnityEvent Next;
 
-    }
+    [SerializeField]
+    UnityEvent Prev;
 
-    void OnMouseExit()
-    {
+    [SerializeField]
+    GameObject tutorial;
 
 
-    }
 
     void Start()
     {
@@ -50,48 +56,54 @@ public class CursorController : MonoBehaviour
             transform.position + new Vector3(0,-80,0);
 
     }
-    
+
+    bool axis = true;
+    bool aButtonFlag = true;
+
 
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (!axis)
         {
-            AddSelectSell(new Vector2(-1, 0));
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            AddSelectSell(new Vector2(1, 0));
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if(selectSell.x == 0)
+            if((int)Input.GetAxis("GamePad_Left_Axis_x") != 0)
             {
+                if (!tutorial.activeSelf)
+                {
 
+                    AddSelectSell(new Vector2((int)Input.GetAxis("GamePad_Left_Axis_x"), 0));
+                }
+                else
+                {
+                    if((int)Input.GetAxis("GamePad_Left_Axis_x") == 1)
+                    {
+                        Next.Invoke();
+                    }
+                    else
+                    {
+                        Prev.Invoke();
+                    }
+                }
             }
-            if(selectSell.x == 1)
+        }
+       
+        if (!aButtonFlag)
+        {
+            if (!Input.GetKey("joystick button 0"))
             {
-                SceneManager.LoadScene("SetPieceMulti");
+                if (selectSell.x == 0)
+                {
+                    open.Invoke();
+                }
+                if (selectSell.x == 1)
+                {
+                    SceneManager.LoadScene("SetPieceMulti");
+                }
             }
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-
-        }
-        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //RaycastHit hit = new RaycastHit();
-
-        //if (Physics.Raycast(ray, out hit))
-        //{
-        //    GameObject obj = hit.collider.gameObject;
-        //    Debug.Log(obj.name);
-        //}
-
+       
+       
+        axis = (int)Input.GetAxis("GamePad_Left_Axis_x") != 0 ;
+        aButtonFlag = !Input.GetKey("joystick button 0");
 
     }
 }

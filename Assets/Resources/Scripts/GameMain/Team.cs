@@ -279,7 +279,7 @@ public class Team : MonoBehaviour
             case Step.SERECT:
 
                 if (_sell.on_pise == null) break;
-
+                if (_sell.on_pise.life <= 0) break;
                 if (_sell.on_pise.team_number != control_team) break;
                 select_pieces = _sell.on_pise;
 
@@ -476,7 +476,7 @@ public class Team : MonoBehaviour
     {
         if (_piece == null)
         {
-            select_status.text = "何もいないよ";
+            select_status.text = "何もいてへんなぁ・・・";
             return;
         }
         string pisename = getPieceName(_piece.piece_num);

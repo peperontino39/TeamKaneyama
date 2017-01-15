@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.UI;
+
 
 public class Tutorial : MonoBehaviour
 {
@@ -14,6 +16,10 @@ public class Tutorial : MonoBehaviour
     int imageNum;
 
     int tutorialSwitch;
+
+
+    [SerializeField]
+    Text page_num;
 
 
     // Use this for initialization
@@ -36,22 +42,18 @@ public class Tutorial : MonoBehaviour
         
         if (Input.GetKeyUp(KeyCode.Y))
         {
-            tutorialSwitch += 1;
+            OpenClose();
 
         }
 
         if (Input.GetKeyUp(KeyCode.L))
         {
-            SetTutorialImage(imageNum + 1);
-            Debug.Log("おした");
-
-
+            NaxtPage();
         }
 
         if (Input.GetKeyUp(KeyCode.J))
         {
-            SetTutorialImage(imageNum - 1);
-
+            PrevPage();
 
         }
 
@@ -67,7 +69,7 @@ public class Tutorial : MonoBehaviour
         {
             tutorialCanvas.SetActive(true);
             SetTutorialImage(imageNum);
-            Debug.Log("でた");
+        
 
         }
         else if (tutorialSwitch == 0)
@@ -78,20 +80,34 @@ public class Tutorial : MonoBehaviour
 
     }
 
+    public void PrevPage()
+    {
+        SetTutorialImage(imageNum - 1);
+    }
+
+    public void NaxtPage()
+    {
+        SetTutorialImage(imageNum + 1);
+    }
+
+    public void OpenClose()
+    {
+        tutorialSwitch += 1;
+    }
 
     void SetTutorialImage(int _imageNum)
     {
 
         tutorialImage[imageNum].SetActive(false);
 
-        imageNum = _imageNum % 10;
+        imageNum = _imageNum % 9;
         imageNum = Mathf.Max(imageNum, 0);
 
+        page_num.text = (imageNum + 1).ToString();
         tutorialImage[imageNum].SetActive(true);
-
-
-
     }
+
+    
 
 
 }
