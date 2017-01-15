@@ -29,7 +29,7 @@ public class Select : MonoBehaviour
     [SerializeField]
     GameObject IsOkWindow;
 
-    PieceNum catchPiese = PieceNum.NON;
+    public PieceNum catchPiese = PieceNum.NON;
     public GameObject selectImage;
 
 
