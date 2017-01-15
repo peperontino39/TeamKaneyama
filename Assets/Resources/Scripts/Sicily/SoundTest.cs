@@ -12,8 +12,6 @@ public class SoundTest : MonoBehaviour {
         audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.clip = audioClip;
 
-        SoundManager.Instance.PlayBGM(SoundManager.BGM.DADDY);
-
     }
 	
 	// Update is called once per frame

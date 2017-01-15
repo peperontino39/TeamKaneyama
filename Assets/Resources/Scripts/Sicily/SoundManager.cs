@@ -8,7 +8,9 @@ public class SoundManager : MonoBehaviour
 
     public enum BGM
     {
-        DADDY = 0,
+        TITLE = 0,
+        MAIN_ONE,
+        MAIN_TWO,
     }
 
     public enum SE
@@ -31,13 +33,18 @@ public class SoundManager : MonoBehaviour
 
     void Awake()
     {
-        //if (GameObject.FindObjectOfType(SoundManager))
-        //{
-        //    Destroy(gameObject);
-        //}
-        Instance = this;
 
-        DontDestroyOnLoad(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(this);
+        }
+
     }
 
     void Start()
@@ -54,20 +61,28 @@ public class SoundManager : MonoBehaviour
     public void PlaySE(SE se)
     {
         //seSources[(int)se].Play();
-
-
         int a = (int)se;
 
         SE s = (SE)System.Enum.ToObject(typeof(SE), a);
-        //SoundManager.Instance.PlaySE(s);
+        
         SoundManager.Instance.seSources[(int)s].Play();
+
+        //Debug.Log("えすいー"+ se.ToString());
+
     }
 
     public void PlayBGM(BGM bgm)
     {
         bgmSources[(int)bgm].Play();
+       // Debug.Log("BGM"+ bgm.ToString());
     }
 
-   
+    public void StopBGM(BGM bgm)
+    {
+        bgmSources[(int)bgm].Stop();
+        //Debug.Log("BGM" + bgm.ToString());
+    }
+
+
 
 }
