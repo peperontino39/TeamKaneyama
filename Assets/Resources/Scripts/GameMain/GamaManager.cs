@@ -30,6 +30,8 @@ public class GamaManager : MonoBehaviour
     [SerializeField]
     public CameraAndCanvasController cameraAndCanvasController;
 
+    [SerializeField]
+    public GameObject WinWindow;
 
 
 

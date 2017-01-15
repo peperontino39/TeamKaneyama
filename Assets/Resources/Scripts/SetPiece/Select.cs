@@ -25,6 +25,10 @@ public class Select : MonoBehaviour
     [SerializeField]
     GameObject canvas;
 
+
+    [SerializeField]
+    GameObject IsOkWindow;
+
     PieceNum catchPiese = PieceNum.NON;
     public GameObject selectImage;
 
@@ -34,16 +38,7 @@ public class Select : MonoBehaviour
     public int[] remainingAmount;
     public Text[] remainingAmountText;
 
-    bool is_ok = false;
 
-
-
-    void Start()
-    {
-        AddNum(0, 0);
-
-        TextWrite();
-    }
 
     private void TextWrite()
     {
@@ -53,250 +48,139 @@ public class Select : MonoBehaviour
         }
     }
 
-    int gamepad1_left_axisx;
-    int gamepad1_left_axisy;
-
     [SerializeField]
     public string gamepadname_x;
     [SerializeField]
     public string gamepadname_y;
     [SerializeField]
     public string gamepadname_a;
+    [SerializeField]
+    public string gamepadname_start;
 
 
+
+    bool axis;
+    bool aButtonFlag = false;
+    bool gamepadnameStartFlag = false;
+
+    public bool is_set_ok = false;
+
+    void Start()
+    {
+        AddNum(0, 0);
+
+        TextWrite();
+        axis = false;
+    }
 
     void Update()
     {
 
-
-        //Debug.Log(Input.GetAxis("GamePad1_Left_Axis_y"));
-        Debug.Log(Input.GetAxis(gamepadname_a));
-
-        if (gamepad1_left_axisx == (int)Input.GetAxisRaw(gamepadname_x))
+        // Debug.Log(Input.GetAxis(gamepadname_x));
+        if (!axis)
         {
-            gamepad1_left_axisx = 0;
-        }
-        if (gamepad1_left_axisy == (int)Input.GetAxisRaw(gamepadname_y))
-        {
-            gamepad1_left_axisy = 0;
-        }
-        if (gamepad1_left_axisx != 0)
-        {
-            AddNum(gamepad1_left_axisx, 0);
-        }
-        if (gamepad1_left_axisy != 0)
-        {
-            AddNum(0, gamepad1_left_axisy);
-        }
-
-
-
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    AddNum(-1, 0);
-
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.D))
-        //{
-        //    AddNum(1, 0);
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.S))
-        //{
-        //    AddNum(0, 1);
-        //}
-        //if (Input.GetKeyDown(KeyCode.W))
-        //{
-        //    AddNum(0, -1);
-
-        //}
-        if (gamepadname_x == "GamePad2_Left_Axis_x")
-        {
-            if (Input.GetKeyDown(KeyCode.Joystick2Button0))
+            if ((int)Input.GetAxis(gamepadname_x) != 0 || (int)Input.GetAxis(gamepadname_y) != 0)
             {
-                //何も持ってないとき
-                if (catchPiese == PieceNum.NON)
-                {
-                    //セルを指している時
-                    if (num == -1)
-                    {
-                        if (onPiece[(int)selectSell.y][(int)selectSell.x].onPiece != PieceNum.NON)
-                        {
-                            selectImage = onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage;
-                            onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage = null;
-                            catchPiese = onPiece[(int)selectSell.y][(int)selectSell.x].onPiece;
-                        }
-                    }
-
-                    //セルを指してないとき
-                    else
-                    {
-                        if (remainingAmount[num] > 0)
-                        {
-                            remainingAmount[num]--;
-                            selectImage = Instantiate(piece[num]);
-
-                            selectImage.transform.SetParent(canvas.transform, false);
-                            catchPiese = selectImage.GetComponent<OnPieceDate>().onPiece;
-                        }
-                    }
-                }
-                //何かもってるとき
-                else
-                {
-                    //セルを指している時
-                    if (num == -1)
-                    {
-
-                        if (onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage != null)
-                        {
-                            remainingAmount[(int)onPiece[(int)selectSell.y][(int)selectSell.x].onPiece]++;
-                            Destroy(onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage);
-                        }
-                        onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage = selectImage;
-                        Debug.Log(selectImage);
-                        selectImage.transform.position = onPiece[(int)selectSell.y][(int)selectSell.x].transform.position;
-                        catchPiese = PieceNum.NON;
-                        onPiece[(int)selectSell.y][(int)selectSell.x].onPiece =
-                            selectImage.GetComponent<OnPieceDate>().onPiece;
-
-                        selectImage = null;
-                    }
-                    //セルを指してないとき
-                    else
-                    {
-                        remainingAmount[(int)catchPiese]++;
-
-                        Destroy(selectImage);
-                        catchPiese = PieceNum.NON;
-                        selectImage = null;
-                    }
-                }
-                TextWrite();
-
-            }
-
-            if (Input.GetKeyDown(KeyCode.Joystick2Button7))
-            {
-                int totle = 0;
-                foreach (var num in remainingAmount)
-                {
-                    totle += num;
-                }
-                //if (totle == 0)
-                //{
-
-                GameMainData.Instance.player2 = new List<List<OnPieceDate>>(onPiece);
-
-                SceneManager.LoadScene("GameMain");
-                //}
-            }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Joystick1Button0))
-            {
-                //何も持ってないとき
-                if (catchPiese == PieceNum.NON)
-                {
-                    //セルを指している時
-                    if (num == -1)
-                    {
-                        if (onPiece[(int)selectSell.y][(int)selectSell.x].onPiece != PieceNum.NON)
-                        {
-                            selectImage = onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage;
-                            onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage = null;
-                            catchPiese = onPiece[(int)selectSell.y][(int)selectSell.x].onPiece;
-                        }
-                    }
-
-                    //セルを指してないとき
-                    else
-                    {
-                        if (remainingAmount[num] > 0)
-                        {
-                            remainingAmount[num]--;
-                            selectImage = Instantiate(piece[num]);
-
-                            selectImage.transform.SetParent(canvas.transform, false);
-                            catchPiese = selectImage.GetComponent<OnPieceDate>().onPiece;
-                        }
-                    }
-                }
-                //何かもってるとき
-                else
-                {
-                    //セルを指している時
-                    if (num == -1)
-                    {
-
-                        if (onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage != null)
-                        {
-                            remainingAmount[(int)onPiece[(int)selectSell.y][(int)selectSell.x].onPiece]++;
-                            Destroy(onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage);
-                        }
-                        onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage = selectImage;
-                        Debug.Log(selectImage);
-                        selectImage.transform.position = onPiece[(int)selectSell.y][(int)selectSell.x].transform.position;
-                        catchPiese = PieceNum.NON;
-                        onPiece[(int)selectSell.y][(int)selectSell.x].onPiece =
-                            selectImage.GetComponent<OnPieceDate>().onPiece;
-
-                        selectImage = null;
-                    }
-                    //セルを指してないとき
-                    else
-                    {
-                        remainingAmount[(int)catchPiese]++;
-
-                        Destroy(selectImage);
-                        catchPiese = PieceNum.NON;
-                        selectImage = null;
-                    }
-                }
-                TextWrite();
-
-            }
-
-            if (Input.GetKeyDown(KeyCode.Joystick1Button7))
-            {
-                int totle = 0;
-                foreach (var num in remainingAmount)
-                {
-                    totle += num;
-                }
-                //if (totle == 0)
-                //{
-
-                GameMainData.Instance.player1 = new List<List<OnPieceDate>>(onPiece);
-
-                SceneManager.LoadScene("GameMain");
-                //}
+                AddNum((int)Input.GetAxis(gamepadname_x), (int)Input.GetAxis(gamepadname_y));
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Joystick2Button0))
+        if (!aButtonFlag)
         {
-            Debug.Log("fghj");
+            if (Input.GetAxis(gamepadname_a) != 0)
+            {
+                Determination();
+            }
         }
-            icon.transform.SetAsLastSibling();
 
+        Debug.Log(Input.GetAxis("GamePad1_start"));
+        if (Input.GetAxis(gamepadname_start) == 1)
+        {
+            int totle = 0;
+            foreach (var num in remainingAmount)
+            {
+                totle += num;
+            }
+            //Debug.Log(is_set_ok);
+            is_set_ok = true;
+            IsOkWindow.SetActive(true);
 
+        }
+
+        icon.transform.SetAsLastSibling();  //アイコンを一番前に出す
         if (selectImage != null)
         {
-            selectImage.transform.position = icon.position + Vector3.up * 30;
+            selectImage.transform.position = icon.position + Vector3.up * 0;
         }
+        axis = (int)Input.GetAxis(gamepadname_x) != 0 || (int)Input.GetAxis(gamepadname_y) != 0;
+        aButtonFlag = Input.GetAxis(gamepadname_a) != 0;
 
-        gamepad1_left_axisx = (int)Input.GetAxisRaw(gamepadname_x);
-        gamepad1_left_axisy = (int)Input.GetAxisRaw(gamepadname_y);
+    }
+    //決定ボタンを押したときの処理です
+    private void Determination()
+    {
+        //何も持ってないとき
+        if (catchPiese == PieceNum.NON)
+        {
+            //セルを指している時
+            if (num == -1)
+            {
+                if (onPiece[(int)selectSell.y][(int)selectSell.x].onPiece != PieceNum.NON)
+                {
+                    selectImage = onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage;
+                    onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage = null;
+                    catchPiese = onPiece[(int)selectSell.y][(int)selectSell.x].onPiece;
+                }
+            }
 
+            //セルを指してないとき
+            else
+            {
+                if (remainingAmount[num] > 0)
+                {
+                    remainingAmount[num]--;
+                    selectImage = Instantiate(piece[num]);
+
+                    selectImage.transform.SetParent(canvas.transform, false);
+                    catchPiese = selectImage.GetComponent<OnPieceDate>().onPiece;
+                }
+            }
+        }
+        //何かもってるとき
+        else
+        {
+            //セルを指している時
+            if (num == -1)
+            {
+
+                if (onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage != null)
+                {
+                    remainingAmount[(int)onPiece[(int)selectSell.y][(int)selectSell.x].onPiece]++;
+                    Destroy(onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage);
+                }
+                onPiece[(int)selectSell.y][(int)selectSell.x].onPieceImage = selectImage;
+                //Debug.Log(selectImage);
+                selectImage.transform.position = onPiece[(int)selectSell.y][(int)selectSell.x].transform.position;
+                catchPiese = PieceNum.NON;
+                onPiece[(int)selectSell.y][(int)selectSell.x].onPiece =
+                    selectImage.GetComponent<OnPieceDate>().onPiece;
+
+                selectImage = null;
+            }
+            //セルを指してないとき
+            else
+            {
+                remainingAmount[(int)catchPiese]++;
+
+                Destroy(selectImage);
+                catchPiese = PieceNum.NON;
+                selectImage = null;
+            }
+        }
+        TextWrite();
 
 
     }
-
-
-
 
     private void AddNum(int x, int y)
     {
@@ -336,4 +220,6 @@ public class Select : MonoBehaviour
             icon.position = piece[num].transform.position + Vector3.up * 30;
         }
     }
+
+
 }

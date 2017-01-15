@@ -23,11 +23,40 @@ public class PicecDeploy : MonoBehaviour
 
     [SerializeField]
     GameObject castle;
-   
+
 
 
     void Start()
     {
+        //for(int y = 0;y < GameMainData.Instance.player1.Count; y++)
+        //{
+        //    for (int x = 0; x < GameMainData.Instance.player1[y].Count ; x++)
+        //    {
+        //        var onpise = GameMainData.Instance.player1[y][x].onPiece;
+        //        if(onpise != PieceNum.NON)
+        //        {
+        //            CreatePiece(onpise, x, 2-y, 0);
+        //        }
+
+
+        //    }
+        //}
+
+        //for (int y = 0; y < GameMainData.Instance.player2.Count; y++)
+        //{
+        //    for (int x = 0; x < GameMainData.Instance.player2[y].Count; x++)
+        //    {
+        //        var onpise = GameMainData.Instance.player2[y][x].onPiece;
+        //        if (onpise != PieceNum.NON)
+        //        {
+        //            CreatePiece(onpise, x, y + 6, 1);
+        //        }
+        //    }
+        //}
+
+
+
+
         CreatePiece(PieceNum.PAWN, 0, 2, 0);
         CreatePiece(PieceNum.PAWN, 1, 2, 0);
         CreatePiece(PieceNum.PAWN, 2, 2, 0);
@@ -101,9 +130,10 @@ public class PicecDeploy : MonoBehaviour
         pic.piece_num = _piece;
         if (_team == 1)
         {
-            obj.GetComponent<Renderer>().material.color = new Color(0, 1, 0);
+            //obj.GetComponent<Renderer>().material.color = new Color(0, 1, 0);
+            obj.transform.Rotate(new Vector3(0,180,0)); //= Quaternion.Euler(0, 0, 0); //obj.transform.Rotate * Quaternion.AngleAxis(90, Vector3.up);
         }
-        if(PieceNum.KING == _piece)
+        if (PieceNum.KING == _piece)
         {
             GamaManager.Instance.kings_info.kings.Add(pic);
         }

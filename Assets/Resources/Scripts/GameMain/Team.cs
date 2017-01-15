@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public struct Area
 {
@@ -16,10 +17,10 @@ public class Team : MonoBehaviour
     {
         new Area() {
             pos = new Vector2(0,0),
-            size = new Vector2(9,3)},
+            size = new Vector2(11,3)},
     new Area() {
-        pos = new Vector2(0,6),
-        size = new Vector2(9,9)}
+        pos = new Vector2(0,8),
+        size = new Vector2(11,11)}
 
     };
 
@@ -97,26 +98,161 @@ public class Team : MonoBehaviour
         set
         {
 
+            var piece = GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].on_pise;
+            if (piece != null)
+            {
+                piece.gameObject.transform.position += new Vector3(0, -0.5f, 0);
+
+            }
             choiceCell = value;
-            choiceCell.x = Mathf.Min(Mathf.Max(choiceCell.x, 0), 8);
-            choiceCell.y = Mathf.Min(Mathf.Max(choiceCell.y, 0), 8);
+            choiceCell.x = Mathf.Min(Mathf.Max(choiceCell.x, 0), 10);
+            choiceCell.y = Mathf.Min(Mathf.Max(choiceCell.y, 0), 10);
+            piece = GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].on_pise;
+            setUiStatus(piece);
+            if (piece != null)
+            {
+                piece.gameObject.transform.position += new Vector3(0, 0.5f, 0);
+            }
 
             GamaManager.Instance.SelectObject.transform.position
                 = GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].transform.position +
-                new Vector3(0, 1, 0);
+                new Vector3(0, 0.1f, 0);
             GamaManager.Instance.cameraAndCanvasController.tergetPosition =
             GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].transform.position;
         }
     }
     void Update()
     {
+
+        if (select_pieces != null)
+        {
+            select_pieces.gameObject.transform.position += new Vector3(0, Mathf.Sin(Time.time * 30) / 20, 0);
+        }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            ChangeControlTeam();
+            //ChangeControlTeam();
+            StartCoroutine(SceneChange());
         }
         //isPress
         //(int)Input.GetAxisRaw("GamePad1_Left_Axis_x") != 0
 
+        GamePadBegin();
+
+        if (control_team == 0)
+        {
+            if (gamepad1_left_axisy != 0 || gamepad1_left_axisx != 0)
+            {
+                ChoiceCell += new Vector2(gamepad1_left_axisx, -gamepad1_left_axisy);
+            }
+        }
+        else
+        {
+            if (gamepad2_left_axisy != 0 || gamepad2_left_axisx != 0)
+            {
+                ChoiceCell += new Vector2(-gamepad2_left_axisx, gamepad2_left_axisy);
+            }
+        }
+
+
+        if (control_team == 0)
+        {
+            if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+            {
+                Atack();
+            }
+            if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+            {
+
+                stepup();
+            }
+            else if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+            {
+                Cancel();
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+            {
+                InCastle();
+
+            }
+            else if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+            {
+                End();
+            }
+            else if (Input.GetKeyDown(KeyCode.Joystick1Button4))
+            {
+                ExitCastle();
+            }
+            else if (Input.GetKeyDown(KeyCode.Joystick1Button5))
+            {
+                Siege();
+            }
+
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Joystick2Button0))
+            {
+                Atack();
+
+            }
+            if (Input.GetKeyDown(KeyCode.Joystick2Button0))
+            {
+                stepup();
+            }
+            else if (Input.GetKeyDown(KeyCode.Joystick2Button1))
+            {
+                Cancel();
+            }
+            else if (Input.GetKeyDown(KeyCode.Joystick2Button2))
+            {
+                InCastle();
+
+            }
+            else if (Input.GetKeyDown(KeyCode.Joystick2Button3))
+            {
+                End();
+            }
+            else if (Input.GetKeyDown(KeyCode.Joystick2Button4))
+            {
+                ExitCastle();
+            }
+            else if (Input.GetKeyDown(KeyCode.Joystick2Button5))
+            {
+                Siege();
+            }
+
+        }
+
+
+
+        gamepad1_left_axisx = (int)Input.GetAxisRaw("GamePad1_Left_Axis_x");
+        gamepad1_left_axisy = (int)Input.GetAxisRaw("GamePad1_Left_Axis_y");
+        gamepad2_left_axisx = (int)Input.GetAxisRaw("GamePad2_Left_Axis_x");
+        gamepad2_left_axisy = (int)Input.GetAxisRaw("GamePad2_Left_Axis_y");
+
+
+
+
+    }
+
+    private static void DebugMouseSertc()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit = new RaycastHit();
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
+            {
+                Debug.Log(hit.collider.gameObject.GetComponent<SellDate>().on_pise);
+
+            }
+        }
+    }
+
+    private void GamePadBegin()
+    {
         if (gamepad1_left_axisx == (int)Input.GetAxisRaw("GamePad1_Left_Axis_x"))
         {
             gamepad1_left_axisx = 0;
@@ -133,144 +269,6 @@ public class Team : MonoBehaviour
         {
             gamepad2_left_axisy = 0;
         }
-
-
-        if (control_team == 0)
-        {
-            if (gamepad1_left_axisy != 0 || gamepad1_left_axisx != 0)
-            {
-                ChoiceCell += new Vector2(gamepad1_left_axisy, gamepad1_left_axisx);
-            }
-        }
-        else
-        {
-            if (gamepad2_left_axisy != 0 || gamepad2_left_axisx != 0)
-            {
-                ChoiceCell += new Vector2(gamepad2_left_axisy, gamepad2_left_axisx);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            ChoiceCell += new Vector2(-1, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            ChoiceCell += new Vector2(0, -1);
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            ChoiceCell += new Vector2(1, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            ChoiceCell += new Vector2(0, 1);
-        }
-
-
-
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit = new RaycastHit();
-
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
-            {
-                Debug.Log(hit.collider.gameObject.GetComponent<SellDate>().on_pise);
-
-            }
-        }
-        //Debug.Log(Input.GetKeyDown(KeyCode.Joystick1Button0));
-
-        //if (control_team == 0)
-        //{
-        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
-        {
-            Atack();
-
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
-        {
-            Cancel();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
-        {
-            InCastle();
-
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick1Button3))
-        {
-            End();
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick1Button4))
-        {
-            ExitCastle();
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick1Button5))
-        {
-            Siege();
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
-        {
-            stepup();
-        }
-        //}
-        //else
-        //{
-        if (Input.GetKeyDown(KeyCode.Joystick2Button0))
-        {
-            Atack();
-
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick2Button1))
-        {
-            Cancel();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Joystick2Button2))
-        {
-            InCastle();
-
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick2Button3))
-        {
-            End();
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick2Button4))
-        {
-            ExitCastle();
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick2Button5))
-        {
-            Siege();
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick2Button0))
-        {
-            stepup();
-        }
-        //}
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //    RaycastHit hit = new RaycastHit();
-
-        //    if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8))
-        //    {
-
-        //    }
-
-        //}
-
-
-        gamepad1_left_axisx = (int)Input.GetAxisRaw("GamePad1_Left_Axis_x");
-        gamepad1_left_axisy = (int)Input.GetAxisRaw("GamePad1_Left_Axis_y");
-        gamepad2_left_axisx = (int)Input.GetAxisRaw("GamePad2_Left_Axis_x");
-        gamepad2_left_axisy = (int)Input.GetAxisRaw("GamePad2_Left_Axis_y");
-
-
-
-
     }
 
     private void stepup()
@@ -279,11 +277,11 @@ public class Team : MonoBehaviour
         switch (step)
         {
             case Step.SERECT:
+
+                if (_sell.on_pise == null) break;
+
+                if (_sell.on_pise.team_number != control_team) break;
                 select_pieces = _sell.on_pise;
-
-                if (select_pieces == null) break;
-
-                if (select_pieces.team_number != control_team) break;
 
                 //攻撃範囲にてきがいた場合足踏みができる処理
                 if (GamaManager.Instance.Board.IsAttackAreanEnemy(select_pieces))
@@ -356,6 +354,8 @@ public class Team : MonoBehaviour
     public void ChangeControlTeam()
     {
         setControlTeam((control_team + 1) % 2);
+        select_pieces.transform.position = new Vector3(select_pieces.transform.position.x, 1.5f, select_pieces.transform.position.z);
+        select_pieces = null;
     }
 
 
@@ -377,7 +377,17 @@ public class Team : MonoBehaviour
         {
             step = Step.ACTIVITY;
             turn.text = ((win_team_num + 1) + "の勝利");
+            StartCoroutine(SceneChange());
         }
+    }
+
+    IEnumerator SceneChange()
+    {
+        yield return new WaitForSeconds(1.0f);
+        GamaManager.Instance.WinWindow.SetActive(true);
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("Title");
+
     }
     //Turnを切り替えるよ
     private void ChangeTurn()
@@ -399,8 +409,6 @@ public class Team : MonoBehaviour
             return;
 
         select_pieces.is_siege = true;
-
-
         GamaManager.Instance.Board.OnPiceMove(select_pieces.sell, moveSell);
         select_pieces.setSell(moveSell);
 
@@ -408,6 +416,7 @@ public class Team : MonoBehaviour
         {
             step = Step.ACTIVITY;
             turn.text = ((control_team + 1) + "の勝利");
+            StartCoroutine(SceneChange());
             return;
         }
 
@@ -465,11 +474,40 @@ public class Team : MonoBehaviour
     //Uiに駒の情報を入れる
     public void setUiStatus(piece _piece)
     {
+        if (_piece == null)
+        {
+            select_status.text = "何もいないよ";
+            return;
+        }
+        string pisename = getPieceName(_piece.piece_num);
         select_status.text =
             "status\n" +
+            pisename + "\n" +
             "体力　　" + _piece.life + " / " + _piece.max_hp + "\n" +
             "攻撃力　" + _piece.attack_power + "\n" +
             "反撃力　" + _piece.counter_attack_power + "\n"
             ;
+    }
+
+    private static string getPieceName(PieceNum _piece)
+    {
+        switch (_piece)
+        {
+            case PieceNum.PAWN:
+                return "ポーン";
+            case PieceNum.QUEEN:
+                return "クイーン";
+            case PieceNum.ROOK:
+                return "ルーク";
+            case PieceNum.JACK:
+                return "ジャック";
+            case PieceNum.BISOP:
+                return "ビショップ";
+            case PieceNum.KING:
+                return "キング";
+            case PieceNum.KNIGHT:
+                return "ナイトウ";
+        }
+        return "";
     }
 }

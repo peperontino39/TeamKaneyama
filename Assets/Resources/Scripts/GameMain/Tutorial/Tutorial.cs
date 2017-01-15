@@ -33,9 +33,7 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(imageNum);
-
-        Debug.Log(tutorialSwitch);
+        
         if (Input.GetKeyUp(KeyCode.Y))
         {
             tutorialSwitch += 1;
