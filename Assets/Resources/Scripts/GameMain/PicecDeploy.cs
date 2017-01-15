@@ -53,7 +53,8 @@ public class PicecDeploy : MonoBehaviour
         //        }
         //    }
         //}
-
+        CreateCastle(4, 1, 0);
+        CreateCastle(4, 7, 1);
 
 
 
@@ -101,8 +102,7 @@ public class PicecDeploy : MonoBehaviour
         CreatePiece(PieceNum.KING, 4, 8, 1);//
         CreatePiece(PieceNum.JACK, 5, 8, 1);
 
-        CreateCastle(4, 1, 0);
-        CreateCastle(4, 7, 1);
+        
 
     }
 
@@ -117,6 +117,7 @@ public class PicecDeploy : MonoBehaviour
         Castle cas = obj.GetComponent<Castle>();
         cas.SetSell(new Vector2(x, y));
         cas.setTeam(_team);
+        GamaManager.Instance.castles.AddCastle(cas);
     }
 
 
@@ -128,6 +129,8 @@ public class PicecDeploy : MonoBehaviour
         pic.setSell(new Vector2(x, y));
         pic.team_number = _team;
         pic.piece_num = _piece;
+       // Debug.Log(GamaManager.Instance.castles.getCatle(_team));
+       obj.transform.position = GamaManager.Instance.castles.getCatle(_team).transform.position;
         if (_team == 1)
         {
             //obj.GetComponent<Renderer>().material.color = new Color(0, 1, 0);

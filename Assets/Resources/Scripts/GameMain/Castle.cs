@@ -37,7 +37,7 @@ public class Castle : MonoBehaviour {
     void Start () {
         SetSell(sell);
 
-        GamaManager.Instance.castles.AddCastle(this);
+        
     }
 	
 	void Update () {

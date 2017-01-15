@@ -93,7 +93,7 @@ public class Select : MonoBehaviour
             }
         }
 
-        Debug.Log(Input.GetAxis("GamePad1_start"));
+       // Debug.Log(Input.GetAxis("GamePad1_start"));
         if (Input.GetAxis(gamepadname_start) == 1)
         {
             int totle = 0;

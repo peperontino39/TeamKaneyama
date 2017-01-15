@@ -85,9 +85,20 @@ public class CreateBoard : MonoBehaviour
 
     //実際に全体攻撃する関数
     //攻撃可能マスに攻撃を与える関数
+    //反撃も入っている
     public void AllAttack(piece _terget_piese)
     {
+        StartCoroutine( AllAttackCoroutine(_terget_piese));
+
+    }
+
+    private IEnumerator AllAttackCoroutine(piece _terget_piese)
+    {
+        
+        //
         List<piece> anger = new List<piece>();
+        //_terget_piese.OnAttackArea(_terget_piese.sell);
+        Debug.Log(_terget_piese);
         foreach (var _line in map)
         {
             foreach (var _sell in _line)
@@ -96,14 +107,13 @@ public class CreateBoard : MonoBehaviour
                 {
                     if (_sell.on_pise != null)
                     {
-
-
                         if (_terget_piese.
                             team_number !=
                       _sell.on_pise.team_number)
                         {
+                            
                             _sell.on_pise.damage(
-                                _terget_piese.attack_power);
+                                _terget_piese.attack_power,2);
                             if (_sell.on_pise != null)
                                 anger.Add(_sell.on_pise);
                         }
@@ -129,13 +139,13 @@ public class CreateBoard : MonoBehaviour
                     {
                         if (_sell.on_pise != null)
                         {
-                            if (ang.team_number !=_sell.on_pise.team_number)
+                            if (ang.team_number != _sell.on_pise.team_number)
                             {
                                 if (_sell.on_pise == _terget_piese)
                                 {
                                     if (ang.life > 0)
                                     {
-                                        _sell.on_pise.damage(ang.counter_attack_power);
+                                        _sell.on_pise.damage(ang.counter_attack_power,3);
                                         _counterPiece.Add(ang);
                                     }
                                 }
@@ -149,7 +159,7 @@ public class CreateBoard : MonoBehaviour
             allAttackOff();
         }
         GamaManager.Instance.movieDate.counterPiece = new List<piece>(_counterPiece);
-
+        yield return new WaitForSeconds(1.0f);
     }
 
     //指定した範囲にほかのチームの駒が何体いるのか？

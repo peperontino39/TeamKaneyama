@@ -29,7 +29,16 @@ public class piece : MonoBehaviour
 
     public void setSell(Vector2 _sell)
     {
-        transform.position = GamaManager.Instance.Board.getSellPosition(_sell);
+       // transform.position = GamaManager.Instance.Board.getSellPosition(_sell);
+        iTween.MoveTo(this.gameObject, iTween.Hash(
+
+            "position", GamaManager.Instance.Board.getSellPosition(_sell),
+
+            "time", 3f,
+
+            "easeType", "easeInOutBack"
+
+        ));
         sell = _sell;
     }
 
@@ -58,16 +67,23 @@ public class piece : MonoBehaviour
         }
     }
 
-    public void damage(int _damage = 0)
+    public void damage(int _damage, float _time)
     {
         life -= _damage;
+        StartCoroutine( damageCol(_damage,_time));
+    }
+
+    private IEnumerator damageCol(int _damage,float _time)
+    {
+        yield return new WaitForSeconds(_time);
+        
         hp_ber.value = (float)life / (float)max_hp;
         if (life <= 0)
         {
             Destroy(gameObject);
         }
     }
-    
+
     private void LoadCharacterDate()
     {
         //StringReader reader = new StringReader(CharacterDataCSV.text);

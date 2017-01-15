@@ -101,7 +101,7 @@ public class Team : MonoBehaviour
             var piece = GamaManager.Instance.Board.map[(int)choiceCell.y][(int)choiceCell.x].on_pise;
             if (piece != null)
             {
-                piece.gameObject.transform.position += new Vector3(0, -0.5f, 0);
+                piece.gameObject.transform.position = new Vector3(piece.gameObject.transform.position.x, 1, piece.gameObject.transform.position.z);
 
             }
             choiceCell = value;
