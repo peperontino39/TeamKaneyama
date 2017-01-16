@@ -17,7 +17,18 @@ public class Animetorcoll : MonoBehaviour
 
     int playAnimNum;
 
+    public void StartAnim(int _anim_num, float _wait, float _time)
+    {
+        StartCoroutine(Animcoll(_anim_num, _wait, _time));
+    }
 
+    IEnumerator Animcoll(int _anim_num , float _wait ,float _time)
+    {
+        yield return new WaitForSeconds(_wait);
+        PlayAnimNum = _anim_num;
+        yield return new WaitForSeconds(_time);
+        PlayAnimNum = 4;
+    }
 
     public int PlayAnimNum
     {
@@ -40,7 +51,7 @@ public class Animetorcoll : MonoBehaviour
                 playAnimNum = value;
 
               
-                transform.rotation = Quaternion.Euler(0, rotateRip[playAnimNum], 0);
+                transform.localRotation = Quaternion.Euler(0, rotateRip[playAnimNum], 0);
                 anim.SetBool(animetioName[playAnimNum], true);
             }
         }
@@ -54,26 +65,26 @@ public class Animetorcoll : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            PlayAnimNum = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            PlayAnimNum = 1;
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            PlayAnimNum = 2;
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            PlayAnimNum = 3;
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            PlayAnimNum = 4;
-        }
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    PlayAnimNum = 0;
+        //}
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    PlayAnimNum = 1;
+        //}
+        //if (Input.GetKeyDown(KeyCode.D))
+        //{
+        //    PlayAnimNum = 2;
+        //}
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{
+        //    PlayAnimNum = 3;
+        //}
+        //if (Input.GetKeyDown(KeyCode.G))
+        //{
+        //    PlayAnimNum = 4;
+        //}
 
         
     }

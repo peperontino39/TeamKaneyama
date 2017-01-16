@@ -88,17 +88,17 @@ public class CreateBoard : MonoBehaviour
     //反撃も入っている
     public void AllAttack(piece _terget_piese)
     {
-        StartCoroutine( AllAttackCoroutine(_terget_piese));
+        StartCoroutine(AllAttackCoroutine(_terget_piese));
 
     }
 
     private IEnumerator AllAttackCoroutine(piece _terget_piese)
     {
-        
+        _terget_piese.anim.StartAnim(2, 3, 3);
         //
         List<piece> anger = new List<piece>();
         //_terget_piese.OnAttackArea(_terget_piese.sell);
-       // Debug.Log(_terget_piese);
+        // Debug.Log(_terget_piese);
         foreach (var _line in map)
         {
             foreach (var _sell in _line)
@@ -111,9 +111,10 @@ public class CreateBoard : MonoBehaviour
                             team_number !=
                       _sell.on_pise.team_number)
                         {
-                            
+
                             _sell.on_pise.damage(
-                                _terget_piese.attack_power,2);
+                                _terget_piese.attack_power, 3);
+
                             if (_sell.on_pise != null)
                                 anger.Add(_sell.on_pise);
                         }
@@ -127,7 +128,22 @@ public class CreateBoard : MonoBehaviour
         GamaManager.Instance.movieDate.attackPiece = new List<piece>() { _terget_piese };
 
         List<piece> _counterPiece = new List<piece>();
+        foreach (var ang in anger)
+        {
+            if (ang.life > 0)
+            {
+                ang.anim.StartAnim(3, 3, 2);
+                ang.anim.StartAnim(2, 6, 2);
+                
+            }
+            else
+            {
+                ang.anim.StartAnim(1, 2.5f, 5);
+            }
+
+        }
         //反撃の処理
+        bool is_counter = false;
         foreach (var ang in anger)
         {
             ang.OnAttackArea(ang.sell);
@@ -145,8 +161,9 @@ public class CreateBoard : MonoBehaviour
                                 {
                                     if (ang.life > 0)
                                     {
-                                        _sell.on_pise.damage(ang.counter_attack_power,3);
+                                        _sell.on_pise.damage(ang.counter_attack_power,6);
                                         _counterPiece.Add(ang);
+                                        is_counter = true;
                                     }
                                 }
                             }
@@ -156,8 +173,21 @@ public class CreateBoard : MonoBehaviour
                 }
 
             }
+
             allAttackOff();
         }
+        if (is_counter)
+        {
+            if (_terget_piese.life > 0)
+            {
+                _terget_piese.anim.StartAnim(3, 4.5f, 2);
+            }
+            else
+            {
+                _terget_piese.anim.StartAnim(1, 4.5f, 2);
+            }
+        }
+       
         GamaManager.Instance.movieDate.counterPiece = new List<piece>(_counterPiece);
         yield return new WaitForSeconds(1.0f);
     }

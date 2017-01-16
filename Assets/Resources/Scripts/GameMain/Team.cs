@@ -368,6 +368,7 @@ public class Team : MonoBehaviour
         GamaManager.Instance.Board.OnPiceMove(select_pieces.sell, moveSell);
         GamaManager.Instance.Board.AllAttack(select_pieces);
         select_pieces.setSell(moveSell);
+        select_pieces.anim.StartAnim(0,0, 2);
         ChangeControlTeam();
         GamaManager.Instance.Board.allAttackOff();
         step = 0;
@@ -395,6 +396,7 @@ public class Team : MonoBehaviour
 
         GamaManager.Instance.Board.OnPiceMove(select_pieces.sell, moveSell);
         select_pieces.setSell(moveSell);
+        select_pieces.anim.StartAnim(0, 0,2);
         ChangeControlTeam();
         GamaManager.Instance.Board.allAttackOff();
         GamaManager.Instance.Board.allMovableOff();

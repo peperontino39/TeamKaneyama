@@ -64,7 +64,7 @@ public class PicecDeploy : MonoBehaviour
             CreatePiece(PieceNum.PAWN, 0, 2, 0);
             CreatePiece(PieceNum.PAWN, 1, 2, 0);
             CreatePiece(PieceNum.PAWN, 2, 2, 0);
-            CreatePiece(PieceNum.PAWN, 3, 2, 0);
+            //CreatePiece(PieceNum.PAWN, 3, 2, 0);
             CreatePiece(PieceNum.PAWN, 4, 2, 0);
             CreatePiece(PieceNum.PAWN, 5, 2, 0);
             CreatePiece(PieceNum.PAWN, 6, 2, 0);

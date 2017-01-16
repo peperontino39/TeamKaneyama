@@ -17,6 +17,9 @@ public class piece : MonoBehaviour
     [SerializeField]
     Slider hp_ber = null;
 
+    [SerializeField]
+    public Animetorcoll anim;
+
     public int max_hp;
     public int life;
     public int attack_power;
@@ -39,6 +42,7 @@ public class piece : MonoBehaviour
             "easeType", "easeInOutBack"
 
         ));
+        
         sell = _sell;
     }
 
