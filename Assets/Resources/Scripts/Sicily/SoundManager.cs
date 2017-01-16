@@ -83,6 +83,11 @@ public class SoundManager : MonoBehaviour
         //Debug.Log("BGM" + bgm.ToString());
     }
 
+    public void BGMVolumeDown(BGM  bgm,float _volume)
+    {
+        bgmSources[(int)bgm].volume = _volume;
+    }
+
 
 
 }

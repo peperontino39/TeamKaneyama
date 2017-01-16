@@ -26,7 +26,7 @@ public class SceneChanger : MonoBehaviour {
     public void OnClick()
     {
         SceneManager.LoadScene("MainMenuSample");
-        SoundManager.Instance.StopBGM(SoundManager.BGM.TITLE);
+        
     }
 
 }
